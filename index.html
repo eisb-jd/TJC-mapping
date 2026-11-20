@@ -157,6 +157,7 @@ h3:first-child{margin-top:0}
 /* pending + about */
 table.pend{width:100%;border-collapse:collapse;font-size:14px}table.pend td{padding:7px 6px;border-bottom:1px solid #F0F0F0}table.pend tr{cursor:pointer}table.pend tbody tr:hover{background:#EAF7FE}
 .ab h2{color:var(--navy);font-size:17px;margin:18px 0 4px}.ab p{margin:0;line-height:1.55}
+body.embed #top,body.embed #nav{display:none}body.embed main{top:0;bottom:0}body.embed .mhead p{display:none}
 </style>
 </head>
 <body>
@@ -247,6 +248,7 @@ table.pend{width:100%;border-collapse:collapse;font-size:14px}table.pend td{padd
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 <script src="https://unpkg.com/qrcode-generator@1.4.4/qrcode.js"></script>
 <script>
+if(/embed=1/.test(location.search))document.body.classList.add('embed');
 const ZC={'West Coast':'#305088','Interior':'#3A9E5C','East Coast':'#00A3E0','Labuan':'#8A6BBE','Sarawak':'#D9822B'};
 const ZORDER=['West Coast','Interior','East Coast','Labuan','Sarawak'];
 const BAND={'West Coast':'SABAH  ·  WEST COAST ZONE','Interior':'SABAH  ·  INTERIOR ZONE','East Coast':'SABAH  ·  EAST COAST ZONE','Labuan':'LABUAN','Sarawak':'SARAWAK'};
