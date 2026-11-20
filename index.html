@@ -6,6 +6,7 @@
 <title>True Jesus Church - Church Location Atlas | Sabah, Labuan &amp; Sarawak</title>
 <meta name="description" content="Find a True Jesus Church (Gereja Yesus Benar) church or prayer house in Sabah, Labuan and Sarawak, with KodLokasi codes for directions.">
 <meta name="theme-color" content="#313131">
+<link rel="icon" href="proposal/assets/mark.svg?v=3" type="image/svg+xml">
 <link rel="stylesheet" href="vendor/leaflet-1.9.4.css">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,400;0,700;1,400&display=swap">
@@ -20,7 +21,7 @@ button{font:inherit}
 #top{position:fixed;top:0;left:0;right:0;height:var(--top);background:var(--char);color:#fff;border-bottom:3px solid var(--sky);display:flex;align-items:center;padding:0 16px;gap:12px;z-index:1000}
 #top .t{cursor:pointer;line-height:1.15}
 #top .t b{display:block;font-size:17px;letter-spacing:.4px}
-#top .t span{font-size:11.5px;color:#BDBDBD}
+#top .t span{font-size:11.5px;color:#BDBDBD}#top .tsub{border-left:1px solid #555;padding-left:12px}
 #top .sp{flex:1}
 #top .sec{color:var(--sky);font-weight:700;font-size:13.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:45vw}
 .badge{background:var(--red);color:#fff;font-size:10.5px;font-weight:700;border-radius:10px;padding:3px 9px;letter-spacing:.4px;white-space:nowrap}
@@ -162,7 +163,7 @@ body.embed #top,body.embed #nav{display:none}body.embed main{top:0;bottom:0}body
 </head>
 <body>
 <header id="top">
-  <div class="t" onclick="go('home')"><b>TRUE JESUS CHURCH</b><span>Church Location Atlas &nbsp;|&nbsp; Sabah &middot; Labuan &middot; Sarawak</span></div>
+  <div class="t" onclick="go('home')" style="display:flex;align-items:center;gap:12px"><img src="proposal/assets/logo-white.svg?v=3" alt="Gereja Yesus Benar" style="height:30px;display:block"><span id="t-sub" class="tsub">Church Location Atlas &nbsp;|&nbsp; Sabah &middot; Labuan &middot; Sarawak</span></div>
   <span class="sp"></span><span class="sec" id="sec"></span><span class="badge" id="ver">DRAFT</span>
 </header>
 <main id="main">
@@ -170,7 +171,7 @@ body.embed #top,body.embed #nav{display:none}body.embed main{top:0;bottom:0}body
 <!-- COVER -->
 <section class="page" id="p-home"><svg id="cov" viewBox="0 0 100 100"></svg><div class="in">
   <div><span class="badge" id="ver2">DRAFT</span></div>
-  <div class="k">TRUE JESUS CHURCH</div>
+  <img src="proposal/assets/logo-white.svg?v=3" alt="Gereja Yesus Benar" style="height:54px;display:block;margin-top:18px;max-width:100%"><div class="k">TRUE JESUS CHURCH</div>
   <h1>CHURCH LOCATION ATLAS</h1>
   <div class="reg">Sabah &nbsp;&middot;&nbsp; Labuan &nbsp;&middot;&nbsp; Sarawak</div>
   <div class="zh">沙巴真耶稣教会 &middot; Gereja Yesus Benar</div>
@@ -215,7 +216,7 @@ body.embed #top,body.embed #nav{display:none}body.embed main{top:0;bottom:0}body
 
 <!-- MAPS -->
 <section class="page" id="p-map">
-  <div class="mhead"><h1 id="m-title">Sabah - overview</h1><p>Tap a numbered pin, then its name, to open the location page.</p><div class="views" id="views"></div></div>
+  <div class="mhead"><h1 id="m-title">Sabah - overview</h1><p id="m-tap">Tap a numbered pin, then its name, to open the location page.</p><div class="views" id="views"></div></div>
   <div id="map"></div>
 </section>
 
@@ -247,11 +248,32 @@ body.embed #top,body.embed #nav{display:none}body.embed main{top:0;bottom:0}body
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 <script src="https://unpkg.com/qrcode-generator@1.4.4/qrcode.js"></script>
+<script src="proposal/content.js"></script>
 <script>
+const LANG=(new URLSearchParams(location.search).get('lang')||'en').replace(/[^a-z]/g,'');const LG=['en','ms','zh'].includes(LANG)?LANG:'en';
+const tr=o=>o?(o[LG]||o.en||''):'';
+const A={
+ map:{en:'Maps',ms:'Peta',zh:'地图'},tapPin:{en:'Tap a numbered pin, then its name, to open the location page.',ms:'Klik pin bernombor, kemudian namanya, untuk membuka halaman lokasi.',zh:'点击编号图钉，再点击名称以打开地点页面。'},
+ overview:{en:'Sabah - overview',ms:'Sabah - gambaran keseluruhan',zh:'沙巴 - 总览'},ovBtn:{en:'Sabah overview',ms:'Gambaran Sabah',zh:'沙巴总览'},
+ kk:{en:'Kota Kinabalu, Penampang & Tuaran (detail)',ms:'Kota Kinabalu, Penampang & Tuaran (terperinci)',zh:'亚庇、兵南邦与斗亚兰（详图）'},kkBtn:{en:'KK detail',ms:'KK terperinci',zh:'亚庇详图'},
+ ken:{en:'Keningau & Tenom (detail)',ms:'Keningau & Tenom (terperinci)',zh:'根地咬与丹南（详图）'},kenBtn:{en:'Keningau detail',ms:'Keningau terperinci',zh:'根地咬详图'},
+ ph:{en:'prayer house',ms:'khemah doa',zh:'祈祷所'},openPage:{en:'Open page',ms:'Buka halaman',zh:'打开页面'},
+ sub:{en:'Gereja Yesus Benar · True Jesus Church',ms:'Gereja Yesus Benar',zh:'真耶稣教会'},photo:{en:'Photo: True Jesus Church',ms:'Foto: Gereja Yesus Benar',zh:'照片：真耶稣教会'},noPhoto:{en:'Photo to be supplied',ms:'Foto akan dibekalkan',zh:'照片待提供'},
+ klc:{en:'KODLOKASI · TAP OR SCAN FOR DIRECTIONS',ms:'KODLOKASI · KLIK ATAU IMBAS UNTUK ARAH',zh:'KODLOKASI · 点击或扫描导航'},openKL:{en:'Open in KodLokasi',ms:'Buka dalam KodLokasi',zh:'在 KodLokasi 中打开'},copy:{en:'Copy',ms:'Salin',zh:'复制'},copied:{en:'Copied',ms:'Disalin',zh:'已复制'},
+ await:{en:'Location awaiting confirmation.',ms:'Lokasi menunggu pengesahan.',zh:'位置待确认。'},awaitD:{en:'The church has not yet supplied GPS coordinates for this location, so it has no map pin or KodLokasi code yet.',ms:'Gereja belum membekalkan koordinat GPS untuk lokasi ini, jadi ia belum mempunyai pin peta atau KodLokasi.',zh:'教会尚未提供此地点的 GPS 坐标，因此暂无地图定位与 KodLokasi。'},
+ addr:{en:'Address',ms:'Alamat',zh:'地址'},svc:{en:'Service times',ms:'Waktu kebaktian',zh:'聚会时间'},ns:{en:'Not yet supplied',ms:'Belum dibekalkan',zh:'尚未提供'},
+ mini:{en:'LOCATION MAP (tap to open)',ms:'PETA LOKASI (klik untuk buka)',zh:'位置图（点击打开）'},dir:{en:'Directory',ms:'Direktori',zh:'名录'},mapB:{en:'Map',ms:'Peta',zh:'地图'},prev:{en:'Previous',ms:'Sebelum',zh:'上一个'},next:{en:'Next',ms:'Seterusnya',zh:'下一个'},
+ near:{en:'Nearby locations',ms:'Lokasi berdekatan',zh:'附近地点'},straight:{en:'(straight-line distance)',ms:'(jarak garis lurus)',zh:'（直线距离）'},
+ note:{en:'Please confirm service times with the local church. Report corrections to help improve this atlas.',ms:'Sila sahkan waktu kebaktian dengan gereja tempatan. Laporkan pembetulan untuk membantu menambah baik atlas ini.',zh:'请向当地教会确认聚会时间，欢迎提供更正以改进本图集。'},
+ tsub:{en:'Church Location Atlas | Sabah · Labuan · Sarawak',ms:'Atlas Lokasi Gereja | Sabah · Labuan · Sarawak',zh:'教会位置图集 | 沙巴 · 纳闽 · 砂拉越'},
+ layers:{sat:{en:'Satellite (with roads & names)',ms:'Satelit (dengan jalan & nama)',zh:'卫星图（含道路与地名）'},satO:{en:'Satellite only',ms:'Satelit sahaja',zh:'仅卫星图'},st:{en:'Street map',ms:'Peta jalan',zh:'街道图'},pl:{en:'Plain map (like the PDF)',ms:'Peta ringkas (seperti PDF)',zh:'简图（同 PDF）'},db:{en:'District boundaries',ms:'Sempadan daerah',zh:'县界'},dn:{en:'District names',ms:'Nama daerah',zh:'县名'}}
+};
+document.documentElement.lang={en:'en',ms:'ms',zh:'zh-Hans'}[LG];
 if(/embed=1/.test(location.search))document.body.classList.add('embed');
+if(LG!=='en'){document.addEventListener('DOMContentLoaded',()=>{});}
 const ZC={'West Coast':'#305088','Interior':'#3A9E5C','East Coast':'#00A3E0','Labuan':'#8A6BBE','Sarawak':'#D9822B'};
 const ZORDER=['West Coast','Interior','East Coast','Labuan','Sarawak'];
-const BAND={'West Coast':'SABAH  ·  WEST COAST ZONE','Interior':'SABAH  ·  INTERIOR ZONE','East Coast':'SABAH  ·  EAST COAST ZONE','Labuan':'LABUAN','Sarawak':'SARAWAK'};
+const BAND={'West Coast':'SABAH  ·  '+tr(C.zones['West Coast']).toUpperCase(),'Interior':'SABAH  ·  '+tr(C.zones['Interior']).toUpperCase(),'East Coast':'SABAH  ·  '+tr(C.zones['East Coast']).toUpperCase(),'Labuan':tr(C.zones.Labuan).toUpperCase(),'Sarawak':tr(C.zones.Sarawak).toUpperCase()};
 const ZLABEL={'West Coast':'West Coast','Interior':'Interior','East Coast':'East Coast','Labuan':'Labuan','Sarawak':'Sarawak'};
 const esc=s=>(s||'').toString().replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 let F=[],P={},META={},OUT=null,DIST=null,cur=null,map=null,mini=null,markers={},sel=null;
@@ -282,7 +304,11 @@ Promise.all([
 });
 
 /* ---------- router ---------- */
-const SEC={home:'',how:'How to use',directory:'Directory',map:'Maps',pending:'Awaiting coordinates',about:'About'};
+const NAVL={home:{en:'Home',ms:'Utama',zh:'首页'},how:{en:'How to use',ms:'Cara guna',zh:'使用说明'},directory:{en:'Directory',ms:'Direktori',zh:'名录'},map:{en:'Maps',ms:'Peta',zh:'地图'},pending:{en:'Awaiting coordinates',ms:'Menunggu koordinat',zh:'待定位'},about:{en:'About',ms:'Perihal',zh:'关于'}};
+const SEC={home:'',how:tr(NAVL.how),directory:tr(NAVL.directory),map:tr(NAVL.map),pending:tr(NAVL.pending),about:tr(NAVL.about)};
+document.querySelectorAll('#nav a').forEach(a=>a.textContent=tr(NAVL[a.dataset.p]));
+document.getElementById('t-sub').textContent=tr(A.tsub);document.getElementById('m-tap').textContent=tr(A.tapPin);
+if(LG!=='en'){document.querySelector('#p-directory h1').textContent=tr({ms:'Direktori lokasi',zh:'地点名录'});document.querySelector('#p-directory .lead').textContent=tr({ms:'Klik nama untuk membuka halamannya, kod untuk membuka KodLokasi, atau "Peta" untuk petanya.',zh:'点击名称打开页面，点击代码打开 KodLokasi，或点击“地图”查看位置。'});document.getElementById('q').placeholder=tr({ms:'Cari nama, subzon, alamat atau KodLokasi',zh:'搜索名称、小区、地址或 KodLokasi'});document.querySelector('#p-directory .btn.red').innerHTML=tr({ms:'Senarai menunggu koordinat',zh:'待定位名单'})+' &rsaquo;'}
 function go(h){location.hash=h}
 window.addEventListener('hashchange',route);
 function route(){let h=decodeURIComponent(location.hash.slice(1))||'home';let arg=null;
@@ -312,20 +338,20 @@ function symbols(){document.getElementById('symbols').innerHTML=ZORDER.map(z=>`<
 function directory(){const q=document.getElementById('q').value.trim().toLowerCase();
   const ok=p=>!q||[p.name,p.subzone,p.address,p.kodlokasi,p.zone,p.state,p.id,p.type].join(' ').toLowerCase().includes(q);
   document.getElementById('dir').innerHTML=ZORDER.map(z=>{const L=F.filter(p=>p.zone===z&&ok(p));if(!L.length)return'';
-    return `<div class="band" style="background:${ZC[z]}">${BAND[z]}<span>${L.length} location(s)</span></div>
-    <table class="dir"><thead><tr><th>No.</th><th>Name</th><th class="hs">Type</th><th class="hs">Subzone</th><th>KodLokasi</th><th></th></tr></thead><tbody>${
-    L.map(p=>`<tr onclick="go('${p.id}')"><td>${mk(p)}</td><td class="nm">${esc(p.name)}</td><td class="hs">${p.type}</td><td class="hs">${esc(p.subzone||'-')}</td>
-    <td class="kc">${p.kodlokasi?`<a href="${p.kodlokasi_url}" target="_blank" rel="noopener" onclick="event.stopPropagation()">${esc(p.kodlokasi)}</a>`:'<span class="aw">awaiting coordinates</span>'}</td>
-    <td class="mb">${p.mapped?`<button class="mbtn" onclick="event.stopPropagation();go('map/${p.id}')">Map</button>`:''}</td></tr>`).join('')}</tbody></table>`}).join('')||'<p class="nst">No location matches your search.</p>'}
+    return `<div class="band" style="background:${ZC[z]}">${BAND[z]}<span>${L.length} ${tr(C.ui.locations)}</span></div>
+    <table class="dir"><thead><tr><th>${tr({en:"No.",ms:"Bil.",zh:"编号"})}</th><th>${tr({en:"Name",ms:"Nama",zh:"名称"})}</th><th class="hs">${tr({en:"Type",ms:"Jenis",zh:"类型"})}</th><th class="hs">${tr({en:"Subzone",ms:"Subzon",zh:"小区"})}</th><th>KodLokasi</th><th></th></tr></thead><tbody>${
+    L.map(p=>`<tr onclick="go('${p.id}')"><td>${mk(p)}</td><td class="nm">${esc(p.name)}</td><td class="hs">${TY(p)}</td><td class="hs">${esc(p.subzone||'-')}</td>
+    <td class="kc">${p.kodlokasi?`<a href="${p.kodlokasi_url}" target="_blank" rel="noopener" onclick="event.stopPropagation()">${esc(p.kodlokasi)}</a>`:`<span class="aw">${tr(C.ui.awaiting)}</span>`}</td>
+    <td class="mb">${p.mapped?`<button class="mbtn" onclick="event.stopPropagation();go('map/${p.id}')">${tr(A.mapB)}</button>`:''}</td></tr>`).join('')}</tbody></table>`}).join('')||'<p class="nst">No location matches your search.</p>'}
 document.getElementById('q').addEventListener('input',directory);
 function pending(){document.getElementById('pend').innerHTML=F.filter(p=>!p.mapped).map(p=>`<tr onclick="go('${p.id}')"><td>${mk(p)}</td><td style="font-weight:700;color:var(--navy)">${esc(p.name)}</td><td>${p.type}</td><td>${p.state}${p.zone!==p.state?' · '+p.zone:''}</td><td>${esc(p.subzone?'SZ '+p.subzone:'-')}</td></tr>`).join('')}
 
 /* ---------- maps ---------- */
-const VIEWS={sabah:{t:'Sabah - overview',b:[[4.05,115.3],[7.4,119.3]]},
-  'west-coast':{t:'Sabah - West Coast zone',z:'West Coast'},'interior':{t:'Sabah - Interior zone',z:'Interior'},'east-coast':{t:'Sabah - East Coast zone',z:'East Coast'},
-  'kk':{t:'Kota Kinabalu, Penampang & Tuaran (detail)',b:[[5.88,116.03],[6.2,116.3]]},
-  'keningau':{t:'Keningau & Tenom (detail)',b:[[5.15,115.85],[5.5,116.25]]},
-  'labuan':{t:'Labuan',z:'Labuan',pad:.06},'sarawak':{t:'Sarawak',z:'Sarawak'}};
+const VIEWS={sabah:{t:tr(A.overview),b:[[4.05,115.3],[7.4,119.3]]},
+  'west-coast':{t:'Sabah - '+tr(C.zones['West Coast']),z:'West Coast'},'interior':{t:'Sabah - '+tr(C.zones['Interior']),z:'Interior'},'east-coast':{t:'Sabah - '+tr(C.zones['East Coast']),z:'East Coast'},
+  'kk':{t:tr(A.kk),b:[[5.88,116.03],[6.2,116.3]]},
+  'keningau':{t:tr(A.ken),b:[[5.15,115.85],[5.5,116.25]]},
+  'labuan':{t:tr(C.zones.Labuan),z:'Labuan',pad:.06},'sarawak':{t:tr(C.zones.Sarawak),z:'Sarawak'}};
 function pinIcon(p,on){const ph=p.type==='Prayer House';return L.divIcon({className:'',iconSize:ph?[26,24]:[24,24],iconAnchor:ph?[13,16]:[12,12],
   html:`<div class="${ph?'tri':'pin'}${on?' sel':''}" style="background:${ZC[p.zone]}">${p.no}</div>`})}
 function initMap(){if(map)return;
@@ -340,17 +366,17 @@ function initMap(){if(map)return;
   if(DIST)DIST.features.forEach(f=>{if(f.properties.kind==='boundary')dl.addData(f);else{const[lo,la]=f.geometry.coordinates;dn.addLayer(L.marker([la,lo],{pane:'dl',interactive:false,keyboard:false,icon:L.divIcon({className:'dlab',html:f.properties.name.toUpperCase(),iconSize:null})}))}});
   if(OUT)L.geoJSON(OUT,{interactive:false,style:f=>({color:'#5F7A99',weight:1,fillColor:/kalimantan|brunei/.test(f.properties.name)?'#E6E6E1':'#FFFDF5',fillOpacity:1})}).addTo(plain);
   hyb.addTo(map);dl.addTo(map);dn.addTo(map);
-  L.control.layers({'Satellite (with roads & names)':hyb,'Satellite only':sat,'Street map':osm,'Plain map (like the PDF)':plain},{'District boundaries':dl,'District names':dn},{position:'topright'}).addTo(map);
+  L.control.layers({[tr(A.layers.sat)]:hyb,[tr(A.layers.satO)]:sat,[tr(A.layers.st)]:osm,[tr(A.layers.pl)]:plain},{[tr(A.layers.db)]:dl,[tr(A.layers.dn)]:dn},{position:'topright'}).addTo(map);
   L.control.scale({imperial:false}).addTo(map);
-  const lg=L.control({position:'bottomright'});lg.onAdd=()=>{const d=L.DomUtil.create('div','legend');d.innerHTML=ZORDER.map(z=>`<span class="dot" style="background:${ZC[z]}"></span>${z}`).join('<br>')+'<br>&#9650; prayer house';return d};lg.addTo(map);
+  const lg=L.control({position:'bottomright'});lg.onAdd=()=>{const d=L.DomUtil.create('div','legend');d.innerHTML=ZORDER.map(z=>`<span class="dot" style="background:${ZC[z]}"></span>${tr(C.zones[z])}`).join('<br>')+'<br>&#9650; '+tr(A.ph);return d};lg.addTo(map);
   const upd=()=>{const el=document.getElementById('map');el.classList.toggle('onsat',map.hasLayer(hyb)||map.hasLayer(sat));el.classList.toggle('lowzoom',map.getZoom()<9);dl.setStyle({color:map.hasLayer(hyb)||map.hasLayer(sat)?'#fff':'#6B7280'})};
   map.on('baselayerchange zoomend',upd);upd();
   F.filter(p=>p.mapped).forEach(p=>{const m=L.marker([p.lat,p.lon],{icon:pinIcon(p),title:p.name}).addTo(map);
     m.bindTooltip(esc(p.name),{permanent:true,direction:'right',offset:[10,0],className:'lbl',opacity:1});
-    m.bindPopup(`<div class="pop"><b>${p.no}. ${esc(p.name)}</b><br>${p.type} · ${esc(p.subzone||p.zone)}<br><span class="c">${esc(p.kodlokasi)}</span><br><a class="btn sky" href="#${p.id}">Open page &rsaquo;</a></div>`);
+    m.bindPopup(`<div class="pop"><b>${p.no}. ${esc(p.name)}</b><br>${TY(p)} · ${esc(p.subzone||tr(C.zones[p.zone]))}<br><span class="c">${esc(p.kodlokasi)}</span><br><a class="btn sky" href="#${p.id}">${tr(A.openPage)} &rsaquo;</a></div>`);
     m.on('click',()=>setSel(p.id));markers[p.id]=m});
   map.on('popupclose',()=>setSel(null));
-  document.getElementById('views').innerHTML=Object.entries(VIEWS).map(([k,v])=>`<button data-v="${k}">${v.z?`<span class="dot" style="background:${ZC[v.z]}"></span>`:''}${{sabah:'Sabah overview',kk:'KK detail',keningau:'Keningau detail'}[k]||v.z}</button>`).join('');
+  document.getElementById('views').innerHTML=Object.entries(VIEWS).map(([k,v])=>`<button data-v="${k}">${v.z?`<span class="dot" style="background:${ZC[v.z]}"></span>`:''}${{sabah:tr(A.ovBtn),kk:tr(A.kkBtn),keningau:tr(A.kenBtn)}[k]||tr(C.zones[v.z])}</button>`).join('');
   document.querySelectorAll('#views button').forEach(b=>b.onclick=()=>{history.replaceState(null,'','#map/'+b.dataset.v);view(b.dataset.v)});
 }
 function view(k){cur=k;const v=VIEWS[k];document.getElementById('m-title').textContent=v.t;
@@ -362,28 +388,29 @@ function focusPin(id){const p=P[id];document.getElementById('m-title').textConte
   map.setView([p.lat,p.lon],15);setSel(id);markers[id].openPopup()}
 
 /* ---------- location page ---------- */
+const TY=p=>p.type==='Prayer House'?tr(C.ui.prayerHouse):tr(C.ui.church);
 function locPage(p){const i=F.indexOf(p),prev=F[(i-1+F.length)%F.length],next=F[(i+1)%F.length];
   const near=p.mapped?F.filter(x=>x.mapped&&x.id!==p.id).map(x=>[x,km(p,x)]).sort((a,b)=>a[1]-b[1]).slice(0,5):[];
-  const svc=(p.services||[]).map(s=>{const m=s.when.match(/^(\w{3}(?:-\w+)?)\s+(.*)$/);return `<tr><td>${esc(m?m[1]:'')}</td><td>${esc(m?m[2]:s.when)}</td><td>${esc(s.service)}</td></tr>`}).join('');
+  const svc=(p.services||[]).map(s=>{const m=s.when.match(/^(\w{3})(?:-(\w{3}))?\s+(.*)$/);const d=m?tr(C.days[m[1]]||{en:m[1]})+(m[2]?'–'+tr(C.days[m[2]]||{en:m[2]}):''):'';const sv=LG==='en'||!C.services[s.service]?s.service:C.services[s.service][LG];return `<tr><td>${esc(d)}</td><td>${esc(m?m[3]:s.when)}</td><td>${esc(sv)}</td></tr>`}).join('');
   const el=document.getElementById('p-loc');
-  el.innerHTML=`<div class="lhead"><span class="ty" style="background:${ZC[p.zone]}">${p.type.toUpperCase()}</span> <span class="sub">No. ${p.no} &middot; ${p.id}</span>
-  <h1>${esc(p.name)}</h1><div class="sub">Gereja Yesus Benar &middot; True Jesus Church</div></div>
-  <div class="lgrid"><div class="photo" ${p.photo?`style="background-image:url('${p.photo}')"`:''}>${p.photo?'<span class="cap">Photo: True Jesus Church</span>':'Photo to be supplied'}</div>
-  ${p.kodlokasi?`<div class="klc"><div class="c">KODLOKASI &middot; TAP OR SCAN FOR DIRECTIONS</div><div class="v">${esc(p.kodlokasi)}</div><div class="ll">${p.lat.toFixed(6)}, ${p.lon.toFixed(6)}</div>
+  el.innerHTML=`<div class="lhead"><span class="ty" style="background:${ZC[p.zone]}">${TY(p).toUpperCase()}</span> <span class="sub">No. ${p.no} &middot; ${p.id}</span>
+  <h1>${esc(p.name)}</h1><div class="sub">${tr(A.sub)}</div></div>
+  <div class="lgrid"><div class="photo" ${p.photo?`style="background-image:url('${p.photo}')"`:''}>${p.photo?`<span class="cap">${tr(A.photo)}</span>`:tr(A.noPhoto)}</div>
+  ${p.kodlokasi?`<div class="klc"><div class="c">${tr(A.klc)}</div><div class="v">${esc(p.kodlokasi)}</div><div class="ll">${p.lat.toFixed(6)}, ${p.lon.toFixed(6)}</div>
     <a class="qr" href="${p.kodlokasi_url}" target="_blank" rel="noopener">${qrsvg(p.kodlokasi_url,4)}</a>
-    <div class="row"><a class="btn sky" href="${p.kodlokasi_url}" target="_blank" rel="noopener">Open in KodLokasi &rsaquo;</a><button class="cp" onclick="copyCode('${p.kodlokasi}',this)">Copy</button></div></div>`
-  :`<div class="klc none"><div class="c" style="color:var(--red)">KODLOKASI</div><b>Location awaiting confirmation.</b>The church has not yet supplied GPS coordinates for this location, so it has no map pin or KodLokasi code yet.</div>`}</div>
+    <div class="row"><a class="btn sky" href="${p.kodlokasi_url}" target="_blank" rel="noopener">${tr(A.openKL)} &rsaquo;</a><button class="cp" onclick="copyCode('${p.kodlokasi}',this)">${tr(A.copy)}</button></div></div>`
+  :`<div class="klc none"><div class="c" style="color:var(--red)">KODLOKASI</div><b>${tr(A.await)}</b>${tr(A.awaitD)}</div>`}</div>
   <div class="lgrid2"><div>
-    <h3>Address</h3><div>${p.address?esc(p.address):'<span class="nst">Not yet supplied</span>'}</div>
-    <h3>Service times</h3>${svc?`<table class="svc">${svc}</table>`:'<span class="nst">Not yet supplied</span>'}
-    ${p.notes?`<div class="note">${esc(p.notes)}</div>`:''}
+    <h3>${tr(A.addr)}</h3><div>${p.address?esc(p.address):`<span class="nst">${tr(A.ns)}</span>`}</div>
+    <h3>${tr(A.svc)}</h3>${svc?`<table class="svc">${svc}</table>`:`<span class="nst">${tr(A.ns)}</span>`}
+    ${p.notes&&LG==='en'?`<div class="note">${esc(p.notes)}</div>`:''}
   </div><div>
-    ${p.mapped?`<div class="mini-cap">LOCATION MAP &nbsp;(tap to open)</div><div id="mini" onclick="go('map/${p.id}')"></div>`:''}
-    <div class="lnav"><a class="btn navy" href="#directory">&lsaquo; Directory</a>${p.mapped?`<a class="btn sky" href="#map/${p.id}">Map</a>`:'<span></span>'}
-    <a class="btn lt" href="#${prev.id}">&lsaquo; Previous</a><a class="btn lt" href="#${next.id}">Next &rsaquo;</a></div>
+    ${p.mapped?`<div class="mini-cap">${tr(A.mini)}</div><div id="mini" onclick="go('map/${p.id}')"></div>`:''}
+    <div class="lnav"><a class="btn navy" href="#directory">&lsaquo; ${tr(A.dir)}</a>${p.mapped?`<a class="btn sky" href="#map/${p.id}">${tr(A.mapB)}</a>`:'<span></span>'}
+    <a class="btn lt" href="#${prev.id}">&lsaquo; ${tr(A.prev)}</a><a class="btn lt" href="#${next.id}">${tr(A.next)} &rsaquo;</a></div>
   </div></div>
-  ${near.length?`<h3 style="margin-top:22px">Nearby locations &nbsp;<span style="font-weight:400;text-transform:none;color:var(--grey)">(straight-line distance)</span></h3><div class="near">${near.map(([o,k])=>`<a href="#${o.id}">${mk(o)}<div>${esc(o.name)}<span>${k.toFixed(1)} km</span></div></a>`).join('')}</div>`:''}
-  <div class="note">Please confirm service times with the local church. Report corrections to help improve this atlas.</div>`;
+  ${near.length?`<h3 style="margin-top:22px">${tr(A.near)} &nbsp;<span style="font-weight:400;text-transform:none;color:var(--grey)">${tr(A.straight)}</span></h3><div class="near">${near.map(([o,k])=>`<a href="#${o.id}">${mk(o)}<div>${esc(o.name)}<span>${k.toFixed(1)} km</span></div></a>`).join('')}</div>`:''}
+  <div class="note">${tr(A.note)}</div>`;
   if(mini){mini.remove();mini=null}
   if(p.mapped){mini=L.map('mini',{zoomControl:false,attributionControl:false,dragging:false,scrollWheelZoom:false,doubleClickZoom:false,boxZoom:false,keyboard:false,touchZoom:false,tap:false}).setView([p.lat,p.lon],11);
     if(OUT)L.geoJSON(OUT,{interactive:false,style:f=>({color:'#5F7A99',weight:1,fillColor:/kalimantan|brunei/.test(f.properties.name)?'#E6E6E1':'#FFFDF5',fillOpacity:1})}).addTo(mini);
@@ -391,7 +418,7 @@ function locPage(p){const i=F.indexOf(p),prev=F[(i-1+F.length)%F.length],next=F[
     F.filter(x=>x.mapped&&x.id!==p.id).forEach(x=>L.circleMarker([x.lat,x.lon],{radius:3,color:'#9AA3AE',fillColor:'#9AA3AE',fillOpacity:1,weight:0,interactive:false}).addTo(mini));
     L.marker([p.lat,p.lon],{icon:pinIcon(p),interactive:false}).addTo(mini)}
 }
-function copyCode(c,b){navigator.clipboard&&navigator.clipboard.writeText(c).then(()=>{b.textContent='Copied';setTimeout(()=>b.textContent='Copy',1500)})}
+function copyCode(c,b){navigator.clipboard&&navigator.clipboard.writeText(c).then(()=>{b.textContent=tr(A.copied);setTimeout(()=>b.textContent=tr(A.copy),1500)})}
 </script>
 </body>
 </html>

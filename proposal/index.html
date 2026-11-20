@@ -6,7 +6,7 @@
 <meta name="robots" content="noindex, nofollow">
 <title>True Jesus Church Sabah | Gereja Yesus Benar Sabah | 沙巴真耶稣教会 (prototype)</title>
 <meta name="theme-color" content="#24386B">
-<link rel="icon" href="assets/mark.svg" type="image/svg+xml">
+<link rel="icon" href="assets/mark.svg?v=3" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@300;400;500;600&family=Noto+Sans+SC:wght@400;500;700&display=swap">
 <style>
@@ -234,22 +234,117 @@ footer .bt{border-top:1px solid rgba(255,255,255,.08);text-align:center;padding:
 .reveal{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease}
 .reveal.in{opacity:1;transform:none}
 @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}*{scroll-behavior:auto}}
+
+/* calendar */
+.calnote{background:#FFF7E0;border:1px solid #F3DDA0;color:#6B4E00;border-radius:12px;padding:10px 14px;font-size:14px;margin-bottom:18px}
+.calbar{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:12px}
+.calnav{display:flex;align-items:center;gap:8px}
+.calnav button{width:40px;height:40px;border-radius:999px;border:1px solid var(--line);background:#fff;font-size:20px;cursor:pointer;color:var(--navy2)}
+.calnav button.tdy{width:auto;padding:0 16px;font:inherit;font-size:14px;font-weight:500}
+.calnav h2{margin:0 0 0 8px;font-size:24px;color:var(--navy2);font-weight:600}
+.calview{display:flex;background:var(--light);border-radius:999px;padding:4px}
+.calview button{border:0;background:transparent;border-radius:999px;padding:7px 16px;font:inherit;font-size:14px;cursor:pointer;color:var(--ink)}
+.calview button.on{background:#fff;box-shadow:var(--sh);color:var(--navy2);font-weight:600}
+.caltypes{display:flex;gap:16px;flex-wrap:wrap;font-size:13px;color:var(--grey);margin-bottom:14px}
+.caltypes i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:6px}
+.cal{border:1px solid var(--line);border-radius:var(--r);overflow:hidden;background:#fff;box-shadow:var(--sh)}
+.calh{display:grid;grid-template-columns:repeat(7,1fr);background:#FAFCFE;border-bottom:1px solid var(--line)}
+.calh div{padding:10px;font-size:12.5px;font-weight:600;color:var(--grey);text-transform:uppercase;letter-spacing:.6px}
+.calg{display:grid;grid-template-columns:repeat(7,1fr)}
+.cd{min-height:118px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);padding:6px;display:flex;flex-direction:column;gap:4px;min-width:0}
+.cd:nth-child(7n){border-right:0}
+.cd.out{background:#FAFBFD}
+.cd .dn{font-size:13px;font-weight:600;color:var(--ink);width:26px;height:26px;display:flex;align-items:center;justify-content:center;border-radius:50%}
+.cd.td .dn{background:var(--teal);color:#fff}
+.ev{display:block;width:100%;text-align:left;border:0;border-radius:6px;padding:3px 7px;font:inherit;font-size:12px;font-weight:500;color:#fff;background:var(--c);cursor:pointer;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;transition:filter .15s}
+.ev:hover{filter:brightness(1.12)}
+.ev.pend{background:repeating-linear-gradient(45deg,var(--c),var(--c) 6px,#6B7685 6px,#6B7685 12px)}
+.more{font-size:12px;color:var(--grey);padding-left:4px}
+.calempty{text-align:center;color:var(--grey);padding:20px}
+.agenda{display:flex;flex-direction:column;gap:12px}
+.ag{display:grid;grid-template-columns:64px 150px 1fr;gap:16px;align-items:center;text-align:left;background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:12px;cursor:pointer;font:inherit;color:var(--ink);box-shadow:var(--sh);transition:transform .2s,box-shadow .2s}
+.ag:hover{transform:translateY(-2px);box-shadow:var(--sh2)}
+.agd{text-align:center}.agd b{display:block;font-family:Poppins,sans-serif;font-size:28px;color:var(--navy2);line-height:1}.agd span{font-size:12px;color:var(--grey);text-transform:uppercase}
+.aga{width:150px;height:86px;border-radius:10px;overflow:hidden}
+.agb{display:flex;flex-direction:column;gap:2px;min-width:0}.agb b{font-family:Poppins,'Noto Sans SC',sans-serif;font-weight:600;color:var(--navy2);font-size:16.5px}.agb span{font-size:13.5px;color:var(--grey)}
+.agt{font-size:12px!important;font-weight:600;text-transform:uppercase;letter-spacing:.6px}
+@media(max-width:640px){.ag{grid-template-columns:52px 1fr}.aga{display:none}}
+.evc{background:#fff;border-radius:20px;overflow:hidden;width:min(560px,100%);max-height:92vh;overflow-y:auto;position:relative;box-shadow:0 30px 80px rgba(0,0,0,.4)}
+.evc .x{position:absolute;right:12px;top:12px;width:38px;height:38px;border-radius:50%;border:0;background:rgba(255,255,255,.9);font-size:22px;cursor:pointer;z-index:2}
+.eva{aspect-ratio:16/9;background:var(--light)}
+.evb{padding:20px 24px 24px}.evb h3{margin:4px 0 12px;font-size:22px;color:var(--navy2);font-weight:600;line-height:1.25}
+.evb dl{display:grid;grid-template-columns:90px 1fr;gap:6px 12px;margin:0 0 16px;font-size:15px}.evb dt{color:var(--grey)}.evb dd{margin:0}
+.klbtn{display:flex;gap:14px;align-items:center;background:linear-gradient(135deg,#1F2633,#2D3748);color:#fff;text-decoration:none;border-radius:14px;padding:12px 16px;margin-bottom:14px}
+.klbtn .q{background:#fff;padding:6px;border-radius:8px}.klbtn .q svg{width:64px;height:64px;display:block}
+.klbtn small{display:block;color:#AEB8C6;font-size:12.5px}.klbtn b{font-family:Poppins,sans-serif;font-size:22px}
+.evact{display:flex;gap:10px;flex-wrap:wrap}
+.reqwrap{display:grid;grid-template-columns:1fr 1.1fr;gap:48px;align-items:start}
+@media(max-width:860px){.reqwrap{grid-template-columns:1fr}}
+.steps{padding-left:20px;color:#4A5568}.steps li{margin:6px 0}
+.reqf{background:#fff;border:1px solid var(--line);border-radius:20px;padding:26px;box-shadow:var(--sh2)}
+.reqf label{display:block;font-weight:600;font-size:14px;color:var(--navy2);margin-bottom:16px}
+.reqf input:not([type=file]),.reqf select{display:block;width:100%;margin-top:6px;padding:12px 14px;border:1px solid var(--line);border-radius:12px;font:inherit;font-weight:400;color:var(--ink);background:#fff}
+.reqf input:focus,.reqf select:focus{outline:none;border-color:var(--sky);box-shadow:0 0 0 4px rgba(0,175,242,.15)}
+.reqf .bad{border-color:var(--red)!important}
+.reqf .two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:520px){.reqf .two{grid-template-columns:1fr}}
+.reqf small{font-weight:400;color:var(--grey);font-size:12.5px}
+.drop{position:relative;margin-top:6px;border:2px dashed #CBD8E6;border-radius:14px;min-height:120px;display:flex;align-items:center;justify-content:center;color:var(--grey);font-weight:400;background:#FAFCFE;overflow:hidden}
+.drop input{position:absolute;inset:0;opacity:0;cursor:pointer}
+.drop img{display:none;position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.ferr{color:var(--red);font-size:14px;min-height:20px;margin-bottom:6px}
+.fok{margin-top:14px;color:#2E7D32;font-size:14.5px}
+/* review */
+.rvgrid{display:grid;grid-template-columns:1.4fr 1fr;gap:24px;margin-top:22px;align-items:start}
+@media(max-width:900px){.rvgrid{grid-template-columns:1fr}}
+table.mx{width:100%;border-collapse:separate;border-spacing:0;background:#fff;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;box-shadow:var(--sh)}
+table.mx th{background:#FAFCFE;text-align:left;font-size:12.5px;color:var(--grey);text-transform:uppercase;letter-spacing:.6px;padding:12px 14px;border-bottom:1px solid var(--line)}
+table.mx th.nw{color:var(--teal)}
+table.mx td{padding:11px 14px;border-bottom:1px solid var(--line);font-size:14.5px}
+table.mx tr:last-child td{border-bottom:0}
+table.mx td:first-child{font-weight:500;color:var(--navy2)}
+.bar{position:relative;height:26px;background:var(--light);border-radius:999px;overflow:hidden;min-width:110px}
+.bar i{position:absolute;left:0;top:0;bottom:0;background:linear-gradient(90deg,var(--teal),var(--sky));border-radius:999px}
+.bar b{position:relative;font-size:13px;font-weight:600;line-height:26px;padding-left:10px;color:var(--char)}
+.zcard{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:20px;box-shadow:var(--sh)}
+.zcard h3{margin:0 0 14px;font-size:16px;color:var(--navy2);font-weight:600}
+.zr{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:10px;align-items:center;padding:8px 0;border-bottom:1px solid var(--line);font-size:14px}
+.zl i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:7px}.zl span{color:var(--grey);font-size:12.5px;margin-left:6px}
+.zb{display:flex;align-items:center;gap:6px}.zb div{flex:1;height:8px;background:var(--light);border-radius:999px;overflow:hidden}.zb i{display:block;height:100%;border-radius:999px}.zb em{font-style:normal;font-size:13px;font-weight:600;width:22px;text-align:right}
+.zleg{display:flex;gap:16px;margin-top:12px;font-size:12.5px;color:var(--grey)}.zleg i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:6px}
+.rvh{font-size:20px;color:var(--navy2);margin:40px 0 12px;font-weight:600}
+.cnt{display:inline-block;background:rgba(0,0,0,.08);border-radius:999px;padding:0 7px;font-size:11.5px;margin-left:4px}
+.chips button.on .cnt{background:rgba(255,255,255,.25)}
+.tblwrap{overflow-x:auto;border-radius:var(--r);box-shadow:var(--sh);border:1px solid var(--line);background:#fff}
+table.cm{border-collapse:collapse;width:100%;font-size:13.5px;min-width:1100px}
+table.cm th{background:#FAFCFE;font-size:11.5px;color:var(--grey);text-transform:uppercase;letter-spacing:.5px;padding:8px 6px;border-bottom:1px solid var(--line);text-align:center;font-weight:600}
+table.cm th.gcur{background:#EEF1F5;color:var(--ink)}table.cm th.gnew{background:#E3F4FB;color:var(--teal)}
+table.cm td{padding:9px 6px;border-bottom:1px solid var(--line);vertical-align:middle}
+table.cm td.c{text-align:center}table.cm td.gl{border-left:2px solid #CFE6F2}
+table.cm tbody tr:hover{background:#F7FBFE}
+table.cm td.cn b{display:block;color:var(--navy2)}table.cm td.cn span{font-size:12px;color:var(--grey)}table.cm td.cn i{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:5px}
+table.cm td.nt{font-size:12.5px;color:#4A5568;min-width:180px}
+.ck{display:inline-flex;align-items:center;justify-content:center;min-width:22px;height:22px;border-radius:999px;font-size:12px;font-weight:700}
+.ck.y{background:#E3F4E8;color:#2E7D32}.ck.n{background:#F3F4F6;color:#9AA3AE}.ck.h{background:#FFF1DB;color:#B26A00;padding:0 8px;font-weight:600;font-size:11.5px;white-space:nowrap}
+.klt{font-weight:600;color:var(--teal);text-decoration:none;font-size:12.5px;white-space:nowrap}
+.iss td{font-size:14px}
 </style>
 </head>
 <body>
 <div id="proto"><div class="wrap"><b id="t-banner"></b><span class="sp"></span><a href="#/review" id="t-review"></a><a id="t-official" href="https://ga.tjcsabah.com/" target="_blank" rel="noopener"></a></div></div>
 <div id="topbar"><div class="wrap"><div class="lang" role="group" aria-label="Language"><button data-l="en">ENGLISH</button><button data-l="ms">BAHASA MELAYU</button><button data-l="zh">中文</button></div><span class="sp"></span><a href="#/disclaimer" data-k="disclaimer"></a><a href="#/contact" data-k="contact"></a></div></div>
 <header><div class="wrap">
-  <a class="brand" href="#/home"><img src="assets/logo.svg" alt="Gereja Yesus Benar" width="335" height="38"><div class="brandtxt"><b id="t-site"></b><span id="t-sub"></span></div></a>
+  <a class="brand" href="#/home"><img src="assets/logo.svg?v=3" alt="Gereja Yesus Benar" width="335" height="38"><div class="brandtxt"><b id="t-site"></b><span id="t-sub"></span></div></a>
   <button id="burger" aria-label="Menu">&#9776;</button>
   <nav class="main" id="nav"></nav>
 </div></header>
 <main id="main"></main>
+<div class="modal" id="evm" onclick="if(event.target===this)evClose()"></div>
 <div class="modal" id="vm" onclick="if(event.target===this)closeV()"><div class="in"><button class="x" onclick="closeV()">&times;</button><div class="vid" id="vmv"></div></div></div>
 <footer><div class="wrap">
-  <div><img class="fl" src="assets/logo-white.svg" alt="Gereja Yesus Benar"><h4 id="f-site"></h4><div id="f-addr"></div><div id="f-note" style="margin-top:12px;color:#7F8A9A"></div></div>
+  <div><img class="fl" src="assets/logo-white.svg?v=3" alt="Gereja Yesus Benar"><h4 id="f-site"></h4><div id="f-addr"></div><div id="f-note" style="margin-top:12px;color:#7F8A9A"></div></div>
   <div><h4 id="f-h1"></h4><div id="f-nav1"></div></div><div><h4 id="f-h2"></h4><div id="f-nav2"></div></div>
-</div><div class="bt">&copy; True Jesus Church Sabah &middot; <span id="f-proto"></span></div></footer>
+</div><div class="bt">&copy; <span id="f-copy"></span> &middot; <span id="f-proto"></span></div></footer>
 
 <script src="https://unpkg.com/qrcode-generator@1.4.4/qrcode.js"></script>
 <script src="content.js"></script>
@@ -259,9 +354,9 @@ const t=o=>o==null?'':(typeof o==='string'?o:(o[L]!=null&&o[L]!==''?o[L]:(o.en||
 const esc=s=>(s||'').toString().replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const ZC={'West Coast':'#305088','Interior':'#3A9E5C','East Coast':'#00A3E0','Labuan':'#8A6BBE','Sarawak':'#D9822B'};
 const ZORD=['West Coast','Interior','East Coast','Labuan','Sarawak'];
-const NAV=['home','about','history','beliefs','organisation','churches','news','resources','contact'];
+const NAV=['home','about','history','organisation','churches','calendar','news','resources','contact'];
 let DATA=null;
-fetch('../data/tjc_locations.geojson',{cache:'no-cache'}).then(r=>r.json()).then(g=>{DATA=g.features.map(f=>f.properties);if(cur==='churches'||cur==='home'||cur==='contact'||cur==='about')route()}).catch(()=>{});
+fetch('../data/tjc_locations.geojson',{cache:'no-cache'}).then(r=>r.json()).then(g=>{DATA=g.features.map(f=>f.properties);if(['churches','home','contact','about','calendar','review'].includes(cur))route()}).catch(()=>{});
 function setLang(l){L=l;try{localStorage.setItem('tjc-lang',l)}catch(e){}document.documentElement.lang={en:'en',ms:'ms',zh:'zh-Hans'}[l];document.body.classList.toggle('zh',l==='zh');chrome();route()}
 function chrome(){
   document.querySelectorAll('.lang button').forEach(b=>b.classList.toggle('on',b.dataset.l===L));
@@ -273,8 +368,8 @@ function chrome(){
   document.getElementById('f-addr').innerHTML=`${esc(C.contact.addr)}<br>${t(C.ui.phone)}: ${esc(C.contact.phone)}<br><a href="mailto:${C.contact.email}">${C.contact.email}</a>`;
   document.getElementById('f-note').textContent=t(C.ui.footerNote);
   document.getElementById('f-nav1').innerHTML=['about','history','beliefs','organisation','news','resources'].map(k=>`<div><a href="#/${k}">${t(C.ui.nav[k])}</a></div>`).join('');
-  document.getElementById('f-nav2').innerHTML=['churches','contact','disclaimer','privacy'].map(k=>`<div><a href="#/${k}">${t(C.ui.nav[k])}</a></div>`).join('');
-  document.getElementById('f-proto').textContent=t(C.ui.banner);
+  document.getElementById('f-nav2').innerHTML=['churches','calendar','contact','disclaimer','privacy'].map(k=>`<div><a href="#/${k}">${t(C.ui.nav[k])}</a></div>`).join('');
+  document.getElementById('f-proto').textContent=t(C.ui.banner);document.getElementById('f-copy').textContent=t(C.ui.site);
 }
 document.querySelectorAll('.lang button').forEach(b=>b.onclick=()=>setLang(b.dataset.l));
 document.getElementById('burger').onclick=()=>document.getElementById('nav').classList.toggle('open');
@@ -282,11 +377,11 @@ let cur='home';
 window.addEventListener('hashchange',route);
 function route(){const h=(location.hash.replace(/^#\/?/,'')||'home').split('/')[0];cur=PAGES[h]?h:'home';
   document.getElementById('main').innerHTML=PAGES[cur]();
-  document.querySelectorAll('#nav a').forEach(a=>a.classList.toggle('on',a.dataset.p===cur||(cur==='history'&&a.dataset.p==='about'&&false)));
+  document.querySelectorAll('#nav a').forEach(a=>a.classList.toggle('on',a.dataset.p===(cur==='beliefs'?'home':cur)));
   document.getElementById('nav').classList.remove('open');
   if(AFTER[cur])AFTER[cur]();
   reveal();
-  document.title=(cur==='home'?'':t(C.ui.nav[cur]||{en:'What changed'})+' | ')+t(C.ui.site)+' (prototype)';
+  document.title=(cur==='home'||cur==='beliefs'?'':t(C.ui.nav[cur]||C.ui.review)+' | ')+t(C.ui.site)+' · '+t({en:'prototype',ms:'prototaip',zh:'原型'});
   if(!location.hash.includes('#/'+cur+'/'))window.scrollTo(0,0)}
 const head=(k,p)=>`<div class="page-h"><div class="wrap"><div class="crumb"><a href="#/home">${t(C.ui.nav.home)}</a> › ${t(C.ui.nav[k])}</div><h1>${t(C.ui.nav[k])}</h1>${p?`<p>${p}</p>`:''}</div></div>`;
 const ICON={pin:'<svg width="22" height="22" viewBox="0 0 24 24" fill="#00AFF2"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>',
@@ -300,8 +395,8 @@ const svcRow=s=>{const m=s.when.match(/^(\w{3})(?:-(\w{3}))?\s+(.*)$/);const d=m
 const OLDP=p=>OLD+encodeURI(p);
 
 const PAGES={
-home:()=>{const n=DATA?DATA.length:108;const other=L==='zh'?'Gereja Yesus Benar Sabah':'沙巴真耶稣教会';const vs=t(C.home.verse).split(' — ');
- return `<div class="hero" style="background-image:url('../photos/TJC-020.jpg')"><div class="wrap"><span class="k">● ${t(C.ui.sub)}</span><h1>${t(C.ui.site)}</h1><div class="zhname">${other}</div><p>${t(C.home.lead)}</p>
+home:()=>{const n=DATA?DATA.length:108;const vs=t(C.home.verse).split(' — ');
+ return `<div class="hero" style="background-image:url('../photos/TJC-020.jpg')"><div class="wrap"><span class="k">● ${t(C.ui.sub)}</span><h1>${t(C.ui.site)}</h1><p>${t(C.home.lead)}</p>
   <div class="acts"><a class="btn" href="#/churches">${t(C.ui.findChurch)} →</a><a class="btn ghost" href="#/beliefs">${t(C.ui.nav.beliefs)}</a></div>
   <div class="stats"><div><b>${n}</b><span>${t({en:'churches & prayer houses',ms:'gereja & khemah doa',zh:'教会与祈祷所'})}</span></div><div><b>3</b><span>${t({en:'pastoral zones',ms:'zon pengembalaan',zh:'教区'})}</span></div><div><b>1927</b><span>${t({en:'gospel reached Sabah',ms:'injil sampai ke Sabah',zh:'真道传入沙巴'})}</span></div></div></div>
   <div class="cap">${t({en:'Kota Kinabalu church',ms:'Gereja Kota Kinabalu',zh:'亚庇教会'})}</div></div>
@@ -310,10 +405,11 @@ home:()=>{const n=DATA?DATA.length:108;const other=L==='zh'?'Gereja Yesus Benar 
  <section class="blk alt"><div class="wrap grid g2" style="align-items:center;gap:48px">
   <div><div class="vid"><iframe src="https://www.youtube-nocookie.com/embed/${C.home.video[L]}" title="${t(C.home.videoT)}" allowfullscreen loading="lazy"></iframe></div>${L==='en'?`<div style="font-size:13px;color:var(--grey);margin-top:8px">${t(C.ui.videoMs)}</div>`:''}</div>
   <div><div class="eyebrow">${t(C.home.videoT)}</div><h2 class="sec">${t({en:'A church restored by the Holy Spirit',ms:'Jemaat yang dipulihkan oleh Roh Kudus',zh:'晚雨圣灵重建的教会'})}</h2><p style="color:#4A5568;font-size:16.5px">${t(C.about.intro)}</p><div class="acts" style="display:flex;gap:12px;flex-wrap:wrap;margin-top:22px"><a class="btn navy" href="#/about">${t(C.ui.more)} →</a><a class="btn line" href="#/history">${t(C.ui.nav.history)}</a></div></div></div></section>
- <section class="blk"><div class="wrap"><div class="eyebrow">${t({en:'What we believe',ms:'Apa yang kami percaya',zh:'我们的信仰'})}</div><h2 class="sec">${t(C.ui.nav.beliefs)}</h2>
-  <div class="blist">${C.beliefs.map((b,i)=>`<a href="#/beliefs/${i+1}"><span>${String(i+1).padStart(2,'0')}</span>${t(b.t)}</a>`).join('')}</div></div></section>
  <section class="blk alt"><div class="wrap"><div style="display:flex;align-items:end;justify-content:space-between;gap:20px;flex-wrap:wrap"><div><div class="eyebrow">${t({en:'Stay informed',ms:'Kekal dimaklumkan',zh:'最新消息'})}</div><h2 class="sec">${t(C.ui.latest)}</h2></div><a class="btn line" href="#/news" style="margin-bottom:22px">${t(C.ui.nav.news)} →</a></div>
   <div class="grid g3">${C.enews[L].slice(0,3).map(e=>`<a class="en" href="${OLDP(e[2])}" target="_blank" rel="noopener">${e[3]?`<img src="${OLD}/wp-content/uploads/${e[3]}" alt="" loading="lazy">`:'<img alt="">'}<div><b>${esc(e[0])}</b><div class="dt">${e[1]}</div><span class="arrow" style="margin-top:6px">${t(C.ui.read)} ↗</span></div></a>`).join('')}</div></div></section>
+ <section class="blk" id="beliefs"><div class="wrap"><div class="eyebrow">${t({en:'What we believe',ms:'Apa yang kami percaya',zh:'我们的信仰'})}</div><h2 class="sec">${t(C.ui.nav.beliefs)}</h2><p style="color:#4A5568;max-width:760px;margin-top:-8px">${t(C.beliefsIntro)}</p>
+  ${C.beliefsVideo[L]||L==='en'?`<p><button class="btn navy" onclick="playV('${C.beliefsVideo[L]||C.beliefsVideo.ms}')">▶ ${t({en:'What are the ten basic beliefs?',ms:'Apakah 10 Dasar Kepercayaan?',zh:'“十大信仰”是什么？'})}</button>${L==='en'?` <span style="font-size:13px;color:var(--grey)">${t(C.ui.videoMs)}</span>`:''}</p>`:''}
+  <div class="bel">${C.beliefs.map((b,i)=>{const v=b.v&&(b.v[L]||(L==='en'?b.v.ms:''));return `<div class="b" id="b${i+1}"><div class="n">${i+1}</div><div><h3>${t(b.t)}</h3><p>${t(b.d)}</p>${v?`<button class="wv" onclick="playV('${v}')">▶ ${t(C.ui.watch)}</button>`:''}</div></div>`}).join('')}</div></div></section>
  <div class="verse"><q>${esc(vs[0])}</q><cite>${esc(vs[1]||'')}</cite></div>`},
 
 about:()=>head('about',t(C.about.intro))+`<section class="blk"><div class="wrap grid g2" style="align-items:start">
@@ -323,11 +419,6 @@ about:()=>head('about',t(C.about.intro))+`<section class="blk"><div class="wrap 
 
 history:()=>head('history',t({en:'From one magazine in 1926 to 108 churches and prayer houses today.',ms:'Daripada senaskah majalah pada tahun 1926 kepada 108 gereja dan khemah doa hari ini.',zh:'从1926年的一本《圣灵报》，到今天的108处教会与祈祷所。'}))+
  `<section class="blk alt"><div class="wrap"><div class="eyebrow" style="text-align:center">1917 – 2026</div><h2 class="sec" style="text-align:center;margin-bottom:40px">${t(C.ui.timeline)}</h2><div class="tl">${C.about.timeline.map(e=>`<div class="e"><div class="y">${e[0]}</div><div>${t(e[1])}</div></div>`).join('')}</div></div></section>`,
-
-beliefs:()=>head('beliefs',t(C.beliefsIntro))+`<section class="blk"><div class="wrap">
-  ${C.beliefsVideo[L]||L==='en'?`<p><button class="btn navy" onclick="playV('${C.beliefsVideo[L]||C.beliefsVideo.ms}')">▶ ${t({en:'What are the ten basic beliefs?',ms:'Apakah 10 Dasar Kepercayaan?',zh:'“十大信仰”是什么？'})}</button>${L==='en'?` <span style="font-size:13px;color:var(--grey)">${t(C.ui.videoMs)}</span>`:''}</p>`:''}
-  <div class="bel">${C.beliefs.map((b,i)=>{const v=b.v&&(b.v[L]||(L==='en'?b.v.ms:''));return `<div class="b" id="b${i+1}"><div class="n">${i+1}</div><div><h3>${t(b.t)}</h3><p>${t(b.d)}</p>${v?`<button class="wv" onclick="playV('${v}')">▶ ${t(C.ui.watch)}</button>`:''}</div></div>`}).join('')}</div>
-  <p style="margin-top:20px"><a href="#/resources">${t(C.resources[0].t)} ›</a></p></div></section>`,
 
 organisation:()=>{const O=C.org;const nd=(o,cls,sub)=>`<button class="node ${cls||''}" data-id="${o.id}">${t(o.n)}${sub?`<small>${sub}</small>`:''}</button>`;
  return head('organisation',t(C.orgIntro))+`<section class="blk"><div class="wrap">
@@ -348,8 +439,8 @@ churches:()=>{
  const intro=t({en:'All 108 churches and prayer houses of the True Jesus Church in Sabah, Labuan and Sarawak, with service times and a KodLokasi code for directions. The same records drive the map, so a correction made once shows everywhere.',ms:'Kesemua 108 gereja dan khemah doa Gereja Yesus Benar di Sabah, Labuan dan Sarawak, dengan waktu kebaktian dan KodLokasi untuk arah. Rekod yang sama digunakan oleh peta, jadi pembetulan yang dibuat sekali akan dipaparkan di semua tempat.',zh:'沙巴、纳闽及砂拉越全部108处真耶稣教会与祈祷所，附聚会时间与 KodLokasi 导航码。地图与名录使用同一份资料，更正一次即处处更新。'});
  return head('churches',intro)+`<section class="blk" style="padding-top:44px"><div class="wrap">
   <h2 class="sec">${t(C.ui.mapTitle)}</h2>
-  <div class="atlas"><iframe src="../?embed=1#map" title="Church Location Atlas" loading="lazy"></iframe></div>
-  <p><a class="btn" href="../#home" target="_blank" rel="noopener">${t(C.ui.fullAtlas)} ↗</a></p>
+  <div class="atlas"><iframe src="../?embed=1&lang=${L}#map" title="Church Location Atlas" loading="lazy"></iframe></div>
+  <p><a class="btn" href="../?lang=${L}#home" target="_blank" rel="noopener">${t(C.ui.fullAtlas)} ↗</a></p>
   <h2 class="sec" style="margin-top:20px">${t(C.ui.serviceTimes)}</h2>
   <div class="ctools"><input id="cq" type="search" placeholder="${esc(t(C.ui.search))}" autocomplete="off"><div class="chips" id="zchips"></div></div>
   <div id="clist">${DATA?'':'…'}</div></div></section>`},
@@ -357,7 +448,7 @@ churches:()=>{
 news:()=>head('news')+`<section class="blk"><div class="wrap"><h2 class="sec">${t(C.ui.latest)}</h2>
   <div class="grid g4">${C.enews[L].map(e=>`<a class="card ncard" href="${OLDP(e[2])}" target="_blank" rel="noopener">${e[3]?`<img src="${OLD}/wp-content/uploads/${e[3]}" alt="" loading="lazy">`:'<img alt="">'}<div class="nb"><b>${esc(e[0])}</b><span class="dt">${e[1]}</span></div></a>`).join('')}</div>
   <h2 class="sec" style="margin-top:30px">${t({en:'Recent activities',ms:'Aktiviti terkini',zh:'近期活动'})}</h2>
-  <div class="plist">${C.posts.map(p=>`<a href="${OLDP(p[3])}" target="_blank" rel="noopener"><span class="dt">${p[0]}</span><span>${esc(p[2])}${p[1]!==L&&t(C.postLang[p[1]])?`<span class="tg">${t(C.postLang[p[1]])}</span>`:''}</span></a>`).join('')}</div>
+  <div class="plist">${C.posts.map(p=>`<a href="${OLDP(p[3])}" target="_blank" rel="noopener"><span class="dt">${p[0]}</span><span>${esc(t(p[2]))}${p[1]!==L&&t(C.postLang[p[1]])?`<span class="tg">${t(C.postLang[p[1]])}</span>`:''}</span></a>`).join('')}</div>
   <h2 class="sec" style="margin-top:30px">${t({en:'Activities by type',ms:'Aktiviti mengikut jenis',zh:'活动分类'})}</h2>
   <div class="grid g4">${C.activities.map(a=>`<a class="card" href="${OLDP(a[1])}" target="_blank" rel="noopener"><h3 style="font-size:16px;margin:0">${t(a[0])} ↗</h3></a>`).join('')}</div></div></section>`,
 
@@ -368,20 +459,20 @@ contact:()=>{const s=DATA&&DATA.find(p=>p.id===C.contact.site);
  return head('contact',t(C.contact.intro))+`<section class="blk"><div class="wrap grid g2" style="align-items:start">
   <table class="ct"><tr><td>${t(C.ui.email)}</td><td><a href="mailto:${C.contact.email}">${C.contact.email}</a></td></tr><tr><td>${t(C.ui.address)}</td><td>${C.contact.addr}</td></tr><tr><td>${t(C.ui.mail)}</td><td>${C.contact.mail}</td></tr><tr><td>${t(C.ui.phone)}</td><td>${C.contact.phone}</td></tr><tr><td>${t(C.ui.fax)}</td><td>${C.contact.fax}</td></tr></table>
   <div><h2 class="sec">${t(C.ui.hours)}</h2>${s?`<a class="klcard" href="${s.kodlokasi_url}" target="_blank" rel="noopener" style="text-decoration:none"><div class="qr">${qr(s.kodlokasi_url,3)}</div><div><div class="c">KODLOKASI</div><div class="v">${s.kodlokasi}</div><div style="color:#bbb;font-size:13px">${t({en:'Tap or scan for directions',ms:'Klik atau imbas untuk arah',zh:'点击或扫描导航'})}</div></div></a>
-   <p><a href="../#${s.id}" target="_blank" rel="noopener">${t(C.ui.openAtlas)} ↗</a></p>`:''}</div></div></section>`},
+   <p><a href="../?lang=${L}#${s.id}" target="_blank" rel="noopener">${t(C.ui.openAtlas)} ↗</a></p>`:''}</div></div></section>`},
 
 disclaimer:()=>head('disclaimer')+`<section class="blk"><div class="wrap"><p style="max-width:760px">${t(C.disclaimer)}</p></div></section>`,
 privacy:()=>head('privacy')+`<section class="blk"><div class="wrap"><p style="max-width:760px">${t(C.privacy)}</p></div></section>`,
-review:()=>REVIEW()
 };
 
+PAGES.beliefs=()=>PAGES.home();
 const AFTER={
- beliefs:()=>{const m=location.hash.match(/beliefs\/(\d+)/);if(m){const e=document.getElementById('b'+m[1]);if(e){e.scrollIntoView({block:'center'});e.classList.add('hl')}}},
+ beliefs:()=>{const m=location.hash.match(/beliefs\/(\d+)/);const e=m?document.getElementById('b'+m[1]):document.getElementById('beliefs');if(e){setTimeout(()=>{e.scrollIntoView({block:m?'center':'start'});if(m)e.classList.add('hl')},60)}},
  organisation:()=>{const O=C.org;const all={};[O.top,O.exec,O.standing,O.chair,O.vice,O.zones,O.college,...O.side,...O.depts].forEach(o=>all[o.id]=o);
   const show=id=>{const o=all[id];document.querySelectorAll('.node').forEach(n=>n.classList.toggle('sel',n.dataset.id===id));
-   const alt=['en','ms','zh'].filter(x=>x!==L).map(x=>o.n[x]).join(' · ');
+   
    const r=o.r?o.r[L]:null;const u=o.units;
-   document.getElementById('ocd').innerHTML=`<h3>${t(o.n)}</h3><div class="alt">${esc(alt)}</div>${o.d?`<p style="margin:0 0 8px">${t(o.d)}</p>`:''}${r?`<b>${t(C.ui.responsibilities)}</b><ol>${r.map(x=>`<li>${esc(x)}</li>`).join('')}</ol>`:''}${u?`<b>${t(C.ui.units)}</b><div class="uc">${u.map(x=>`<span>${esc(t(x))}</span>`).join('')}</div>`:''}`;
+   document.getElementById('ocd').innerHTML=`<h3>${t(o.n)}</h3>${o.d?`<p style="margin:0 0 8px">${t(o.d)}</p>`:''}${r?`<b>${t(C.ui.responsibilities)}</b><ol>${r.map(x=>`<li>${esc(x)}</li>`).join('')}</ol>`:''}${u?`<b>${t(C.ui.units)}</b><div class="uc">${u.map(x=>`<span>${esc(t(x))}</span>`).join('')}</div>`:''}`;
    const ue=document.getElementById('u-'+id);if(ue)ue.classList.toggle('on')};
   document.querySelectorAll('.node').forEach(n=>n.onclick=()=>{show(n.dataset.id);if(innerWidth<900)document.getElementById('ocd').scrollIntoView({behavior:'smooth'})});
   show('conf')},
@@ -399,36 +490,15 @@ const AFTER={
 function card(p){const ph=p.photo?`style="background-image:url('../${p.photo}')"`:'class="ph none"';const svc=(p.services||[]).slice(0,4).map(svcRow).join('');
  return `<div class="cc">${p.photo?`<div class="ph" ${ph}></div>`:`<div ${ph}></div>`}<div class="bd"><h4>${esc(p.name)}</h4><div class="ty">${p.type==='Prayer House'?t(C.ui.prayerHouse):t(C.ui.church)}</div>
   ${svc?`<table>${svc}</table>`:`<div class="ty" style="margin:6px 0">${t(C.ui.serviceTimes)}: ${t(C.ui.notSupplied)}</div>`}
-  ${p.kodlokasi?`<a class="kl" href="${p.kodlokasi_url}" target="_blank" rel="noopener">${p.kodlokasi}</a>`:`<span class="aw">${t(C.ui.awaiting)}</span> `}<a class="lk" href="../#${p.id}" target="_blank" rel="noopener">${t({en:'Details',ms:'Butiran',zh:'详情'})} ↗</a></div></div>`}
+  ${p.kodlokasi?`<a class="kl" href="${p.kodlokasi_url}" target="_blank" rel="noopener">${p.kodlokasi}</a>`:`<span class="aw">${t(C.ui.awaiting)}</span> `}<a class="lk" href="../?lang=${L}#${p.id}" target="_blank" rel="noopener">${t({en:'Details',ms:'Butiran',zh:'详情'})} ↗</a></div></div>`}
 const IO='IntersectionObserver' in window?new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');IO.unobserve(e.target)}}),{rootMargin:'0px 0px -40px 0px'}):null;
 function reveal(){if(!IO)return;const vh=innerHeight;document.querySelectorAll('main .card,main .bel .b,main .tl .e,main .en,main .blist a,main .story h3,main .story p').forEach(el=>{if(el.getBoundingClientRect().top<vh)return;el.classList.add('reveal');IO.observe(el)});setTimeout(()=>document.querySelectorAll('.reveal:not(.in)').forEach(el=>{if(el.getBoundingClientRect().top<innerHeight)el.classList.add('in')}),1200)}
 function ocAll(o){document.querySelectorAll('.units').forEach(u=>u.classList.toggle('on',o))}
 
-/* ---------- review page (for the church and EARTH Info; English) ---------- */
-function REVIEW(){const I=[
- ['h','Gereja Tempatan (Local Churches) page is empty','The Malay menu item opens a blank page; the directory sits on a separate page.','Local Churches page with map, search and service times for all 108 locations, from the same records as the Church Location Atlas.','f'],
- ['h','13 Malay church pages are blank','Kota Kinabalu, Penampang, Inanam, Tuaran, Tamparuli, Labuan, Danau, Donggongon, Sepangar, Putatan, Tanjung Aru, Tampulan and Kolombong have no content in Bahasa Melayu.','Every church now shows the same name, service times and directions in all three languages.','f'],
- ['h','No Interior zone church pages at all','39 Interior churches (Tenom, Nabawan, Bingkor, Kemabong, Pensiangan) have no page, no service times and no map in either language. The Malay Interior list says “last updated 2006”.','All Interior churches are listed and mapped, with service times where the church documents gave them.','f'],
- ['h','No English website','Only Chinese and Bahasa Melayu, although an English history page and English e-news already exist.','English added as a third language, with a language switch on every page.','f'],
- ['h','Malay and Chinese content do not match','Different menus, department names and pages per language; the Chinese history is long, the Malay one short; Chinese church pages updated 2023, Malay 2021.','All content now sits in one file with English, Malay and Chinese side by side, so a change is made to all three at once.','f'],
- ['h','Evangelism & Pastoral department link is broken','Both menus link to /xuanmu/, which returns “410 Gone”.','Department now has its own entry in the interactive chart; YouTube channel linked under Resources.','f'],
- ['m','Organisation chart is a 2018–2020 image','A photo of the chart plus separate pages; Chinese “教牧处” page empty; Education Department missing from the Chinese menu.','Interactive chart in three languages: tap any box to see its role, responsibilities and units.','f'],
- ['m','Ten Basic Beliefs incomplete on the home page','Chinese shows 6 of 10, Malay 5 of 10.','All ten beliefs in three languages, with the existing videos.','f'],
- ['m','Calendar stops in 2020 and news in November 2024','Calendar 2018/2020 pages are still published; latest news is November 2024.','Old calendars removed from navigation. The church needs a person to keep news current.','p'],
- ['m','E-News issue 015 only in Malay','Issue 015 (Nov 2024) exists in Malay only; the English and Chinese archives stop at 014.','Shown per language as published. Church to confirm whether English/Chinese 015 exist.','p'],
- ['m','Dates disagree between pages','Chinese history says re-registered in “1927” in one place and 1978 in another; Tuaran dedication 1935 (church page) vs 1936 (history); Labuan 1930 vs 1931.','Timeline uses 1978, 1936 and 1931 from the history page. Church to confirm.','p'],
- ['m','Duplicate and leftover pages','Two “Hubungi Kami” and two “联络我们” pages, a duplicate empty Donggongon page, a top-level Kolombong page, WordPress “Sample Page”, default WordPress privacy policy, empty “Aktiviti Ibu Gereja” and “总会活动” pages.','Not carried over. Privacy note rewritten to describe what the site actually does.','f'],
- ['m','Outdated facts','English history page: “Membership 13,120, last updated 2006”. Malay history says “Dr. Philip Tyan” (should be Dn.).','Membership figure left out until the church supplies a current one; title corrected.','f'],
- ['l','Church histories only in Chinese','14 churches have detailed histories in Chinese only.','Linked from the Chinese site for now. Translations to be supplied by the Literature Department, or drafted by EARTH Info for checking.','p'],
- ['l','Mixed and unreachable external links','Home page links use http://; the Morning Star site (chenxing.tjcsabah.com) did not respond during the review.','Links changed to https. Church to check Morning Star.','p'],
- ['l','No page descriptions for search engines or sharing','Home page has no meta description; page titles are the same in both languages.','Each page has its own title in the chosen language.','f'],
- ['l','Facebook link points to “GA-Recording”','The “TJC Sabah GA Official Facebook” link opens a page named GA-Recording.','Kept as is. Church to confirm the correct page.','p']];
- const S={h:'High',m:'Medium',l:'Low'};
- return `<div class="page-h"><div class="wrap"><div class="crumb"><a href="#/home">Home</a> › What changed</div><h1>Website review: what we found and what changed</h1><p>Review of ga.tjcsabah.com (Chinese and Malay) by EARTH Info, 20 November 2026: 156 pages and 124 posts checked. This page is in English for the church committee.</p></div></div>
- <section class="blk"><div class="wrap"><table class="iss"><thead><tr><th>Severity</th><th>Problem on the current site</th><th>Detail</th><th>In this prototype</th></tr></thead><tbody>${I.map(i=>`<tr><td><span class="sev ${i[0]}">${S[i[0]]}</span></td><td><b>${i[1]}</b></td><td>${i[2]}</td><td><span class="fx ${i[4]==='p'?'p':''}">${i[4]==='p'?'Needs the church':'Fixed'}</span> · ${i[3]}</td></tr>`).join('')}</tbody></table>
- <h2 class="sec" style="margin-top:30px">How the content is kept in step</h2><p style="max-width:800px">Every piece of text lives in one content file, with English, Bahasa Melayu and Chinese next to each other. Church names, service times, photos and directions come from the same records as the Church Location Atlas, so one correction updates the website, the map, the printed Atlas and the Google Earth file together.</p></div></section>`}
-
-chrome();document.documentElement.lang={en:'en',ms:'ms',zh:'zh-Hans'}[L];document.body.classList.toggle('zh',L==='zh');route();
+function init(){chrome();document.documentElement.lang={en:'en',ms:'ms',zh:'zh-Hans'}[L];document.body.classList.toggle('zh',L==='zh');route()}
 </script>
+<script src="calendar.js"></script>
+<script src="review.js"></script>
+<script>init();document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeV();evClose()}})</script>
 </body>
 </html>

@@ -17,6 +17,7 @@ ui:{
   organisation:{en:'Organisation',ms:'Jabatan Ibu Gereja',zh:'总会各处'},
   churches:{en:'Local Churches',ms:'Gereja Tempatan',zh:'地方教会'},
   news:{en:'News & Activities',ms:'Berita & Aktiviti',zh:'会讯与活动'},
+  calendar:{en:'Calendar',ms:'Kalendar',zh:'行事历'},
   resources:{en:'Resources',ms:'Sumber',zh:'资源'},
   contact:{en:'Contact Us',ms:'Hubungi Kami',zh:'联络我们'},
   disclaimer:{en:'Disclaimer',ms:'Penafian',zh:'网站声明'},
@@ -84,7 +85,8 @@ services:{
  'Sister Fellowship':{ms:'Persahabatan Saudari',zh:'姐妹团契'},
  'Evergreen Service':{ms:'Kebaktian Warga Emas',zh:'长青团契'},
  'Home / Fellowship Service':{ms:'Kebaktian Rumah / Persahabatan',zh:'家庭 / 团契聚会'},
- 'Night service / Home Service':{ms:'Kebaktian Malam / Rumah',zh:'晚间 / 家庭聚会'}
+ 'Night service / Home Service':{ms:'Kebaktian Malam / Rumah',zh:'晚间 / 家庭聚会'},
+ 'Home Fellowship Service (Combined':{ms:'Kebaktian Persahabatan Rumah (Gabungan)',zh:'家庭团契聚会（联合）'}
 },
 zones:{'West Coast':{en:'West Coast Zone',ms:'Zon Pantai Barat',zh:'西海岸区'},'Interior':{en:'Interior Zone',ms:'Zon Pedalaman',zh:'内陆区'},'East Coast':{en:'East Coast Zone',ms:'Zon Pantai Timur',zh:'东海岸区'},'Labuan':{en:'Labuan',ms:'Labuan',zh:'纳闽'},'Sarawak':{en:'Sarawak',ms:'Sarawak',zh:'砂拉越'}},
 
@@ -254,18 +256,18 @@ enews:{
  zh:[['电子会讯 014','2024-09-29','/blog/真耶稣教会沙巴总会电子会讯-014/','2024/09/enewsbc14-225x300.png'],['电子会讯 013','2024-05-01','/blog/真耶稣教会沙巴总会电子会讯-013/','2024/05/enewsbc13-225x300.png'],['电子会讯 012 (后)','2023-10-15','/blog/真耶稣教会沙巴总会电子会讯-012b/','2023/10/enewsbc12b-225x300.png'],['电子会讯 012 (前)','2023-05-22','/blog/真耶稣教会沙巴总会电子会訊-012/','2023/05/enewsbc12-226x300.png']]
 },
 posts:[
- ['2024-10-17','zh','亚庇教会 灵恩布道大会 17 – 20/10/2024','/blog/亚庇教会-灵恩布道大会-17-20-10-2024/'],
- ['2024-11-03','ms','AnugerahNya yang berlimpah-limpah','/ms/blog/anugerahnya-yang-berlimpah-limpah/'],
- ['2024-07-03','zh','二零二四年新春感恩聚会 – 伊罗普拉教会','/blog/二零二四年新春感恩聚会-伊罗普拉教会/'],
- ['2023-07-19','ms','Gereja Somodon – Aktiviti Unit Pendidikan Agama (UPA)','/ms/blog/gereja-somodon-aktiviti-unit-pendidikan-agama-upa-19-julai-2023/'],
- ['2023-07-19','ms','Gereja Labuan – Kejohanan Beregu Badminton Komiti Pelayanan Belia','/ms/blog/gereja-labuan-kejohanan-beregu-badminton-anjuran-komiti-pelayanan-belia-gereja-yesus-benar-labuan-19-julai-2023/'],
- ['2023-06-10','ms','Subzon Kota Kinabalu – Konsert Muzik Rohani','/ms/blog/subzon-kota-kinabalu-konsert-muzik-rohani-10-jun-2023/'],
- ['2023-04-14','ms','Gereja Tenom – Kebaktian Kebangunan Rohani dan Penginjilan Melalui Kidung','/ms/blog/gereja-tenom-kebaktian-kebangunan-rohani-dan-kebaktian-penginjilan-melalui-kidung-14-16-april-2023/'],
- ['2023-03-04','ms','Gereja Sungai Apih – Pengurapan Diaken','/ms/blog/gereja-sungai-apih-pengurapan-diaken-04-mac-2023/'],
- ['2021-11-06','zh','真耶稣教会 (兵南邦) 四十周年','/blog/真耶稣教会-兵南邦-四十周年/'],
- ['2021-11-06','ms','Ulang Tahun Ke-40 Gereja Yesus Benar (Penampang)','/ms/blog/ulang-tahun-ke-40-gereja-yesus-benar-penampang/']
+ ['2024-11-03','ms',{en:'His abundant grace',ms:'AnugerahNya yang berlimpah-limpah',zh:'祂丰盛的恩典'},'/ms/blog/anugerahnya-yang-berlimpah-limpah/'],
+ ['2024-10-17','zh',{en:'Kota Kinabalu church: spiritual & evangelistic meeting, 17–20 Oct 2024',ms:'Gereja Kota Kinabalu: KKR & Penginjilan, 17–20 Okt 2024',zh:'亚庇教会 灵恩布道大会 17 – 20/10/2024'},'/blog/亚庇教会-灵恩布道大会-17-20-10-2024/'],
+ ['2024-07-03','zh',{en:'2024 Chinese New Year thanksgiving service – Elopura church',ms:'Kebaktian kesyukuran Tahun Baru Cina 2024 – Gereja Elopura',zh:'二零二四年新春感恩聚会 – 伊罗普拉教会'},'/blog/二零二四年新春感恩聚会-伊罗普拉教会/'],
+ ['2023-07-19','ms',{en:'Somodon church – religious education activity',ms:'Gereja Somodon – Aktiviti Unit Pendidikan Agama (UPA)',zh:'所摩顿教会 – 宗教教育活动'},'/ms/blog/gereja-somodon-aktiviti-unit-pendidikan-agama-upa-19-julai-2023/'],
+ ['2023-07-19','ms',{en:'Labuan church – youth badminton doubles tournament',ms:'Gereja Labuan – Kejohanan Beregu Badminton Komiti Pelayanan Belia',zh:'纳闽教会 – 青年羽球双打赛'},'/ms/blog/gereja-labuan-kejohanan-beregu-badminton-anjuran-komiti-pelayanan-belia-gereja-yesus-benar-labuan-19-julai-2023/'],
+ ['2023-06-10','ms',{en:'Kota Kinabalu subzone – hymn concert',ms:'Subzon Kota Kinabalu – Konsert Muzik Rohani',zh:'亚庇小区 – 圣乐音乐会'},'/ms/blog/subzon-kota-kinabalu-konsert-muzik-rohani-10-jun-2023/'],
+ ['2023-04-14','ms',{en:'Tenom church – spiritual meeting and evangelism through hymns',ms:'Gereja Tenom – Kebaktian Kebangunan Rohani dan Penginjilan Melalui Kidung',zh:'丹南教会 – 灵恩会暨诗歌布道'},'/ms/blog/gereja-tenom-kebaktian-kebangunan-rohani-dan-kebaktian-penginjilan-melalui-kidung-14-16-april-2023/'],
+ ['2023-03-04','ms',{en:'Sungai Apih church – ordination of deacons',ms:'Gereja Sungai Apih – Pengurapan Diaken',zh:'双涯亚卑教会 – 按立执事'},'/ms/blog/gereja-sungai-apih-pengurapan-diaken-04-mac-2023/'],
+ ['2021-11-06','zh',{en:'Penampang church 40th anniversary',ms:'Ulang Tahun Ke-40 Gereja Penampang',zh:'真耶稣教会 (兵南邦) 四十周年'},'/blog/真耶稣教会-兵南邦-四十周年/']
 ],
-postLang:{ms:{en:'In Bahasa Melayu',ms:'',zh:'马来文'},zh:{en:'In Chinese',ms:'Dalam Bahasa Cina',zh:''}},
+
+postLang:{ms:{en:'Article in Bahasa Melayu',ms:'',zh:'原文为马来文'},zh:{en:'Article in Chinese',ms:'Artikel dalam Bahasa Cina',zh:''}},
 activities:[
  [{en:'Spiritual & evangelistic meetings',ms:'KKR & Penginjilan',zh:'灵恩布道会'},'/ms/blog/category/kalendar/kkr/'],
  [{en:'Student spiritual meetings',ms:'KKR Murid-murid',zh:'学生灵恩会'},'/blog/category/行事历/学生灵恩会/'],
