@@ -117,7 +117,7 @@ table.dir td.mb{text-align:right;width:56px}
 .pin.sel{transform:scale(1.4);box-shadow:0 0 0 4px rgba(0,175,242,.55)}
 .tri.sel{transform:scale(1.4)}
 .pinw{cursor:pointer;filter:drop-shadow(0 1px 2px rgba(0,0,0,.45))}.pinw svg{display:block}.pinw.sel{z-index:1000!important}
-.legend b{display:block;font-size:11px;letter-spacing:.5px;text-transform:uppercase;color:#767676;margin:4px 0 2px}.legend b:first-child{margin-top:0}.lgi{display:flex;align-items:center;gap:6px}.lgi svg{width:16px;height:16px}
+.legend b{display:block;font-size:11px;letter-spacing:.5px;text-transform:uppercase;color:#767676;margin:4px 0 2px}.legend b:first-child{margin-top:0}.lgi{display:flex;align-items:center;gap:6px}.lgi svg{width:13px;height:13px}.lgi{min-height:16px}
 .leaflet-tooltip.lbl{background:transparent;border:0;box-shadow:none;padding:0 0 0 2px}.leaflet-tooltip.lbl:before{display:none}
 .lbl{font:bold 12px 'Roboto Condensed',Arial,sans-serif;color:var(--char)!important;white-space:nowrap;text-shadow:none!important;pointer-events:none;background:#fff!important;border-radius:999px!important;padding:2px 9px!important;box-shadow:0 1px 4px rgba(0,0,0,.35)!important}
 #map.onsat .lbl{color:#fff;text-shadow:0 0 3px #000,0 0 3px #000}
@@ -169,7 +169,7 @@ body.embed #top,body.embed #nav{display:none}body.embed main{top:0;bottom:0}body
 </head>
 <body>
 <header id="top">
-  <div class="t" onclick="go('home')" style="display:flex;align-items:center;gap:12px"><img src="proposal/assets/logo-white.svg?v=3" alt="Gereja Yesus Benar" style="height:30px;display:block"><span id="t-sub" class="tsub">Church Location Atlas &nbsp;|&nbsp; Sabah &middot; Labuan &middot; Sarawak</span></div>
+  <div class="t" style="display:flex;align-items:center;gap:12px"><a id="homelink" href="proposal/#/home" title="Home"><img src="proposal/assets/logo-white.svg?v=3" alt="Gereja Yesus Benar" style="height:30px;display:block"></a><span id="t-sub" class="tsub">Church Location Atlas &nbsp;|&nbsp; Sabah &middot; Labuan &middot; Sarawak</span></div>
   <span class="sp"></span><span class="sec" id="sec"></span><div class="lsw" role="group" aria-label="Language"><a data-l="en">EN</a><a data-l="ms">BM</a><a data-l="zh">中文</a></div><a class="dl" id="dlpdf" href="downloads/TJC_Church_Location_Atlas_EN.pdf" download><svg class="pdfi" width="22" height="26" viewBox="0 0 22 26" aria-hidden="true"><path d="M3 1h11l6 6v16a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2z" fill="#fff" stroke="#C9CED6"/><path d="M14 1v4a2 2 0 0 0 2 2h4" fill="#E9ECF1"/><rect x="0" y="13" width="17" height="8" rx="1.5" fill="#E2231A"/><text x="8.5" y="19.2" text-anchor="middle" font-family="Arial,sans-serif" font-weight="700" font-size="6.2" fill="#fff">PDF</text></svg><span id="dlt">Download directory</span></a><span class="badge" id="ver">DRAFT</span>
 </header>
 <main id="main">
@@ -313,7 +313,7 @@ const NAVL={home:{en:'Home',ms:'Utama',zh:'首页'},how:{en:'How to use',ms:'Car
 const SEC={home:'',how:tr(NAVL.how),directory:tr(NAVL.directory),map:tr(NAVL.map),pending:tr(NAVL.pending),about:tr(NAVL.about)};
 document.querySelectorAll('#nav a').forEach(a=>a.textContent=tr(NAVL[a.dataset.p]));
 document.querySelectorAll('[data-i]').forEach(e=>{const v=I18[e.dataset.i];if(v)e.innerHTML=v[LG]||v.en});
-document.getElementById('t-sub').textContent=tr(A.tsub);document.getElementById('cov-name').textContent=tr({en:'Sabah General Assembly',ms:'Ibu Gereja Sabah',zh:'沙巴真耶稣教会 · 沙巴总会'});document.getElementById('dlt').textContent=tr(I18.dl);document.getElementById('dlpdf').href='downloads/TJC_Church_Location_Atlas_'+LG.toUpperCase()+'.pdf';document.getElementById('dlpdf').setAttribute('download',{en:'TJC_Church_Location_Atlas_EN.pdf',ms:'Atlas_Lokasi_Gereja_GYB_BM.pdf',zh:'TJC_Church_Location_Atlas_ZH.pdf'}[LG]);document.getElementById('dlpdf').title=tr({en:'Church Location Atlas (PDF)',ms:'Atlas Lokasi Gereja (PDF)',zh:'教会位置图集 (PDF)'});
+document.getElementById('t-sub').textContent=tr(A.tsub);document.getElementById('cov-name').textContent=tr({en:'Sabah General Assembly',ms:'Ibu Gereja Sabah',zh:'沙巴真耶稣教会 · 沙巴总会'});document.getElementById('homelink').href='proposal/?lang='+LG+'#/home';document.getElementById('dlt').textContent=tr(I18.dl);document.getElementById('dlpdf').href='downloads/TJC_Church_Location_Atlas_'+LG.toUpperCase()+'.pdf';document.getElementById('dlpdf').setAttribute('download',{en:'TJC_Church_Location_Atlas_EN.pdf',ms:'Atlas_Lokasi_Gereja_GYB_BM.pdf',zh:'TJC_Church_Location_Atlas_ZH.pdf'}[LG]);document.getElementById('dlpdf').title=tr({en:'Church Location Atlas (PDF)',ms:'Atlas Lokasi Gereja (PDF)',zh:'教会位置图集 (PDF)'});
 document.querySelectorAll('.lsw a').forEach(a=>{a.classList.toggle('on',a.dataset.l===LG);a.onclick=ev=>{ev.preventDefault();const v=new URL(location.href);v.searchParams.set('lang',a.dataset.l);location.href=v.pathname+v.search+location.hash}});
 document.getElementById('q').placeholder=tr({en:'Search name, subzone, address or KodLokasi',ms:'Cari nama, subzon, alamat atau KodLokasi',zh:'搜索名称、小区、地址或 KodLokasi'});
 function go(h){location.hash=h}
@@ -358,9 +358,9 @@ const VIEWS={all:{t:tr({en:'All churches',ms:'Semua gereja',zh:'全部教会'})}
   'west-coast':{t:(LG==='zh'?'沙巴 · ':'Sabah · ')+tr(C.zones['West Coast']),z:'West Coast'},'interior':{t:(LG==='zh'?'沙巴 · ':'Sabah · ')+tr(C.zones['Interior']),z:'Interior'},'east-coast':{t:(LG==='zh'?'沙巴 · ':'Sabah · ')+tr(C.zones['East Coast']),z:'East Coast'},
   'labuan':{t:tr(C.zones.Labuan),z:'Labuan',pad:.06},'sarawak':{t:tr(C.zones.Sarawak),z:'Sarawak'}};
 VIEWS.sabah=VIEWS.all;
-const SYM={church:(c,on)=>`<svg width="${on?30:24}" height="${on?30:24}" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10.5" fill="${c}" stroke="#fff" stroke-width="2"/><path d="M12 6.5v11M8.2 10.2h7.6" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/></svg>`,
- ph:(c,on)=>`<svg width="${on?30:24}" height="${on?28:22}" viewBox="0 0 24 22"><path d="M12 1.5 22.6 20.5H1.4Z" fill="${c}" stroke="#fff" stroke-width="2" stroke-linejoin="round"/><circle cx="12" cy="14.2" r="2.6" fill="#fff"/></svg>`};
-function pinIcon(p,on){const ph=p.type==='Prayer House';const w=on?30:24,h=ph?(on?28:22):(on?30:24);return L.divIcon({className:'pinw'+(on?' sel':''),iconSize:[w,h],iconAnchor:[w/2,h/2],html:(ph?SYM.ph:SYM.church)(ZC[p.zone],on)})}
+const SYM={church:(c,on)=>`<svg width="${on?18:13}" height="${on?18:13}" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="${c}" stroke="#fff" stroke-width="3"/></svg>`,
+ ph:(c,on)=>`<svg width="${on?19:14}" height="${on?17:13}" viewBox="0 0 24 22"><path d="M12 2 22.3 20.3H1.7Z" fill="${c}" stroke="#fff" stroke-width="3" stroke-linejoin="round"/></svg>`};
+function pinIcon(p,on){const ph=p.type==='Prayer House';const w=ph?(on?19:14):(on?18:13),h=ph?(on?17:13):(on?18:13);return L.divIcon({className:'pinw'+(on?' sel':''),iconSize:[w,h],iconAnchor:[w/2,h/2],html:(ph?SYM.ph:SYM.church)(ZC[p.zone],on)})}
 let REGZ=null;
 function initMap(){if(map)return;
   map=L.map('map',{zoomControl:true}).setView([4.2,114.4],6);
@@ -387,7 +387,7 @@ function initMap(){if(map)return;
   document.querySelectorAll('#views button').forEach(b=>b.onclick=()=>{history.replaceState(null,'','#map/'+b.dataset.v);view(b.dataset.v)});
 }
 function labels(z,only){REGZ=z;Object.entries(markers).forEach(([id,m])=>{const p=P[id];const inR=only?id===only:(z?p.zone===z:false);
-  m.unbindTooltip();m.bindTooltip(esc(p.name),{permanent:inR,direction:'right',offset:[12,0],className:'lbl'+(inR?' on':''),opacity:1});
+  m.unbindTooltip();m.bindTooltip(esc(p.name),{permanent:inR,direction:'right',offset:[7,0],className:'lbl'+(inR?' on':''),opacity:1});
   m.setOpacity(z&&!inR&&!only?.35:1)})}
 function view(k){if(!VIEWS[k])k='all';cur=k;const v=VIEWS[k];document.getElementById('m-title').textContent=v.t;
   document.querySelectorAll('#views button').forEach(b=>b.classList.toggle('on',b.dataset.v===k));

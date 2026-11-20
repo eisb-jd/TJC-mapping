@@ -363,7 +363,7 @@ function chrome(){
   document.getElementById('t-banner').textContent=t(C.ui.banner);document.getElementById('t-review').textContent=t(C.ui.review)+' ›';document.getElementById('t-official').textContent=t(C.ui.official)+': ga.tjcsabah.com ↗';
   document.getElementById('t-site').textContent=t(C.ui.site);document.getElementById('t-sub').textContent=t(C.ui.sub);document.getElementById('f-h1').textContent=t({en:'About',ms:'Mengenai',zh:'关于'});document.getElementById('f-h2').textContent=t({en:'Visit & connect',ms:'Lawati & hubungi',zh:'探访与联络'});
   document.querySelectorAll('#topbar [data-k]').forEach(a=>a.textContent=t(C.ui.nav[a.dataset.k]));
-  const HREF=k=>k==='churches'?`../?lang=${L}#map`:`#/${k}`;window.HREF=HREF;document.getElementById('nav').innerHTML=NAV.map(k=>`<a href="${HREF(k)}" data-p="${k}">${t(C.ui.nav[k])}</a>`).join('');
+  const HREF=k=>k==='churches'?`../?lang=${L}#home`:`#/${k}`;window.HREF=HREF;document.getElementById('nav').innerHTML=NAV.map(k=>`<a href="${HREF(k)}" data-p="${k}">${t(C.ui.nav[k])}</a>`).join('');
   document.getElementById('f-site').textContent=t(C.ui.site)+' · '+t(C.ui.sub);
   document.getElementById('f-addr').innerHTML=`${esc(C.contact.addr)}<br>${t(C.ui.phone)}: ${esc(C.contact.phone)}<br><a href="mailto:${C.contact.email}">${C.contact.email}</a>`;
   document.getElementById('f-note').textContent=t(C.ui.footerNote);
