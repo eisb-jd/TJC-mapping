@@ -46,7 +46,7 @@ main{position:absolute;top:var(--hdr);bottom:0;left:0;right:0;display:flex}
 #detail h2{margin:8px 0 2px;color:#000;font-size:26px;text-transform:uppercase;font-weight:700;letter-spacing:.2px}
 .sub{color:var(--grey);font-size:12px}
 .kl{background:var(--char);color:#fff;border-radius:4px;border-top:4px solid var(--sky);padding:14px;margin:14px 0;display:flex;gap:12px;align-items:center}
-.kl .c{font-size:12px;color:#BDBDBD}.kl .v{font-size:22px;font-weight:bold;color:#fff;margin:3px 0 8px;letter-spacing:.3px}
+.kl .c{font-size:12px;color:#BDBDBD}.kl .v{font-size:22px;font-weight:bold;color:#fff;margin:3px 0 1px;letter-spacing:.3px}.kl .ll{font-size:11.5px;color:#BDBDBD;margin-bottom:9px;letter-spacing:.2px}
 .kl a.btn{display:inline-block;background:var(--sky);color:#fff;text-decoration:none;font-weight:bold;font-size:13px;border-radius:3px;padding:7px 12px}
 .kl button{background:transparent;border:1px solid #777;color:#fff;border-radius:3px;padding:6px 10px;font:inherit;font-size:11.5px;margin-left:4px;cursor:pointer}
 .kl .qr{background:#fff;border-radius:8px;padding:6px;flex:none}
@@ -191,12 +191,11 @@ function show(id,fly){const f=F.find(x=>x.id===id);if(!f)return;const p=f.proper
   d.innerHTML=`<div class="ph${p.photo?'':' none'}" ${p.photo?`style="background-image:url('${p.photo}')"`:''}>${p.photo?'<span class="cap">Photo: True Jesus Church</span>':'Photo to be supplied'}<button class="back" onclick="closeD()">&larr; List</button></div>
   <div class="bd"><span class="type" style="background:${ZC[p.zone]}">${p.type.toUpperCase()}</span> <span class="sub">No. ${p.no} &middot; ${p.id}</span>
   <h2>${esc(p.name)}</h2><div class="sub">Gereja Yesus Benar &middot; ${p.state}${p.zone!==p.state?' &middot; '+p.zone:''}${p.subzone?' &middot; Subzone '+esc(p.subzone):''}</div>
-  ${p.kodlokasi?`<div class="kl"><div style="flex:1"><div class="c">KODLOKASI &middot; tap for directions</div><div class="v">${esc(p.kodlokasi)}</div>
+  ${p.kodlokasi?`<div class="kl"><div style="flex:1"><div class="c">KODLOKASI &middot; tap for directions</div><div class="v">${esc(p.kodlokasi)}</div>${f.geometry?`<div class="ll">${p.lat.toFixed(6)}, ${p.lon.toFixed(6)}</div>`:''}
   <a class="btn" href="${p.kodlokasi_url}" target="_blank" rel="noopener">Open in KodLokasi</a><button onclick="copyCode('${p.kodlokasi}',this)">Copy</button></div><div class="qr" id="qr"></div></div>`
   :`<div class="kl none"><b>Location awaiting confirmation.</b><br>The church has not yet supplied GPS coordinates for this location.</div>`}
   <h3>Address</h3><div>${p.address?esc(p.address):'<span class="sub">Not yet supplied</span>'}</div>
   <h3>Service times</h3>${svc?`<table class="svc">${svc}</table>`:'<span class="sub">Not yet supplied</span>'}
-  ${f.geometry?`<h3>GPS (WGS 84)</h3><div>${p.lat.toFixed(6)}, ${p.lon.toFixed(6)} <span class="sub">&middot; ${esc(p.coord_source)}</span></div>`:''}
   ${p.notes?`<div class="note">${esc(p.notes)}</div>`:''}
   ${near.length?`<h3>Nearby</h3><div class="near">${near.map(([o,k])=>`<a href="#${o.id}" onclick="show('${o.id}',true);return false">${esc(o.name)}<span>${k.toFixed(1)} km</span></a>`).join('')}</div>`:''}
   <div class="note">Please confirm service times with the local church. Report corrections to help improve this map.</div></div>`;
