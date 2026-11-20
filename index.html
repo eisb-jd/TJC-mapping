@@ -150,7 +150,7 @@ leg.onAdd=()=>{const d=L.DomUtil.create('div','legend');d.innerHTML=Object.entri
 const esc=s=>(s||'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 function icon(p,on){const ph=p.type==='Prayer House';return L.divIcon({className:'',iconSize:ph?[26,24]:[24,24],iconAnchor:ph?[13,16]:[12,12],
   html:`<div class="${ph?'tri':'pin'}${on?' sel':''}" style="background:${ZC[p.zone]}">${p.no}</div>`})}
-fetch('data/tjc_locations.geojson').then(r=>r.ok?r.json():fetch('data/tjc_locations.json').then(x=>x.json())).catch(()=>fetch('data/tjc_locations.json').then(x=>x.json())).then(g=>{
+fetch('data/tjc_locations.geojson',{cache:'no-cache'}).then(r=>r.ok?r.json():fetch('data/tjc_locations.json').then(x=>x.json())).catch(()=>fetch('data/tjc_locations.json').then(x=>x.json())).then(g=>{
   META=g.metadata||{};document.getElementById('ver').textContent=(META.version||'DRAFT').toUpperCase();
   document.getElementById('ab-status').textContent=`${META.version||''}, ${META.date||''}. ${g.features.length} locations; ${g.features.filter(f=>f.geometry).length} mapped. ${META.note||''}`;
   F=g.features;
