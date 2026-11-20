@@ -68,10 +68,10 @@ function fmtDate(s){const d=new Date(s+'T00:00:00');return L==='zh'?`${d.getFull
 function fmtRange(e){return e.s===e.e?fmtDate(e.s):fmtDate(e.s)+' – '+fmtDate(e.e)}
 function art(e,w,h){/* generated poster when the church has not uploaded artwork */
  if(e.img)return `<img src="${e.img}" alt="" style="width:100%;height:100%;object-fit:cover;display:block">`;
- const c=(EVT_TYPES[e.type]||EVT_TYPES.special).c;const tt=esc(evTitle(e));const words=tt.split(' ');let lines=[],cur='';
+ const gid='g'+e.id+'_'+Math.random().toString(36).slice(2,8);const c=(EVT_TYPES[e.type]||EVT_TYPES.special).c;const tt=esc(evTitle(e));const words=tt.split(' ');let lines=[],cur='';
  words.forEach(w0=>{if((cur+' '+w0).trim().length>(L==='zh'?10:22)){lines.push(cur.trim());cur=w0}else cur+=' '+w0});if(cur.trim())lines.push(cur.trim());
  if(L==='zh'&&lines.length===1&&tt.length>10)lines=[tt.slice(0,10),tt.slice(10)];
- return `<svg viewBox="0 0 600 340" preserveAspectRatio="xMidYMid slice" style="width:100%;height:100%;display:block"><defs><linearGradient id="g${e.id}" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1E3669"/><stop offset="1" stop-color="${c}"/></linearGradient></defs><rect width="600" height="340" fill="url(#g${e.id})"/><image href="assets/mark-white.svg" x="330" y="120" width="320" height="200" opacity=".12"/>
+ return `<svg viewBox="0 0 600 340" preserveAspectRatio="xMidYMid slice" style="width:100%;height:100%;display:block"><defs><linearGradient id="${gid}" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1E3669"/><stop offset="1" stop-color="${c}"/></linearGradient></defs><rect width="600" height="340" fill="url(#${gid})"/><image href="assets/mark-white.svg" x="330" y="120" width="320" height="200" opacity=".12"/>
  <text x="36" y="58" fill="#BFE6F8" font-family="Poppins,Noto Sans SC,sans-serif" font-size="18" letter-spacing="2">${esc(t((EVT_TYPES[e.type]||EVT_TYPES.special).n)).toUpperCase()}</text>
  ${lines.slice(0,3).map((l,i)=>`<text x="36" y="${118+i*44}" fill="#fff" font-family="Poppins,Noto Sans SC,sans-serif" font-weight="600" font-size="36">${l}</text>`).join('')}
  <text x="36" y="300" fill="#fff" font-family="Inter,Noto Sans SC,sans-serif" font-size="18" opacity=".9">${esc(fmtRange(e))}</text></svg>`}
