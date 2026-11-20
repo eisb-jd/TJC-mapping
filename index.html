@@ -21,7 +21,9 @@ button{font:inherit}
 #top{position:fixed;top:0;left:0;right:0;height:var(--top);background:var(--char);color:#fff;border-bottom:3px solid var(--sky);display:flex;align-items:center;padding:0 16px;gap:12px;z-index:1000}
 #top .t{cursor:pointer;line-height:1.15}
 #top .t b{display:block;font-size:17px;letter-spacing:.4px}
-#top .t span{font-size:11.5px;color:#BDBDBD}#top .tsub{border-left:1px solid #555;padding-left:12px}
+#top .t span{font-size:11.5px;color:#BDBDBD}#top .dl{display:inline-flex;align-items:center;gap:6px;background:var(--sky);color:#fff;text-decoration:none;font-weight:700;font-size:12.5px;border-radius:999px;padding:6px 12px;white-space:nowrap}#top .dl:hover{background:#0098D4}
+@media(max-width:760px){#top .dl span{display:none}#top .dl{padding:7px}}
+#top .tsub{border-left:1px solid #555;padding-left:12px}
 #top .sp{flex:1}
 #top .sec{color:var(--sky);font-weight:700;font-size:13.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:45vw}
 .badge{background:var(--red);color:#fff;font-size:10.5px;font-weight:700;border-radius:10px;padding:3px 9px;letter-spacing:.4px;white-space:nowrap}
@@ -53,7 +55,7 @@ h1.pt{color:var(--navy);font-size:28px;margin:4px 0 6px}
 #p-home .bts .btn{padding:13px 6px;font-size:16px}
 #p-home .prep{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;margin-top:22px;font-size:12px;color:#CFE3F5;line-height:1.5;flex-wrap:wrap}
 #p-home .prep img{height:44px;background:#fff;border-radius:3px;padding:3px}
-#cov{position:absolute;right:-4%;top:6%;width:min(78vw,760px);opacity:1;z-index:1;pointer-events:none}
+#cov{position:absolute;right:-2%;top:10%;width:min(86vw,920px);opacity:1;z-index:1;pointer-events:none}
 /* how to use */
 .steps{display:flex;flex-direction:column;gap:6px;margin-bottom:22px}
 .step{display:flex;gap:14px;align-items:center;padding:12px 0;border-bottom:1px solid var(--line)}
@@ -164,7 +166,7 @@ body.embed #top,body.embed #nav{display:none}body.embed main{top:0;bottom:0}body
 <body>
 <header id="top">
   <div class="t" onclick="go('home')" style="display:flex;align-items:center;gap:12px"><img src="proposal/assets/logo-white.svg?v=3" alt="Gereja Yesus Benar" style="height:30px;display:block"><span id="t-sub" class="tsub">Church Location Atlas &nbsp;|&nbsp; Sabah &middot; Labuan &middot; Sarawak</span></div>
-  <span class="sp"></span><span class="sec" id="sec"></span><span class="badge" id="ver">DRAFT</span>
+  <span class="sp"></span><span class="sec" id="sec"></span><a class="dl" id="dlpdf" href="downloads/TJC_Church_Location_Atlas.pdf" download="TJC_Church_Location_Atlas.pdf" title="PDF, 18 MB"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0-5-5m5 5 5-5M5 21h14"/></svg><span id="dlt">Download directory (PDF)</span></a><span class="badge" id="ver">DRAFT</span>
 </header>
 <main id="main">
 
@@ -179,7 +181,7 @@ body.embed #top,body.embed #nav{display:none}body.embed main{top:0;bottom:0}body
   <div class="stats"><div><b id="s-all">-</b><span>locations listed</span></div><div><b id="s-map">-</b><span>mapped with KodLokasi</span></div><div><b id="s-pend">-</b><span>awaiting coordinates</span></div></div>
   <div class="bts"><a class="btn sky" href="#directory">Directory &nbsp;&rsaquo;</a><a class="btn white" href="#map">Maps &nbsp;&rsaquo;</a><a class="btn white" href="#how">How to use &nbsp;&rsaquo;</a></div>
   <div class="prep"><div><span id="cov-date"></span><br>Locations compiled from the church's subzone documents; open / crowd-sourced data used for cross-checking.<br>Not field-verified. Please report corrections so they can be included in the final version.</div>
-  <div style="text-align:right">Prepared by <b>EARTH Info Sdn. Bhd.</b><br>Kota Kinabalu, Sabah<br><img src="earthinfo-logo.jpg" alt="EARTH Info" onerror="this.remove()"></div></div>
+  <div style="text-align:right">Prepared by <b>EARTH Info Sdn. Bhd.</b><br>Kota Kinabalu, Sabah</div></div>
 </div></section>
 
 <!-- HOW TO USE -->
@@ -307,7 +309,7 @@ Promise.all([
 const NAVL={home:{en:'Home',ms:'Utama',zh:'首页'},how:{en:'How to use',ms:'Cara guna',zh:'使用说明'},directory:{en:'Directory',ms:'Direktori',zh:'名录'},map:{en:'Maps',ms:'Peta',zh:'地图'},pending:{en:'Awaiting coordinates',ms:'Menunggu koordinat',zh:'待定位'},about:{en:'About',ms:'Perihal',zh:'关于'}};
 const SEC={home:'',how:tr(NAVL.how),directory:tr(NAVL.directory),map:tr(NAVL.map),pending:tr(NAVL.pending),about:tr(NAVL.about)};
 document.querySelectorAll('#nav a').forEach(a=>a.textContent=tr(NAVL[a.dataset.p]));
-document.getElementById('t-sub').textContent=tr(A.tsub);document.getElementById('m-tap').textContent=tr(A.tapPin);
+document.getElementById('t-sub').textContent=tr(A.tsub);document.getElementById('dlt').textContent=tr({en:'Download directory (PDF)',ms:'Muat turun direktori (PDF)',zh:'下载名录 (PDF)'});document.getElementById('dlpdf').title=tr({en:'Church Location Atlas, PDF, 18 MB',ms:'Atlas Lokasi Gereja, PDF, 18 MB',zh:'教会位置图集，PDF，18 MB'});document.getElementById('m-tap').textContent=tr(A.tapPin);
 if(LG!=='en'){document.querySelector('#p-directory h1').textContent=tr({ms:'Direktori lokasi',zh:'地点名录'});document.querySelector('#p-directory .lead').textContent=tr({ms:'Klik nama untuk membuka halamannya, kod untuk membuka KodLokasi, atau "Peta" untuk petanya.',zh:'点击名称打开页面，点击代码打开 KodLokasi，或点击“地图”查看位置。'});document.getElementById('q').placeholder=tr({ms:'Cari nama, subzon, alamat atau KodLokasi',zh:'搜索名称、小区、地址或 KodLokasi'});document.querySelector('#p-directory .btn.red').innerHTML=tr({ms:'Senarai menunggu koordinat',zh:'待定位名单'})+' &rsaquo;'}
 function go(h){location.hash=h}
 window.addEventListener('hashchange',route);
@@ -323,13 +325,13 @@ function route(){let h=decodeURIComponent(location.hash.slice(1))||'home';let ar
 }
 
 /* ---------- cover silhouette ---------- */
-function cover(){if(!OUT)return;const sab=OUT.features.filter(f=>/sabah/i.test(f.properties.name));
-  const x0=115.1,x1=119.4,y0=4.0,y1=7.45,W=100,H=W*(y1-y0)/(x1-x0);
+function cover(){if(!OUT)return;const sab=OUT.features.filter(f=>/sabah|sarawak|labuan/i.test(f.properties.name));
+  const x0=109.45,x1=119.35,y0=0.8,y1=7.45,W=100,H=W*(y1-y0)/(x1-x0);
   const X=lo=>((lo-x0)/(x1-x0)*W).toFixed(2),Y=la=>((y1-la)/(x1-x0)*W).toFixed(2);
   let path='';sab.forEach(f=>f.geometry.coordinates.forEach(poly=>poly.forEach(r=>{path+='M'+r.map(c=>X(c[0])+','+Y(c[1])).join('L')+'Z'})));
-  const dots=F.filter(p=>p.mapped&&p.state!=='Sarawak').map(p=>`<circle cx="${X(p.lon)}" cy="${Y(p.lat)}" r=".55" fill="#00AFF2"/>`).join('');
+  const dots=F.filter(p=>p.mapped).map(p=>`<circle cx="${X(p.lon)}" cy="${Y(p.lat)}" r=".38" fill="#00AFF2"/>`).join('');
   const s=document.getElementById('cov');s.setAttribute('viewBox',`0 0 ${W} ${H.toFixed(1)}`);
-  s.innerHTML=`<path d="${path}" fill="#7FA3D6" fill-opacity=".55" stroke="#9FBCE3" stroke-width=".15"/>${dots}`}
+  s.innerHTML=`<path d="${path}" fill="#7FA3D6" fill-opacity=".55" stroke="#9FBCE3" stroke-width=".1"/>${dots}`}
 
 function symbols(){document.getElementById('symbols').innerHTML=ZORDER.map(z=>`<div><span class="dot" style="background:${ZC[z]}"></span>Church - ${z}</div>`).join('')+
   `<div><span class="trii"></span>Triangle = prayer house; the number is the location number</div>`}

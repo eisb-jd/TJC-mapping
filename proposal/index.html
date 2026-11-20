@@ -363,12 +363,12 @@ function chrome(){
   document.getElementById('t-banner').textContent=t(C.ui.banner);document.getElementById('t-review').textContent=t(C.ui.review)+' ›';document.getElementById('t-official').textContent=t(C.ui.official)+': ga.tjcsabah.com ↗';
   document.getElementById('t-site').textContent=t(C.ui.site);document.getElementById('t-sub').textContent=t(C.ui.sub);document.getElementById('f-h1').textContent=t({en:'About',ms:'Mengenai',zh:'关于'});document.getElementById('f-h2').textContent=t({en:'Visit & connect',ms:'Lawati & hubungi',zh:'探访与联络'});
   document.querySelectorAll('#topbar [data-k]').forEach(a=>a.textContent=t(C.ui.nav[a.dataset.k]));
-  document.getElementById('nav').innerHTML=NAV.map(k=>`<a href="#/${k}" data-p="${k}">${t(C.ui.nav[k])}</a>`).join('');
+  const HREF=k=>k==='churches'?`../?lang=${L}#map`:`#/${k}`;window.HREF=HREF;document.getElementById('nav').innerHTML=NAV.map(k=>`<a href="${HREF(k)}" data-p="${k}">${t(C.ui.nav[k])}</a>`).join('');
   document.getElementById('f-site').textContent=t(C.ui.site)+' · '+t(C.ui.sub);
   document.getElementById('f-addr').innerHTML=`${esc(C.contact.addr)}<br>${t(C.ui.phone)}: ${esc(C.contact.phone)}<br><a href="mailto:${C.contact.email}">${C.contact.email}</a>`;
   document.getElementById('f-note').textContent=t(C.ui.footerNote);
   document.getElementById('f-nav1').innerHTML=['about','history','beliefs','organisation','news','resources'].map(k=>`<div><a href="#/${k}">${t(C.ui.nav[k])}</a></div>`).join('');
-  document.getElementById('f-nav2').innerHTML=['churches','calendar','contact','disclaimer','privacy'].map(k=>`<div><a href="#/${k}">${t(C.ui.nav[k])}</a></div>`).join('');
+  document.getElementById('f-nav2').innerHTML=['churches','calendar','contact','disclaimer','privacy'].map(k=>`<div><a href="${HREF(k)}">${t(C.ui.nav[k])}</a></div>`).join('');
   document.getElementById('f-proto').textContent=t(C.ui.banner);document.getElementById('f-copy').textContent=t(C.ui.site);
 }
 document.querySelectorAll('.lang button').forEach(b=>b.onclick=()=>setLang(b.dataset.l));
@@ -397,11 +397,11 @@ const OLDP=p=>OLD+encodeURI(p);
 const PAGES={
 home:()=>{const n=DATA?DATA.length:108;const vs=t(C.home.verse).split(' — ');
  return `<div class="hero" style="background-image:url('../photos/TJC-020.jpg')"><div class="wrap"><span class="k">● ${t(C.ui.sub)}</span><h1>${t(C.ui.site)}</h1><p>${t(C.home.lead)}</p>
-  <div class="acts"><a class="btn" href="#/churches">${t(C.ui.findChurch)} →</a><a class="btn ghost" href="#/beliefs">${t(C.ui.nav.beliefs)}</a></div>
+  <div class="acts"><a class="btn" href="${HREF('churches')}">${t(C.ui.findChurch)} →</a><a class="btn ghost" href="#/beliefs">${t(C.ui.nav.beliefs)}</a></div>
   <div class="stats"><div><b>${n}</b><span>${t({en:'churches & prayer houses',ms:'gereja & khemah doa',zh:'教会与祈祷所'})}</span></div><div><b>3</b><span>${t({en:'pastoral zones',ms:'zon pengembalaan',zh:'教区'})}</span></div><div><b>1927</b><span>${t({en:'gospel reached Sabah',ms:'injil sampai ke Sabah',zh:'真道传入沙巴'})}</span></div></div></div>
   <div class="cap">${t({en:'Kota Kinabalu church',ms:'Gereja Kota Kinabalu',zh:'亚庇教会'})}</div></div>
  <section class="blk"><div class="wrap"><div class="eyebrow">${t({en:'Welcome',ms:'Selamat datang',zh:'欢迎'})}</div><h2 class="sec">${t({en:'How can we help you today?',ms:'Apa yang anda cari hari ini?',zh:'今天我们能为您做什么？'})}</h2>
-  <div class="grid g4">${C.home.cards.map(c=>`<a class="card" href="#/${c.to}"><div class="ico">${ICON[c.icon]}</div><h3>${t(c.t)}</h3><p>${t(c.d)}</p><span class="arrow">${t(C.ui.open)} →</span></a>`).join('')}</div></div></section>
+  <div class="grid g4">${C.home.cards.map(c=>`<a class="card" href="${HREF(c.to)}"><div class="ico">${ICON[c.icon]}</div><h3>${t(c.t)}</h3><p>${t(c.d)}</p><span class="arrow">${t(C.ui.open)} →</span></a>`).join('')}</div></div></section>
  <section class="blk alt"><div class="wrap grid g2" style="align-items:center;gap:48px">
   <div><div class="vid"><iframe src="https://www.youtube-nocookie.com/embed/${C.home.video[L]}" title="${t(C.home.videoT)}" allowfullscreen loading="lazy"></iframe></div>${L==='en'?`<div style="font-size:13px;color:var(--grey);margin-top:8px">${t(C.ui.videoMs)}</div>`:''}</div>
   <div><div class="eyebrow">${t(C.home.videoT)}</div><h2 class="sec">${t({en:'A church restored by the Holy Spirit',ms:'Jemaat yang dipulihkan oleh Roh Kudus',zh:'晚雨圣灵重建的教会'})}</h2><p style="color:#4A5568;font-size:16.5px">${t(C.about.intro)}</p><div class="acts" style="display:flex;gap:12px;flex-wrap:wrap;margin-top:22px"><a class="btn navy" href="#/about">${t(C.ui.more)} →</a><a class="btn line" href="#/history">${t(C.ui.nav.history)}</a></div></div></div></section>
