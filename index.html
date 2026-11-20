@@ -317,7 +317,7 @@ function route(){let h=decodeURIComponent(location.hash.slice(1))||'home';let ar
   document.querySelectorAll('.page').forEach(s=>s.classList.toggle('on',s.id==='p-'+pg));
   document.querySelectorAll('#nav a').forEach(a=>a.classList.toggle('on',a.dataset.p===(pg==='loc'?'directory':pg==='pending'?'directory':pg)));
   document.getElementById('main').scrollTop=0;
-  if(pg==='loc'){const p=P[h];if(!p){go('directory');return}locPage(p);document.getElementById('sec').textContent=[p.state,p.zone!==p.state?p.zone:'',p.subzone?'SZ '+p.subzone:''].filter(Boolean).join(' · ')}
+  if(pg==='loc'){const p=P[h];if(!p){go('directory');return}locPage(p);document.getElementById('sec').textContent=[p.state,p.zone!==p.state?tr(C.zones[p.zone]):'',p.subzone?tr(C.ui.subzone)+' '+p.subzone:''].filter(Boolean).join(' · ')}
   else document.getElementById('sec').textContent=SEC[pg]||'';
   if(pg==='map'){initMap();setTimeout(()=>{map.invalidateSize();if(arg&&P[arg])focusPin(arg);else view(arg&&VIEWS[arg]?arg:(cur||'sabah'))},30)}
 }
