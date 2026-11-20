@@ -1,0 +1,182 @@
+﻿severity,check,id,name,detail
+High,Missing coordinates,TJC-016,Kionsom,"No GPS coordinates; not shown on map, no KodLokasi code."
+High,Missing coordinates,TJC-033,Putrajaya,"No GPS coordinates; not shown on map, no KodLokasi code."
+High,Missing coordinates,TJC-053,Binanun,"No GPS coordinates; not shown on map, no KodLokasi code."
+High,Missing coordinates,TJC-055,Kampung Dua,"No GPS coordinates; not shown on map, no KodLokasi code."
+High,Missing coordinates,TJC-057,Kapalarau,"No GPS coordinates; not shown on map, no KodLokasi code."
+High,Missing coordinates,TJC-059,Katalirus,"No GPS coordinates; not shown on map, no KodLokasi code."
+High,Missing coordinates,TJC-062,Labut,"No GPS coordinates; not shown on map, no KodLokasi code."
+High,Missing coordinates,TJC-064,Layon,"No GPS coordinates; not shown on map, no KodLokasi code."
+High,Missing coordinates,TJC-065,Lotong,"No GPS coordinates; not shown on map, no KodLokasi code."
+High,Missing coordinates,TJC-071,Nangkawangan,"No GPS coordinates; not shown on map, no KodLokasi code."
+High,Missing coordinates,TJC-073,Pangi,"No GPS coordinates; not shown on map, no KodLokasi code."
+High,Missing coordinates,TJC-079,Salong,"No GPS coordinates; not shown on map, no KodLokasi code."
+High,Missing coordinates,TJC-089,Ulu Tepoh,"No GPS coordinates; not shown on map, no KodLokasi code."
+High,Missing coordinates,TJC-105,Bintulu,"No GPS coordinates; not shown on map, no KodLokasi code."
+High,Missing coordinates,TJC-108,Sibu,"No GPS coordinates; not shown on map, no KodLokasi code."
+Medium,Coordinates from crowd-sourced data,TJC-106,Kuching,"Position from OpenStreetMap, not from church records."
+Medium,Coordinates from crowd-sourced data,TJC-107,Miri,"Position from OpenStreetMap, not from church records."
+Medium,Corrected in source,TJC-051,Batu Lunguyan,Latitude/longitude swapped in church document; corrected. Church to confirm.
+Medium,Corrected in source,TJC-054,Kabu Baru,Latitude/longitude swapped in church document; corrected. Church to confirm.
+Medium,Corrected in source,TJC-056,Kampung Lima,Latitude/longitude swapped in church document; corrected. Church to confirm.
+Medium,Corrected in source,TJC-060,Kauluan,Latitude/longitude swapped in church document; corrected. Church to confirm.
+Medium,Corrected in source,TJC-070,Nakuyung,Latitude/longitude swapped in church document; corrected. Church to confirm.
+Medium,Corrected in source,TJC-081,Sinaron,Latitude/longitude swapped in church document; corrected. Church to confirm.
+Medium,Location to confirm,TJC-009,Danau,"Church GPS is near Kinarut/Papar; the only ""Danau"" village in OSM is Dahit Danau, Penampang. Confirm location."
+Medium,Location to confirm,TJC-054,Kabu Baru,A Google Maps listing for this church is about 6 km from the church-supplied GPS. Confirm the correct pin.
+Medium,Location to confirm,TJC-060,Kauluan,"Church document says Kauluan, Sook (Keningau); confirm the pin is at Sook, not Kauluan in Ranau."
+Medium,Location to confirm,TJC-096,Malikup,"A second prayer house, Pinangah, in the church documents is only 400 m away but is not on the church map. Confirm both."
+Medium,Location to confirm,TJC-105,Bintulu,Two possible listings found on Google Maps; church to confirm which is correct.
+Low,Missing address,TJC-016,Kionsom,No address in church documents.
+Low,Missing address,TJC-030,Pengarawan,No address in church documents.
+Low,Missing address,TJC-033,Putrajaya,No address in church documents.
+Low,Missing address,TJC-053,Binanun,No address in church documents.
+Low,Missing address,TJC-055,Kampung Dua,No address in church documents.
+Low,Missing address,TJC-057,Kapalarau,No address in church documents.
+Low,Missing address,TJC-059,Katalirus,No address in church documents.
+Low,Missing address,TJC-062,Labut,No address in church documents.
+Low,Missing address,TJC-064,Layon,No address in church documents.
+Low,Missing address,TJC-065,Lotong,No address in church documents.
+Low,Missing address,TJC-068,Marais,No address in church documents.
+Low,Missing address,TJC-070,Nakuyung,No address in church documents.
+Low,Missing address,TJC-071,Nangkawangan,No address in church documents.
+Low,Missing address,TJC-073,Pangi,No address in church documents.
+Low,Missing address,TJC-075,Saga,No address in church documents.
+Low,Missing address,TJC-082,Sugiang,No address in church documents.
+Low,Missing address,TJC-084,Sungai Apih,No address in church documents.
+Low,Missing address,TJC-088,Ulikon,No address in church documents.
+Low,Missing address,TJC-089,Ulu Tepoh,No address in church documents.
+Low,Missing address,TJC-096,Malikup,No address in church documents.
+Low,Missing address,TJC-105,Bintulu,No address in church documents.
+Low,Missing address,TJC-106,Kuching,No address in church documents.
+Low,Missing address,TJC-107,Miri,No address in church documents.
+Low,Missing address,TJC-108,Sibu,No address in church documents.
+Low,Missing photo,TJC-001,Asia City,No photo supplied.
+Low,Missing photo,TJC-002,Bambangan,No photo supplied.
+Low,Missing photo,TJC-003,Bangkalalak,No photo supplied.
+Low,Missing photo,TJC-004,Bawang,No photo supplied.
+Low,Missing photo,TJC-005,Beaufort,No photo supplied.
+Low,Missing photo,TJC-006,Beaufort 62.5,No photo supplied.
+Low,Missing photo,TJC-007,Beaufort 66,No photo supplied.
+Low,Missing photo,TJC-008,Boribi,No photo supplied.
+Low,Missing photo,TJC-009,Danau,No photo supplied.
+Low,Missing photo,TJC-010,Donggongon,No photo supplied.
+Low,Missing photo,TJC-011,Gensurai,No photo supplied.
+Low,Missing photo,TJC-012,Gentuong,No photo supplied.
+Low,Missing photo,TJC-013,Guong,No photo supplied.
+Low,Missing photo,TJC-014,Inanam,No photo supplied.
+Low,Missing photo,TJC-015,Kelangsat,No photo supplied.
+Low,Missing photo,TJC-016,Kionsom,No photo supplied.
+Low,Missing photo,TJC-017,Kipatau,No photo supplied.
+Low,Missing photo,TJC-018,Kolombong,No photo supplied.
+Low,Missing photo,TJC-019,Kota Belud,No photo supplied.
+Low,Missing photo,TJC-020,Kota Kinabalu,No photo supplied.
+Low,Missing photo,TJC-021,Kota Marudu,No photo supplied.
+Low,Missing photo,TJC-022,Kudat,No photo supplied.
+Low,Missing photo,TJC-023,Lupak,No photo supplied.
+Low,Missing photo,TJC-024,Menunggang,No photo supplied.
+Low,Missing photo,TJC-025,Pakiak,No photo supplied.
+Low,Missing photo,TJC-026,Pangasaan,No photo supplied.
+Low,Missing photo,TJC-027,Papar,No photo supplied.
+Low,Missing photo,TJC-028,Penampang,No photo supplied.
+Low,Missing photo,TJC-029,Penampatan,No photo supplied.
+Low,Missing photo,TJC-030,Pengarawan,No photo supplied.
+Low,Missing photo,TJC-031,Purun,No photo supplied.
+Low,Missing photo,TJC-032,Putatan,No photo supplied.
+Low,Missing photo,TJC-034,Ranau,No photo supplied.
+Low,Missing photo,TJC-035,Rongalis,No photo supplied.
+Low,Missing photo,TJC-036,Sepanggar,No photo supplied.
+Low,Missing photo,TJC-037,Sikuati,No photo supplied.
+Low,Missing photo,TJC-038,Sipitang,No photo supplied.
+Low,Missing photo,TJC-039,Somodon,No photo supplied.
+Low,Missing photo,TJC-040,Taburan,No photo supplied.
+Low,Missing photo,TJC-041,Tamparuli,No photo supplied.
+Low,Missing photo,TJC-042,Tampulan,No photo supplied.
+Low,Missing photo,TJC-043,Tanjung Aru,No photo supplied.
+Low,Missing photo,TJC-044,Timbou,No photo supplied.
+Low,Missing photo,TJC-045,Tinuhan,No photo supplied.
+Low,Missing photo,TJC-046,Tuaran,No photo supplied.
+Low,Missing photo,TJC-047,Wangkod,No photo supplied.
+Low,Missing photo,TJC-048,Ambual,No photo supplied.
+Low,Missing photo,TJC-049,Balantos,No photo supplied.
+Low,Missing photo,TJC-050,Bamban,No photo supplied.
+Low,Missing photo,TJC-051,Batu Lunguyan,No photo supplied.
+Low,Missing photo,TJC-052,Biah Skim,No photo supplied.
+Low,Missing photo,TJC-054,Kabu Baru,No photo supplied.
+Low,Missing photo,TJC-055,Kampung Dua,No photo supplied.
+Low,Missing photo,TJC-056,Kampung Lima,No photo supplied.
+Low,Missing photo,TJC-058,Kapayan,No photo supplied.
+Low,Missing photo,TJC-060,Kauluan,No photo supplied.
+Low,Missing photo,TJC-061,Keningau,No photo supplied.
+Low,Missing photo,TJC-062,Labut,No photo supplied.
+Low,Missing photo,TJC-063,Laman,No photo supplied.
+Low,Missing photo,TJC-066,Luanti,No photo supplied.
+Low,Missing photo,TJC-067,Mansasoh,No photo supplied.
+Low,Missing photo,TJC-068,Marais,No photo supplied.
+Low,Missing photo,TJC-069,Matanoi,No photo supplied.
+Low,Missing photo,TJC-070,Nakuyung,No photo supplied.
+Low,Missing photo,TJC-072,Pahat,No photo supplied.
+Low,Missing photo,TJC-073,Pangi,No photo supplied.
+Low,Missing photo,TJC-074,Ponontomon,No photo supplied.
+Low,Missing photo,TJC-075,Saga,No photo supplied.
+Low,Missing photo,TJC-076,Sakali,No photo supplied.
+Low,Missing photo,TJC-077,Sakikilu,No photo supplied.
+Low,Missing photo,TJC-078,Salinatan,No photo supplied.
+Low,Missing photo,TJC-079,Salong,No photo supplied.
+Low,Missing photo,TJC-080,Sikait,No photo supplied.
+Low,Missing photo,TJC-081,Sinaron,No photo supplied.
+Low,Missing photo,TJC-082,Sugiang,No photo supplied.
+Low,Missing photo,TJC-083,Sumandalom,No photo supplied.
+Low,Missing photo,TJC-084,Sungai Apih,No photo supplied.
+Low,Missing photo,TJC-085,Sungai Paal,No photo supplied.
+Low,Missing photo,TJC-086,Tenom,No photo supplied.
+Low,Missing photo,TJC-087,Tuntumulud,No photo supplied.
+Low,Missing photo,TJC-088,Ulikon,No photo supplied.
+Low,Missing photo,TJC-089,Ulu Tepoh,No photo supplied.
+Low,Missing photo,TJC-091,Bukit Belacon,No photo supplied.
+Low,Missing photo,TJC-092,Bukit Garam,No photo supplied.
+Low,Missing photo,TJC-093,Elopura,No photo supplied.
+Low,Missing photo,TJC-094,Kunak,No photo supplied.
+Low,Missing photo,TJC-095,Lahad Datu,No photo supplied.
+Low,Missing photo,TJC-096,Malikup,No photo supplied.
+Low,Missing photo,TJC-098,Segama,No photo supplied.
+Low,Missing photo,TJC-100,Sibuga,No photo supplied.
+Low,Missing photo,TJC-101,Silabukan,No photo supplied.
+Low,Missing photo,TJC-103,Telupid,No photo supplied.
+Low,Missing photo,TJC-104,Labuan,No photo supplied.
+Low,Missing photo,TJC-105,Bintulu,No photo supplied.
+Low,Missing photo,TJC-106,Kuching,No photo supplied.
+Low,Missing photo,TJC-107,Miri,No photo supplied.
+Low,Missing photo,TJC-108,Sibu,No photo supplied.
+Low,Missing service times,TJC-016,Kionsom,No service times in church documents.
+Low,Missing service times,TJC-033,Putrajaya,No service times in church documents.
+Low,Missing service times,TJC-050,Bamban,No service times in church documents.
+Low,Missing service times,TJC-053,Binanun,No service times in church documents.
+Low,Missing service times,TJC-055,Kampung Dua,No service times in church documents.
+Low,Missing service times,TJC-057,Kapalarau,No service times in church documents.
+Low,Missing service times,TJC-059,Katalirus,No service times in church documents.
+Low,Missing service times,TJC-062,Labut,No service times in church documents.
+Low,Missing service times,TJC-063,Laman,No service times in church documents.
+Low,Missing service times,TJC-064,Layon,No service times in church documents.
+Low,Missing service times,TJC-065,Lotong,No service times in church documents.
+Low,Missing service times,TJC-067,Mansasoh,No service times in church documents.
+Low,Missing service times,TJC-068,Marais,No service times in church documents.
+Low,Missing service times,TJC-071,Nangkawangan,No service times in church documents.
+Low,Missing service times,TJC-073,Pangi,No service times in church documents.
+Low,Missing service times,TJC-074,Ponontomon,No service times in church documents.
+Low,Missing service times,TJC-075,Saga,No service times in church documents.
+Low,Missing service times,TJC-082,Sugiang,No service times in church documents.
+Low,Missing service times,TJC-083,Sumandalom,No service times in church documents.
+Low,Missing service times,TJC-084,Sungai Apih,No service times in church documents.
+Low,Missing service times,TJC-088,Ulikon,No service times in church documents.
+Low,Missing service times,TJC-089,Ulu Tepoh,No service times in church documents.
+Low,Missing service times,TJC-105,Bintulu,No service times in church documents.
+Low,Missing service times,TJC-106,Kuching,No service times in church documents.
+Low,Missing service times,TJC-107,Miri,No service times in church documents.
+Low,Missing service times,TJC-108,Sibu,No service times in church documents.
+Low,Missing subzone,TJC-016,Kionsom,Subzone unknown.
+Low,Missing subzone,TJC-089,Ulu Tepoh,Subzone unknown.
+Low,Missing subzone,TJC-105,Bintulu,Subzone unknown.
+Low,Missing subzone,TJC-106,Kuching,Subzone unknown.
+Low,Missing subzone,TJC-107,Miri,Subzone unknown.
+Low,Missing subzone,TJC-108,Sibu,Subzone unknown.

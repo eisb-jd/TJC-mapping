@@ -1,0 +1,4399 @@
+{
+ "type": "FeatureCollection",
+ "name": "tjc_locations",
+ "metadata": {
+  "title": "True Jesus Church locations - Sabah, Labuan & Sarawak",
+  "version": "Draft v1",
+  "date": "2026-11-20",
+  "crs": "EPSG:4326 (WGS 84)",
+  "producer": "EARTH Info Sdn. Bhd.",
+  "sources": "Church subzone documents (Nov 2026); OpenStreetMap contributors (Kuching, Miri); KodLokasi web app (codes)",
+  "note": "Features with geometry null are awaiting coordinates from the church. Not field-verified."
+ },
+ "features": [
+  {
+   "type": "Feature",
+   "id": "TJC-001",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     116.072273,
+     5.976705
+    ]
+   },
+   "properties": {
+    "id": "TJC-001",
+    "no": 1,
+    "name": "Asia City",
+    "name_source": "Asia City",
+    "type": "Church",
+    "state": "Sabah",
+    "zone": "West Coast",
+    "subzone": "Kota Kinabalu",
+    "address": "2nd Floor, Lot 67, Block H, Lorong Singgah Mata 4, Asia City., P.O. Box 15615, 88864 Kota Kinabalu, Sabah.",
+    "kodlokasi": "SBKK.37.58X",
+    "kodlokasi_url": "https://map.kodlokasi.my/SBKK.37.58X",
+    "services": [
+     {
+      "when": "Fri 7.30pm - 8.30pm",
+      "service": "Night Service - Sabbath"
+     },
+     {
+      "when": "Sat 2.00pm - 3.00pm",
+      "service": "Sabbath Service"
+     }
+    ],
+    "photo": null,
+    "coord_source": "Client document",
+    "status": "Located",
+    "notes": null,
+    "lat": 5.976705,
+    "lon": 116.072273
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "TJC-002",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     116.526972,
+     6.413172
+    ]
+   },
+   "properties": {
+    "id": "TJC-002",
+    "no": 2,
+    "name": "Bambangan",
+    "name_source": "Bambangan",
+    "type": "Prayer House",
+    "state": "Sabah",
+    "zone": "West Coast",
+    "subzone": "Kudat",
+    "address": "Kampung Bambangan Rosok, Jalan Kompleks Sukan, 89157 Kota Belud, Sabah.",
+    "kodlokasi": "SBKB.1076.654",
+    "kodlokasi_url": "https://map.kodlokasi.my/SBKB.1076.654",
+    "services": [
+     {
+      "when": "Wed 7.30pm - 8.30pm",
+      "service": "Night Service"
+     },
+     {
+      "when": "Fri 7.30pm - 8.30pm",
+      "service": "Night Service - Sabbath"
+     },
+     {
+      "when": "Sat 10.00am - 11.00am",
+      "service": "Sabbath Service"
+     }
+    ],
+    "photo": null,
+    "coord_source": "Client document",
+    "status": "Located",
+    "notes": null,
+    "lat": 6.413172,
+    "lon": 116.526972
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "TJC-003",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     115.544192,
+     5.295662
+    ]
+   },
+   "properties": {
+    "id": "TJC-003",
+    "no": 3,
+    "name": "Bangkalalak",
+    "name_source": "Bangkalalak",
+    "type": "Prayer House",
+    "state": "Sabah",
+    "zone": "West Coast",
+    "subzone": "Beaufort",
+    "address": "P.O. Box 790, 89808, Beaufort",
+    "kodlokasi": "SBBF.2259.557X",
+    "kodlokasi_url": "https://map.kodlokasi.my/SBBF.2259.557X",
+    "services": [
+     {
+      "when": "Fri 7.30pm - 8.30pm",
+      "service": "Night Service - Sabbath"
+     },
+     {
+      "when": "Sat 10.30am - 11.30am",
+      "service": "Sabbath Service"
+     }
+    ],
+    "photo": null,
+    "coord_source": "Client document",
+    "status": "Located",
+    "notes": null,
+    "lat": 5.295662,
+    "lon": 115.544192
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "TJC-004",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     116.292778,
+     6.126111
+    ]
+   },
+   "properties": {
+    "id": "TJC-004",
+    "no": 4,
+    "name": "Bawang",
+    "name_source": "Bawang",
+    "type": "Church",
+    "state": "Sabah",
+    "zone": "West Coast",
+    "subzone": "Tuaran",
+    "address": "Kg Bawang, Peti Surat 297, 89207, Tamparuli",
+    "kodlokasi": "SBTU.678.563E",
+    "kodlokasi_url": "https://map.kodlokasi.my/SBTU.678.563E",
+    "services": [
+     {
+      "when": "Mon 7.30pm - 8.30pm",
+      "service": "Home Service"
+     },
+     {
+      "when": "Tue 7.30pm - 8.30pm",
+      "service": "Family Altar"
+     },
+     {
+      "when": "Wed 7.30pm - 8.30pm",
+      "service": "Night Service"
+     },
+     {
+      "when": "Fri 7.30pm - 8.30pm",
+      "service": "Night Service - Sabbath"
+     },
+     {
+      "when": "Sat 6.30am - 7.15am",
+      "service": "Morning Prayer"
+     },
+     {
+      "when": "Sat 9.00am - 10.00am",
+      "service": "Sabbath Service 1"
+     },
+     {
+      "when": "Sat 2.00pm - 3.00pm",
+      "service": "Sabbath Service 2"
+     }
+    ],
+    "photo": null,
+    "coord_source": "Client document",
+    "status": "Located",
+    "notes": null,
+    "lat": 6.126111,
+    "lon": 116.292778
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "TJC-005",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     115.751511,
+     5.339737
+    ]
+   },
+   "properties": {
+    "id": "TJC-005",
+    "no": 5,
+    "name": "Beaufort",
+    "name_source": "Beaufort",
+    "type": "Church",
+    "state": "Sabah",
+    "zone": "West Coast",
+    "subzone": "Beaufort",
+    "address": "P.O. Box 56, 89807 Beaufort, Sabah",
+    "kodlokasi": "SBBF.51.65E",
+    "kodlokasi_url": "https://map.kodlokasi.my/SBBF.51.65E",
+    "services": [
+     {
+      "when": "Wed 7.30pm - 8.30pm",
+      "service": "Bible Study and Prayer Service"
+     },
+     {
+      "when": "Fri 7.30pm - 8.30pm",
+      "service": "Night Service - Sabbath"
+     },
+     {
+      "when": "Sat 2.00pm - 3.00pm",
+      "service": "Sabbath Service"
+     }
+    ],
+    "photo": null,
+    "coord_source": "Client document",
+    "status": "Located",
+    "notes": null,
+    "lat": 5.339737,
+    "lon": 115.751511
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "TJC-006",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     115.793922,
+     5.308028
+    ]
+   },
+   "properties": {
+    "id": "TJC-006",
+    "no": 6,
+    "name": "Beaufort 62.5",
+    "name_source": "Beaufort 62.5",
+    "type": "Prayer House",
+    "state": "Sabah",
+    "zone": "West Coast",
+    "subzone": "Beaufort",
+    "address": "Kampung Batu 62, Bantayan, Beaufort, Sabah.",
+    "kodlokasi": "SBBF.523.419E",
+    "kodlokasi_url": "https://map.kodlokasi.my/SBBF.523.419E",
+    "services": [
+     {
+      "when": "Fri 7.30pm - 8.30pm",
+      "service": "Night Service - Sabbath"
+     },
+     {
+      "when": "Sat 2.30pm - 3.30pm",
+      "service": "Sabbath Service"
+     }
+    ],
+    "photo": null,
+    "coord_source": "Client document",
+    "status": "Located",
+    "notes": null,
+    "lat": 5.308028,
+    "lon": 115.793922
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "TJC-007",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     115.805323,
+     5.263457
+    ]
+   },
+   "properties": {
+    "id": "TJC-007",
+    "no": 7,
+    "name": "Beaufort 66",
+    "name_source": "Beaufort 66",
+    "type": "Church",
+    "state": "Sabah",
+    "zone": "West Coast",
+    "subzone": "Beaufort",
+    "address": "P.O. Box 137, 89807 Beaufort",
+    "kodlokasi": "SBBF.650.917E",
+    "kodlokasi_url": "https://map.kodlokasi.my/SBBF.650.917E",
+    "services": [
+     {
+      "when": "Sun 10.00am - 11.00am",
+      "service": "Home Service"
+     },
+     {
+      "when": "Fri 7.30pm - 8.30pm",
+      "service": "Night Service - Sabbath"
+     },
+     {
+      "when": "Sat 3.00pm - 4.00pm",
+      "service": "Sabbath Service"
+     }
+    ],
+    "photo": null,
+    "coord_source": "Client document",
+    "status": "Located",
+    "notes": null,
+    "lat": 5.263457,
+    "lon": 115.805323
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "TJC-008",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     117.224662,
+     6.625057
+    ]
+   },
+   "properties": {
+    "id": "TJC-008",
+    "no": 8,
+    "name": "Boribi",
+    "name_source": "Boribi",
+    "type": "Prayer House",
+    "state": "Sabah",
+    "zone": "West Coast",
+    "subzone": "Kudat",
+    "address": "Kg. Boribi, Mini Pos 129 Pitas, 81000 Kota Marudu",
+    "kodlokasi": "SBPS.2147.950E",
+    "kodlokasi_url": "https://map.kodlokasi.my/SBPS.2147.950E",
+    "services": [
+     {
+      "when": "Fri 7.30pm - 8.30pm",
+      "service": "Night Service - Sabbath"
+     },
+     {
+      "when": "Sat 11.00am - 12.00pm",
+      "service": "Sabbath Service"
+     }
+    ],
+    "photo": null,
+    "coord_source": "Client document",
+    "status": "Located",
+    "notes": null,
+    "lat": 6.625057,
+    "lon": 117.224662
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "TJC-009",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     116.035644,
+     5.799951
+    ]
+   },
+   "properties": {
+    "id": "TJC-009",
+    "no": 9,
+    "name": "Danau",
+    "name_source": "Danau",
+    "type": "Prayer House",
+    "state": "Sabah",
+    "zone": "West Coast",
+    "subzone": "Kota Kinabalu",
+    "address": "KM 23, Jalan Papar Lama, Kampung Danau Kinarut",
+    "kodlokasi": "SBPA.1152.747",
+    "kodlokasi_url": "https://map.kodlokasi.my/SBPA.1152.747",
+    "services": [
+     {
+      "when": "Fri 8.00pm - 9.00pm",
+      "service": "Night Service - Sabbath"
+     },
+     {
+      "when": "Sat 2.00pm - 3.00pm",
+      "service": "Sabbath Service"
+     }
+    ],
+    "photo": null,
+    "coord_source": "Client document",
+    "status": "Located",
+    "notes": null,
+    "lat": 5.799951,
+    "lon": 116.035644
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "TJC-010",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     116.108461,
+     5.916993
+    ]
+   },
+   "properties": {
+    "id": "TJC-010",
+    "no": 10,
+    "name": "Donggongon",
+    "name_source": "Donggongon",
+    "type": "Church",
+    "state": "Sabah",
+    "zone": "West Coast",
+    "subzone": "Kota Kinabalu",
+    "address": "Off Jalan Penampang -Tambunan, Kampung Kibabaig, Dongongon, Penampang.",
+    "kodlokasi": "SBPG.4.16",
+    "kodlokasi_url": "https://map.kodlokasi.my/SBPG.4.16",
+    "services": [
+     {
+      "when": "Fri 8.00pm - 9.00pm",
+      "service": "Sabbath - Night Service"
+     },
+     {
+      "when": "Sat 11.30am - 12.30pm",
+      "service": "Sabbath Service 1"
+     },
+     {
+      "when": "Sat 2.15pm - 3.15pm",
+      "service": "Sabbath Service 2"
+     }
+    ],
+    "photo": null,
+    "coord_source": "Client document",
+    "status": "Located",
+    "notes": null,
+    "lat": 5.916993,
+    "lon": 116.108461
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "TJC-011",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     116.489066,
+     6.202009
+    ]
+   },
+   "properties": {
+    "id": "TJC-011",
+    "no": 11,
+    "name": "Gensurai",
+    "name_source": "Gensurai",
+    "type": "Prayer House",
+    "state": "Sabah",
+    "zone": "West Coast",
+    "subzone": "Kudat",
+    "address": "W.D.T 53, 89157 Kota Belud, Sabah",
+    "kodlokasi": "SBKB.654.1713E",
+    "kodlokasi_url": "https://map.kodlokasi.my/SBKB.654.1713E",
+    "services": [
+     {
+      "when": "Fri 7.30pm - 8.30pm",
+      "service": "Night Service - Sabbath"
+     },
+     {
+      "when": "Sat 10.00am - 11.00am",
+      "service": "Sabbath Service"
+     }
+    ],
+    "photo": null,
+    "coord_source": "Client document",
+    "status": "Located",
+    "notes": null,
+    "lat": 6.202009,
+    "lon": 116.489066
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "TJC-012",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     116.511587,
+     6.427324
+    ]
+   },
+   "properties": {
+    "id": "TJC-012",
+    "no": 12,
+    "name": "Gentuong",
+    "name_source": "Gentuong",
+    "type": "Church",
+    "state": "Sabah",
+    "zone": "West Coast",
+    "subzone": "Kudat",
+    "address": "Kg. Gentuong Rosok, Jalan Kompleks Sukan 89158",
+    "kodlokasi": "SBKB.905.813",
+    "kodlokasi_url": "https://map.kodlokasi.my/SBKB.905.813",
+    "services": [
+     {
+      "when": "Fri 7.30pm - 8.30pm",
+      "service": "Night Service - Sabbath"
+     },
+     {
+      "when": "Sat 6.30am - 7.30am",
+      "service": "Morning Prayer"
+     },
+     {
+      "when": "Sat 10.30am - 11.00am",
+      "service": "Special Service"
+     },
+     {
+      "when": "Sat 11.00am - 12.00pm",
+      "service": "Sabbath Service"
+     }
+    ],
+    "photo": null,
+    "coord_source": "Client document",
+    "status": "Located",
+    "notes": null,
+    "lat": 6.427324,
+    "lon": 116.511587
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "TJC-013",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     116.508154,
+     6.409349
+    ]
+   },
+   "properties": {
+    "id": "TJC-013",
+    "no": 13,
+    "name": "Guong",
+    "name_source": "Guong",
+    "type": "Church",
+    "state": "Sabah",
+    "zone": "West Coast",
+    "subzone": "Kudat",
+    "address": "Kg. Guong Rosok, Peti Surat 475, 89158 Kota Belud, Sabah.",
+    "kodlokasi": "SBKB.867.611",
+    "kodlokasi_url": "https://map.kodlokasi.my/SBKB.867.611",
+    "services": [
+     {
+      "when": "Tue 7.30pm - 8.30pm",
+      "service": "Night Service"
+     },
+     {
+      "when": "Thu 7.30pm - 8.30pm",
+      "service": "Home Service"
+     },
+     {
+      "when": "Fri 7.30pm - 8.30pm",
+      "service": "Night Service - Sabbath"
+     },
+     {
+      "when": "Sat 6.30am - 7.15am",
+      "service": "Morning Prayer"
+     },
+     {
+      "when": "Sat 2.00pm - 3.00pm",
+      "service": "Sabbath Service"
+     }
+    ],
+    "photo": null,
+    "coord_source": "Client document",
+    "status": "Located",
+    "notes": null,
+    "lat": 6.409349,
+    "lon": 116.508154
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "TJC-014",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     116.127361,
+     5.99298
+    ]
+   },
+   "properties": {
+    "id": "TJC-014",
+    "no": 14,
+    "name": "Inanam",
+    "name_source": "Inanam",
+    "type": "Church",
+    "state": "Sabah",
+    "zone": "West Coast",
+    "subzone": "Kota Kinabalu",
+    "address": "No. 26-2, Blk A, Inanam Business Centre Ph 1, Jalan Tuaran, Inanam, 88450 Kota Kinabalu, Sabah.",
+    "kodlokasi": "SBKK.578.126",
+    "kodlokasi_url": "https://map.kodlokasi.my/SBKK.578.126",
+    "services": [
+     {
+      "when": "Wed 8.00pm - 9.00pm",
+      "service": "Night Service - Bible Study"
+     },
+     {
+      "when": "Fri 8.00pm - 9.00pm",
+      "service": "Night Service - Sabbath"
+     },
+     {
+      "when": "Sat 10.45am - 11.45am",
+      "service": "Sabbath Service 1"
+     },
+     {
+      "when": "Sat 3.00pm - 4.00pm",
+      "service": "Sabbath Service 2"
+     }
+    ],
+    "photo": null,
+    "coord_source": "Client document",
+    "status": "Located",
+    "notes": null,
+    "lat": 5.99298,
+    "lon": 116.127361
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "TJC-015",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     115.726123,
+     4.980076
+    ]
+   },
+   "properties": {
+    "id": "TJC-015",
+    "no": 15,
+    "name": "Kelangsat",
+    "name_source": "Kelangsat",
+    "type": "Church",
+    "state": "Sabah",
+    "zone": "West Coast",
+    "subzone": "Beaufort",
+    "address": "Kg. Kelangsat, 89850 Sipitang, Sabah.",
+    "kodlokasi": "SBSG.1946.1086E",
+    "kodlokasi_url": "https://map.kodlokasi.my/SBSG.1946.1086E",
+    "services": [
+     {
+      "when": "Wed 7.30pm - 8.00pm",
+      "service": "Bible Study and Prayer Service"
+     },
+     {
+      "when": "Fri 7.30pm - 8.45pm",
+      "service": "Night Service - Sabbath"
+     },
+     {
+      "when": "Sat 7.00am - 7.45am",
+      "service": "Morning Prayer"
+     },
+     {
+      "when": "Sat 11.00am - 12.00pm",
+      "service": "Sabbath Service"
+     }
+    ],
+    "photo": null,
+    "coord_source": "Client document",
+    "status": "Located",
+    "notes": null,
+    "lat": 4.980076,
+    "lon": 115.726123
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "TJC-016",
+   "geometry": null,
+   "properties": {
+    "id": "TJC-016",
+    "no": 16,
+    "name": "Kionsom",
+    "name_source": "Kionsom",
+    "type": "Prayer House",
+    "state": "Sabah",
+    "zone": "West Coast",
+    "subzone": "",
+    "address": "",
+    "kodlokasi": null,
+    "kodlokasi_url": null,
+    "services": [],
+    "photo": null,
+    "coord_source": null,
+    "status": "Awaiting coordinates",
+    "notes": null,
+    "lat": null,
+    "lon": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "TJC-017",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     116.335668,
+     6.233264
+    ]
+   },
+   "properties": {
+    "id": "TJC-017",
+    "no": 17,
+    "name": "Kipatau",
+    "name_source": "Kipatau",
+    "type": "Prayer House",
+    "state": "Sabah",
+    "zone": "West Coast",
+    "subzone": "Tuaran",
+    "address": "Gereja Yesus Benar, Khemah Doa Kipatau",
+    "kodlokasi": "SBTU.1156.639",
+    "kodlokasi_url": "https://map.kodlokasi.my/SBTU.1156.639",
+    "services": [
+     {
+      "when": "Fri 7.30pm - 8.30pm",
+      "service": "Night Service - Sabbath"
+     },
+     {
+      "when": "Sat 10.30am - 11.30am",
+      "service": "Sabbath Service"
+     }
+    ],
+    "photo": null,
+    "coord_source": "Client document",
+    "status": "Located",
+    "notes": null,
+    "lat": 6.233264,
+    "lon": 116.335668
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "TJC-018",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     116.116341,
+     5.968936
+    ]
+   },
+   "properties": {
+    "id": "TJC-018",
+    "no": 18,
+    "name": "Kolombong",
+    "name_source": "Kolombong",
+    "type": "Church",
+    "state": "Sabah",
+    "zone": "West Coast",
+    "subzone": "Kota Kinabalu",
+    "address": "Lot 7-9, Taman BDC, Phase 3, Kolombong, 88450 Kota Kinabalu, Sabah.",
+    "kodlokasi": "SBKK.455.145E",
+    "kodlokasi_url": "https://map.kodlokasi.my/SBKK.455.145E",
+    "services": [
+     {
+      "when": "Tue 8.00pm - 9.00pm",
+      "service": "Night Service - Bible Study"
+     },
+     {
+      "when": "Wed 8.00pm - 9.00pm",
+      "service": "Sister Fellowship"
+     },
+     {
+      "when": "Fri 8.00pm - 9.00pm",
+      "service": "Night Service - Sabbath"
+     },
+     {
+      "when": "Sat 9.15am - 9.45am",
+      "service": "Morning Prayer"
+     },
+     {
+      "when": "Sat 10.00am - 11.00am",
+      "service": "Sabbath Service 1"
+     },
+     {
+      "when": "Sat 11.30am - 12.30pm",
+      "service": "Youth Service"
+     },
+     {
+      "when": "Sat 2.30pm - 3.30pm",
+      "service": "Sabbath Service 2"
+     }
+    ],
+    "photo": null,
+    "coord_source": "Client document",
+    "status": "Located",
+    "notes": null,
+    "lat": 5.968936,
+    "lon": 116.116341
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "TJC-019",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     116.431435,
+     6.349441
+    ]
+   },
+   "properties": {
+    "id": "TJC-019",
+    "no": 19,
+    "name": "Kota Belud",
+    "name_source": "K.B.",
+    "type": "Church",
+    "state": "Sabah",
+    "zone": "West Coast",
+    "subzone": "Kudat",
+    "address": "P.O. Box 57, 89157 Kota Belud, Sabah.",
+    "kodlokasi": "SBKB.13.62E",
+    "kodlokasi_url": "https://map.kodlokasi.my/SBKB.13.62E",
+    "services": [
+     {
+      "when": "Fri 8.00pm - 8.30pm",
+      "service": "Special Praying Service"
+     },
+     {
+      "when": "Sat 2.00pm - 3.00pm",
+      "service": "Sabbath Service"
+     }
+    ],
+    "photo": null,
+    "coord_source": "Client document",
+    "status": "Located",
+    "notes": null,
+    "lat": 6.349441,
+    "lon": 116.431435
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "TJC-020",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     116.098207,
+     5.975907
+    ]
+   },
+   "properties": {
+    "id": "TJC-020",
+    "no": 20,
+    "name": "Kota Kinabalu",
+    "name_source": "K.K",
+    "type": "Church",
+    "state": "Sabah",
+    "zone": "West Coast",
+    "subzone": "Kota Kinabalu",
+    "address": "Mile 3, Off Tuaran Road, Jalan Fung Yei Ting, 88450 Kota Kinabalu, Sabah. Malaysia.",
+    "kodlokasi": "SBKK.253.67E",
+    "kodlokasi_url": "https://map.kodlokasi.my/SBKK.253.67E",
+    "services": [
+     {
+      "when": "Sun 7.00am - 8.00am",
+      "service": "Morning Prayer"
+     },
+     {
+      "when": "Sun 7.30pm - 8.30pm",
+      "service": "Night Service"
+     },
+     {
+      "when": "Wed 7.30pm - 8.30pm",
+      "service": "Night Service - Bible Study"
+     },
+     {
+      "when": "Thu 7.30pm - 9.00pm",
+      "service": "Fellowship Service"
+     },
+     {
+      "when": "Fri 7.30pm - 8.30pm",
+      "service": "Night Service - Sabbath"
+     },
+     {
+      "when": "Sat 10.00am - 11.00am",
+      "service": "Sabbath Service 1"
+     },
+     {
+      "when": "Sat 2.00pm - 3.00pm",
+      "service": "Sabbath Service 2"
+     },
+     {
+      "when": "Sat 3.45pm - 4.45pm",
+      "service": "Sabbath Service 3"
+     }
+    ],
+    "photo": null,
+    "coord_source": "Client document",
+    "status": "Located",
+    "notes": null,
+    "lat": 5.975907,
+    "lon": 116.098207
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "TJC-021",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     116.782607,
+     6.493848
+    ]
+   },
+   "properties": {
+    "id": "TJC-021",
+    "no": 21,
+    "name": "Kota Marudu",
+    "name_source": "K.M.",
+    "type": "Church",
+    "state": "Sabah",
+    "zone": "West Coast",
+    "subzone": "Kudat",
+    "address": "Beg Berkunci 23, 89109 Kota Marudu",
+    "kodlokasi": "SBKM.147.33E",
+    "kodlokasi_url": "https://map.kodlokasi.my/SBKM.147.33E",
+    "services": [
+     {
+      "when": "Fri 7.30pm - 8.30pm",
+      "service": "Night Service - Sabbath"
+     },
+     {
+      "when": "Sat 7.00am - 7.45am",
+      "service": "Morning Prayer"
+     },
+     {
+      "when": "Sat 2.00pm - 3.00pm",
+      "service": "Sabbath Service"
+     }
+    ],
+    "photo": null,
+    "coord_source": "Client document",
+    "status": "Located",
+    "notes": null,
+    "lat": 6.493848,
+    "lon": 116.782607
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "TJC-022",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     116.847568,
+     6.886325
+    ]
+   },
+   "properties": {
+    "id": "TJC-022",
+    "no": 22,
+    "name": "Kudat",
+    "name_source": "Kudat",
+    "type": "Church",
+    "state": "Sabah",
+    "zone": "West Coast",
+    "subzone": "Kudat",
+    "address": "P.O. Box 50, Kudat",
+    "kodlokasi": "SBKD.65.52W",
+    "kodlokasi_url": "https://map.kodlokasi.my/SBKD.65.52W",
+    "services": [
+     {
+      "when": "Fri 7.45pm - 8.45pm",
+      "service": "Night Service - Sabbath"
+     },
+     {
+      "when": "Sat 7.00am - 7.45am",
+      "service": "Morning Prayer"
+     },
+     {
+      "when": "Sat 2.00pm - 3.00pm",
+      "service": "Sabbath Service"
+     }
+    ],
+    "photo": null,
+    "coord_source": "Client document",
+    "status": "Located",
+    "notes": null,
+    "lat": 6.886325,
+    "lon": 116.847568
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "TJC-023",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     115.641592,
+     5.360163
+    ]
+   },
+   "properties": {
+    "id": "TJC-023",
+    "no": 23,
+    "name": "Lupak",
+    "name_source": "Lupak",
+    "type": "Church",
+    "state": "Sabah",
+    "zone": "West Coast",
+    "subzone": "Beaufort",
+    "address": "P.O. Box 974, 89808, Kg. Lupak, Beaufort, Sabah.",
+    "kodlokasi": "SBBF.1175.166W",
+    "kodlokasi_url": "https://map.kodlokasi.my/SBBF.1175.166W",
+    "services": [
+     {
+      "when": "Sun 7.30pm - 8.30pm",
+      "service": "Night Service"
+     },
+     {
+      "when": "Wed 7.30pm - 8.30pm",
+      "service": "Night Service"
+     },
+     {
+      "when": "Sat 7.00am - 7.30am",
+      "service": "Morning Prayer"
+     },
+     {
+      "when": "Sat 12.00pm - 1.00pm",
+      "service": "Sabbath Service"
+     }
+    ],
+    "photo": null,
+    "coord_source": "Client document",
+    "status": "Located",
+    "notes": null,
+    "lat": 5.360163,
+    "lon": 115.641592
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "TJC-024",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     115.536056,
+     5.492787
+    ]
+   },
+   "properties": {
+    "id": "TJC-024",
+    "no": 24,
+    "name": "Menunggang",
+    "name_source": "Menunggang",
+    "type": "Church",
+    "state": "Sabah",
+    "zone": "West Coast",
+    "subzone": "Beaufort",
+    "address": "P.O. Box 326, 89747 Kuala Penyu, Sabah.",
+    "kodlokasi": "SBKP.707.904X",
+    "kodlokasi_url": "https://map.kodlokasi.my/SBKP.707.904X",
+    "services": [
+     {
+      "when": "Wed 7.00pm - 8.00pm",
+      "service": "Night Service"
+     },
+     {
+      "when": "Fri 7.00pm - 8.00pm",
+      "service": "Night Service - Sabbath"
+     },
+     {
+      "when": "Sat 8.30am - 10.00am",
+      "service": "Sabbath Service"
+     }
+    ],
+    "photo": null,
+    "coord_source": "Client document",
+    "status": "Located",
+    "notes": null,
+    "lat": 5.492787,
+    "lon": 115.536056
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "TJC-025",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     115.782627,
+     5.018619
+    ]
+   },
+   "properties": {
+    "id": "TJC-025",
+    "no": 25,
+    "name": "Pakiak",
+    "name_source": "Pakiak",
+    "type": "Prayer House",
+    "state": "Sabah",
+    "zone": "West Coast",
+    "subzone": "Beaufort",
+    "address": "Khemah Doa Kampung Pakiak, Solob, 89850 Sipitang, Sabah",
+    "kodlokasi": "SBSG.2575.655E",
+    "kodlokasi_url": "https://map.kodlokasi.my/SBSG.2575.655E",
+    "services": [
+     {
+      "when": "Sat 9.00am - 10.00am",
+      "service": "Sabbath Service"
+     }
+    ],
+    "photo": null,
+    "coord_source": "Client document",
+    "status": "Located",
+    "notes": null,
+    "lat": 5.018619,
+    "lon": 115.782627
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "TJC-026",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     116.134654,
+     5.96893
+    ]
+   },
+   "properties": {
+    "id": "TJC-026",
+    "no": 26,
+    "name": "Pangasaan",
+    "name_source": "Pangasaan",
+    "type": "Church",
+    "state": "Sabah",
+    "zone": "West Coast",
+    "subzone": "Kota Kinabalu",
+    "address": "Kg. Pangasaan, Jalan Bantayan, 88450 Inanam, Kota Kinabalu, Sabah.",
+    "kodlokasi": "SBKK.659.145E",
+    "kodlokasi_url": "https://map.kodlokasi.my/SBKK.659.145E",
+    "services": [
+     {
+      "when": "Sun 6.30am - 7.30am",
+      "service": "Morning Prayer"
+     },
+     {
+      "when": "Wed 8.00pm - 9.00pm",
+      "service": "Night Service"
+     },
+     {
+      "when": "Fri 8.00pm - 9.00pm",
+      "service": "Night Service - Sabbath"
+     },
+     {
+      "when": "Sat 3.00pm - 4.00pm",
+      "service": "Sabbath Service"
+     }
+    ],
+    "photo": null,
+    "coord_source": "Client document",
+    "status": "Located",
+    "notes": null,
+    "lat": 5.96893,
+    "lon": 116.134654
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "TJC-027",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     115.928089,
+     5.727598
+    ]
+   },
+   "properties": {
+    "id": "TJC-027",
+    "no": 27,
+    "name": "Papar",
+    "name_source": "Papar",
+    "type": "Church",
+    "state": "Sabah",
+    "zone": "West Coast",
+    "subzone": "Kota Kinabalu",
+    "address": "P.O. Box 63, 89600 Papar, Sabah.",
+    "kodlokasi": "SBPA.47.65X",
+    "kodlokasi_url": "https://map.kodlokasi.my/SBPA.47.65X",
+    "services": [
+     {
+      "when": "Fri 8.00pm - 9.00pm",
+      "service": "Night Service - Sabbath"
+     },
+     {
+      "when": "Sat 9.30am - 10.30am",
+      "service": "Sabbath Service 1"
+     },
+     {
+      "when": "Sat 1.30pm - 3.00pm",
+      "service": "Sabbath Service 2"
+     }
+    ],
+    "photo": null,
+    "coord_source": "Client document",
+    "status": "Located",
+    "notes": null,
+    "lat": 5.727598,
+    "lon": 115.928089
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "TJC-028",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     116.077699,
+     5.933612
+    ]
+   },
+   "properties": {
+    "id": "TJC-028",
+    "no": 28,
+    "name": "Penampang",
+    "name_source": "Penampang",
+    "type": "Church",
+    "state": "Sabah",
+    "zone": "West Coast",
+    "subzone": "Kota Kinabalu",
+    "address": "P.O. Box 13914, Jalan Kobusak-Jalan Tosaraya, Lorong Tosaraya 3, Taman Tosaraya, Penampang, Sabah.",
+    "kodlokasi": "SBPG.341.202W",
+    "kodlokasi_url": "https://map.kodlokasi.my/SBPG.341.202W",
+    "services": [
+     {
+      "when": "Mon 8.00pm - 9.00pm",
+      "service": "Bible Study"
+     },
+     {
+      "when": "Wed 8.00pm - 9.00pm",
+      "service": "Night Service"
+     },
+     {
+      "when": "Fri 8.00pm - 9.00pm",
+      "service": "Night Service - Sabbath"
+     },
+     {
+      "when": "Sat 10.00am - 11.00am",
+      "service": "Sabbath Service 1"
+     },
+     {
+      "when": "Sat 2.00pm - 3.00pm",
+      "service": "Sabbath Service 2"
+     }
+    ],
+    "photo": null,
+    "coord_source": "Client document",
+    "status": "Located",
+    "notes": null,
+    "lat": 5.933612,
+    "lon": 116.077699
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "TJC-029",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     116.526162,
+     6.300766
+    ]
+   },
+   "properties": {
+    "id": "TJC-029",
+    "no": 29,
+    "name": "Penampatan",
+    "name_source": "Penampatan",
+    "type": "Prayer House",
+    "state": "Sabah",
+    "zone": "West Coast",
+    "subzone": "Kudat",
+    "address": "Kg. Penampatan Woriu, Kota Belud",
+    "kodlokasi": "SBKB.1067.607E",
+    "kodlokasi_url": "https://map.kodlokasi.my/SBKB.1067.607E",
+    "services": [
+     {
+      "when": "Fri 7.30pm - 8.30pm",
+      "service": "Night Service - Sabbath"
+     },
+     {
+      "when": "Sat 10.30am - 11.30am",
+      "service": "Sabbath Service"
+     }
+    ],
+    "photo": null,
+    "coord_source": "Client document",
+    "status": "Located",
+    "notes": null,
+    "lat": 6.300766,
+    "lon": 116.526162
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "TJC-030",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     115.757058,
+     4.974298
+    ]
+   },
+   "properties": {
+    "id": "TJC-030",
+    "no": 30,
+    "name": "Pengarawan",
+    "name_source": "Pengarawan",
+    "type": "Church",
+    "state": "Sabah",
+    "zone": "West Coast",
+    "subzone": "Beaufort",
+    "address": "",
+    "kodlokasi": "SBSG.2291.1150E",
+    "kodlokasi_url": "https://map.kodlokasi.my/SBSG.2291.1150E",
+    "services": [
+     {
+      "when": "Fri 7.15pm - 8.15pm",
+      "service": "Night Service - Sabbath"
+     },
+     {
+      "when": "Sat 10.30am - 11.30am",
+      "service": "Sabbath Service"
+     }
+    ],
+    "photo": null,
+    "coord_source": "Client document",
+    "status": "Located",
+    "notes": null,
+    "lat": 4.974298,
+    "lon": 115.757058
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "TJC-031",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     115.610984,
+     5.552965
+    ]
+   },
+   "properties": {
+    "id": "TJC-031",
+    "no": 31,
+    "name": "Purun",
+    "name_source": "Purun",
+    "type": "Church",
+    "state": "Sabah",
+    "zone": "West Coast",
+    "subzone": "Beaufort",
+    "address": "Kg. Purun, Kuala Penyu, Sabah",
+    "kodlokasi": "SBKP.129.231E",
+    "kodlokasi_url": "https://map.kodlokasi.my/SBKP.129.231E",
+    "services": [
+     {
+      "when": "Wed 7.00pm - 8.00pm",
+      "service": "Night Service"
+     },
+     {
+      "when": "Fri 7.00pm - 8.00pm",
+      "service": "Night Service - Sabbath"
+     },
+     {
+      "when": "Sat 9.00am - 10.00am",
+      "service": "Sabbath Service"
+     }
+    ],
+    "photo": null,
+    "coord_source": "Client document",
+    "status": "Located",
+    "notes": null,
+    "lat": 5.552965,
+    "lon": 115.610984
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "TJC-032",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     116.047745,
+     5.893134
+    ]
+   },
+   "properties": {
+    "id": "TJC-032",
+    "no": 32,
+    "name": "Putatan",
+    "name_source": "Putatan",
+    "type": "Church",
+    "state": "Sabah",
+    "zone": "West Coast",
+    "subzone": "Kota Kinabalu",
+    "address": "Lot 9 & 10, 2nd Floor Putatan Point, Lorong Putat 3 Jalan JKR, Block B, 88200 Putatan, Kota Kinabalu, Sabah.",
+    "kodlokasi": "SBPT.78.27E",
+    "kodlokasi_url": "https://map.kodlokasi.my/SBPT.78.27E",
+    "services": [
+     {
+      "when": "Fri 8.00pm - 9.00pm",
+      "service": "Night Service - Sabbath"
+     },
+     {
+      "when": "Sat 10.00am - 11.00am",
+      "service": "Sabbath Service 1"
+     },
+     {
+      "when": "Sat 2.00pm - 3.00pm",
+      "service": "Sabbath Service 2"
+     }
+    ],
+    "photo": null,
+    "coord_source": "Client document",
+    "status": "Located",
+    "notes": null,
+    "lat": 5.893134,
+    "lon": 116.047745
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "TJC-033",
+   "geometry": null,
+   "properties": {
+    "id": "TJC-033",
+    "no": 33,
+    "name": "Putrajaya",
+    "name_source": "Putrajaya",
+    "type": "Prayer House",
+    "state": "Sabah",
+    "zone": "West Coast",
+    "subzone": "Tuaran",
+    "address": "",
+    "kodlokasi": null,
+    "kodlokasi_url": null,
+    "services": [],
+    "photo": "photos/TJC-033.jpg",
+    "coord_source": null,
+    "status": "Awaiting coordinates",
+    "notes": null,
+    "lat": null,
+    "lon": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "TJC-034",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     116.666479,
+     5.947117
+    ]
+   },
+   "properties": {
+    "id": "TJC-034",
+    "no": 34,
+    "name": "Ranau",
+    "name_source": "Ranau",
+    "type": "Church",
+    "state": "Sabah",
+    "zone": "West Coast",
+    "subzone": "Kota Kinabalu",
+    "address": "P.O. Box 31, 89307 Ranau, Kg. Paka II, Ranau, Sabah.",
+    "kodlokasi": "SBRN.39.45E",
+    "kodlokasi_url": "https://map.kodlokasi.my/SBRN.39.45E",
+    "services": [
+     {
+      "when": "Fri 7.30pm - 8.30pm",
+      "service": "Night Service - Sabbath"
+     },
+     {
+      "when": "Sat 10.00am - 11.00am",
+      "service": "Sabbath Service 1"
+     },
+     {
+      "when": "Sat 2.00pm - 3.00pm",
+      "service": "Sabbath Service 2"
+     }
+    ],
+    "photo": null,
+    "coord_source": "Client document",
+    "status": "Located",
+    "notes": null,
+    "lat": 5.947117,
+    "lon": 116.666479
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "TJC-035",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     116.308942,
+     6.210132
+    ]
+   },
+   "properties": {
+    "id": "TJC-035",
+    "no": 35,
+    "name": "Rongalis",
+    "name_source": "Rongalis",
+    "type": "Church",
+    "state": "Sabah",
+    "zone": "West Coast",
+    "subzone": "Tuaran",
+    "address": "W.D.T 41, 89259 Tamparuli, Sabah.",
+    "kodlokasi": "SBTU.858.380",
+    "kodlokasi_url": "https://map.kodlokasi.my/SBTU.858.380",
+    "services": [
+     {
+      "when": "Tue 7.30pm - 8.30pm",
+      "service": "Night Service"
+     },
+     {
+      "when": "Wed 7.30pm - 8.30pm",
+      "service": "Night Service"
+     },
+     {
+      "when": "Thu 7.30pm - 8.30pm",
+      "service": "Home Service"
+     },
+     {
+      "when": "Fri 7.30pm - 8.30pm",
+      "service": "Night Service - Sabbath"
+     },
+     {
+      "when": "Sat 10.00am - 11.00am",
+      "service": "Sabbath Service 1"
+     },
+     {
+      "when": "Sat 2.00pm - 3.00pm",
+      "service": "Sabbath Service 2"
+     }
+    ],
+    "photo": null,
+    "coord_source": "Client document",
+    "status": "Located",
+    "notes": null,
+    "lat": 6.210132,
+    "lon": 116.308942
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "TJC-036",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     116.149874,
+     6.060816
+    ]
+   },
+   "properties": {
+    "id": "TJC-036",
+    "no": 36,
+    "name": "Sepanggar",
+    "name_source": "Sepanggar",
+    "type": "Church",
+    "state": "Sabah",
+    "zone": "West Coast",
+    "subzone": "Kota Kinabalu",
+    "address": "1st Floor, Lot 5, Block C, Taman Indah Permai Shophouse, Menggatal, 88450 Kota Kinabalu, Sabah.",
+    "kodlokasi": "SBKK.829.885",
+    "kodlokasi_url": "https://map.kodlokasi.my/SBKK.829.885",
+    "services": [
+     {
+      "when": "Fri 7.45pm - 8.45pm",
+      "service": "Night Service - Sabbath"
+     },
+     {
+      "when": "Sat 2.15pm - 3.15pm",
+      "service": "Sabbath Service"
+     }
+    ],
+    "photo": null,
+    "coord_source": "Client document",
+    "status": "Located",
+    "notes": null,
+    "lat": 6.060816,
+    "lon": 116.149874
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "TJC-037",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     116.715273,
+     6.888661
+    ]
+   },
+   "properties": {
+    "id": "TJC-037",
+    "no": 37,
+    "name": "Sikuati",
+    "name_source": "Sikuati",
+    "type": "Prayer House",
+    "state": "Sabah",
+    "zone": "West Coast",
+    "subzone": "Kudat",
+    "address": "P.O. Box 435, 89058 Kudat",
+    "kodlokasi": "SBKD.1537.78W",
+    "kodlokasi_url": "https://map.kodlokasi.my/SBKD.1537.78W",
+    "services": [
+     {
+      "when": "Sat 10.00am - 11.00am",
+      "service": "Sabbath Service"
+     }
+    ],
+    "photo": null,
+    "coord_source": "Client document",
+    "status": "Located",
+    "notes": null,
+    "lat": 6.888661,
+    "lon": 116.715273
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "TJC-038",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     115.533284,
+     5.013683
+    ]
+   },
+   "properties": {
+    "id": "TJC-038",
+    "no": 38,
+    "name": "Sipitang",
+    "name_source": "Sipitang",
+    "type": "Church",
+    "state": "Sabah",
+    "zone": "West Coast",
+    "subzone": "Beaufort",
+    "address": "P.O.Box 226, 89857 Sipitang",
+    "kodlokasi": "SBSG.202.710X",
+    "kodlokasi_url": "https://map.kodlokasi.my/SBSG.202.710X",
+    "services": [
+     {
+      "when": "Mon 7.30pm - 8.30pm",
+      "service": "Night Service"
+     },
+     {
+      "when": "Tue 7.30pm - 8.30pm",
+      "service": "Home Service"
+     },
+     {
+      "when": "Fri 7.30pm - 8.30pm",
+      "service": "Night Service - Sabbath"
+     },
+     {
+      "when": "Sat 9.00am - 10.00am",
+      "service": "Sabbath Service 1"
+     },
+     {
+      "when": "Sat 2.00pm - 3.00pm",
+      "service": "Sabbath Service 2"
+     }
+    ],
+    "photo": null,
+    "coord_source": "Client document",
+    "status": "Located",
+    "notes": null,
+    "lat": 5.013683,
+    "lon": 115.533284
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "TJC-039",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     116.337634,
+     6.190296
+    ]
+   },
+   "properties": {
+    "id": "TJC-039",
+    "no": 39,
+    "name": "Somodon",
+    "name_source": "Somodon",
+    "type": "Church",
+    "state": "Sabah",
+    "zone": "West Coast",
+    "subzone": "Tuaran",
+    "address": "Peti Surat 230, 89257 Tamparuli, Sabah",
+    "kodlokasi": "SBTU.1178.158",
+    "kodlokasi_url": "https://map.kodlokasi.my/SBTU.1178.158",
+    "services": [
+     {
+      "when": "Sun 2.00pm - 3.00pm",
+      "service": "Home Service"
+     },
+     {
+      "when": "Mon 7.30pm - 8.30pm",
+      "service": "Night Service - Bible Study"
+     },
+     {
+      "when": "Wed 7.30pm - 8.30pm",
+      "service": "Night Service"
+     },
+     {
+      "when": "Fri 7.30pm - 8.30pm",
+      "service": "Night Service - Sabbath"
+     },
+     {
+      "when": "Sat 7.00am - 7.40am",
+      "service": "Morning Prayer"
+     },
+     {
+      "when": "Sat 9.00am - 10.00am",
+      "service": "Sabbath Service 1"
+     },
+     {
+      "when": "Sat 2.00pm - 3.00pm",
+      "service": "Sabbath Service 2"
+     }
+    ],
+    "photo": null,
+    "coord_source": "Client document",
+    "status": "Located",
+    "notes": null,
+    "lat": 6.190296,
+    "lon": 116.337634
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "TJC-040",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     116.58581,
+     6.614582
+    ]
+   },
+   "properties": {
+    "id": "TJC-040",
+    "no": 40,
+    "name": "Taburan",
+    "name_source": "Taburan",
+    "type": "Church",
+    "state": "Sabah",
+    "zone": "West Coast",
+    "subzone": "Kudat",
+    "address": "Kampung taburan, Kota Belud.",
+    "kodlokasi": "SBKB.1731.2911",
+    "kodlokasi_url": "https://map.kodlokasi.my/SBKB.1731.2911",
+    "services": [
+     {
+      "when": "Sat 9.30am - 10.30am",
+      "service": "Sabbath Service"
+     }
+    ],
+    "photo": null,
+    "coord_source": "Client document",
+    "status": "Located",
+    "notes": null,
+    "lat": 6.614582,
+    "lon": 116.58581
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "TJC-041",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     116.274503,
+     6.141306
+    ]
+   },
+   "properties": {
+    "id": "TJC-041",
+    "no": 41,
+    "name": "Tamparuli",
+    "name_source": "Tamparuli",
+    "type": "Church",
+    "state": "Sabah",
+    "zone": "West Coast",
+    "subzone": "Kota Kinabalu",
+    "address": "P.O. Box 69, 89257 Tamparuli, Sabah.",
+    "kodlokasi": "SBTU.475.393E",
+    "kodlokasi_url": "https://map.kodlokasi.my/SBTU.475.393E",
+    "services": [
+     {
+      "when": "Sun 7.30pm - 8.30pm",
+      "service": "Home / Fellowship Service"
+     },
+     {
+      "when": "Fri 7.30pm - 8.30pm",
+      "service": "Night Service - Sabbath"
+     },
+     {
+      "when": "Sat 7.00am - 8.00am",
+      "service": "Sabbath Service 1"
+     },
+     {
+      "when": "Sat 2.00pm - 3.00pm",
+      "service": "Sabbath Service 2"
+     }
+    ],
+    "photo": null,
+    "coord_source": "Client document",
+    "status": "Located",
+    "notes": null,
+    "lat": 6.141306,
+    "lon": 116.274503
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "TJC-042",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     116.212104,
+     6.061397
+    ]
+   },
+   "properties": {
+    "id": "TJC-042",
+    "no": 42,
+    "name": "Tampulan",
+    "name_source": "Tampulan",
+    "type": "Church",
+    "state": "Sabah",
+    "zone": "West Coast",
+    "subzone": "Kota Kinabalu",
+    "address": "Kg. Tampulan, Jalan Lawa Mandau, Telipok, 88450, Kota Kinabalu, Sabah.",
+    "kodlokasi": "SBKK.1521.892",
+    "kodlokasi_url": "https://map.kodlokasi.my/SBKK.1521.892",
+    "services": [
+     {
+      "when": "Fri 7.30pm - 8.30pm",
+      "service": "Night Service - Sabbath"
+     },
+     {
+      "when": "Sat 7.30am - 8.30am",
+      "service": "Morning Prayer"
+     },
+     {
+      "when": "Sat 2.00pm - 3.00pm",
+      "service": "Sabbath Service"
+     }
+    ],
+    "photo": null,
+    "coord_source": "Client document",
+    "status": "Located",
+    "notes": null,
+    "lat": 6.061397,
+    "lon": 116.212104
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "TJC-043",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     116.056084,
+     5.953858
+    ]
+   },
+   "properties": {
+    "id": "TJC-043",
+    "no": 43,
+    "name": "Tanjung Aru",
+    "name_source": "Tanjung Aru",
+    "type": "Church",
+    "state": "Sabah",
+    "zone": "West Coast",
+    "subzone": "Kota Kinabalu",
+    "address": "4, Jalan Pinang, 1st Floor, Tanjung Aru, 88100 Kota Kinabalu.",
+    "kodlokasi": "SBKK.218.314X",
+    "kodlokasi_url": "https://map.kodlokasi.my/SBKK.218.314X",
+    "services": [
+     {
+      "when": "Fri 8.00pm - 9.00pm",
+      "service": "Night Service - Sabbath"
+     },
+     {
+      "when": "Sat 7.00am - 8.00am",
+      "service": "Sabbath Morning Prayer"
+     },
+     {
+      "when": "Sat 2.30pm - 3.30pm",
+      "service": "Sabbath Service"
+     }
+    ],
+    "photo": null,
+    "coord_source": "Client document",
+    "status": "Located",
+    "notes": null,
+    "lat": 5.953858,
+    "lon": 116.056084
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "TJC-044",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     116.341877,
+     6.215662
+    ]
+   },
+   "properties": {
+    "id": "TJC-044",
+    "no": 44,
+    "name": "Timbou",
+    "name_source": "Timbou",
+    "type": "Church",
+    "state": "Sabah",
+    "zone": "West Coast",
+    "subzone": "Tuaran",
+    "address": "W.D.T 41, 89257 Tamparuli, Sabah.",
+    "kodlokasi": "SBTU.1225.442",
+    "kodlokasi_url": "https://map.kodlokasi.my/SBTU.1225.442",
+    "services": [
+     {
+      "when": "Tue 7.30pm - 8.30pm",
+      "service": "Night Service"
+     },
+     {
+      "when": "Wed 7.30pm - 8.30pm",
+      "service": "Fellowship Service"
+     },
+     {
+      "when": "Thu 7.30pm - 8.30pm",
+      "service": "Home Service"
+     },
+     {
+      "when": "Fri 7.30pm - 8.30pm",
+      "service": "Night Service - Sabbath"
+     },
+     {
+      "when": "Sat 7.00am - 7.30am",
+      "service": "Morning Prayer"
+     },
+     {
+      "when": "Sat 9.00am - 10.00am",
+      "service": "Sabbath Service 1"
+     },
+     {
+      "when": "Sat 2.00pm - 3.00pm",
+      "service": "Sabbath Service 2"
+     }
+    ],
+    "photo": null,
+    "coord_source": "Client document",
+    "status": "Located",
+    "notes": null,
+    "lat": 6.215662,
+    "lon": 116.341877
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "TJC-045",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     116.329534,
+     6.226707
+    ]
+   },
+   "properties": {
+    "id": "TJC-045",
+    "no": 45,
+    "name": "Tinuhan",
+    "name_source": "Tinuhan",
+    "type": "Church",
+    "state": "Sabah",
+    "zone": "West Coast",
+    "subzone": "Tuaran",
+    "address": "Gereja Yesus Benar Tinuhan, Peti Surat 324, 89257 Tamparuli",
+    "kodlokasi": "SBTU.1087.566",
+    "kodlokasi_url": "https://map.kodlokasi.my/SBTU.1087.566",
+    "services": [
+     {
+      "when": "Mon 7.30pm - 8.30pm",
+      "service": "Night Service"
+     },
+     {
+      "when": "Wed 7.30pm - 8.30pm",
+      "service": "Fellowship Service"
+     },
+     {
+      "when": "Fri 7.30pm - 8.30pm",
+      "service": "Night Service - Sabbath"
+     },
+     {
+      "when": "Sat 6.30am - 7.15am",
+      "service": "Morning Prayer"
+     },
+     {
+      "when": "Sat 9.00am - 10.00am",
+      "service": "Sabbath Service 1"
+     },
+     {
+      "when": "Sat 2.15pm - 3.15pm",
+      "service": "Sabbath Service 2"
+     }
+    ],
+    "photo": null,
+    "coord_source": "Client document",
+    "status": "Located",
+    "notes": null,
+    "lat": 6.226707,
+    "lon": 116.329534
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "TJC-046",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     116.220926,
+     6.146004
+    ]
+   },
+   "properties": {
+    "id": "TJC-046",
+    "no": 46,
+    "name": "Tuaran",
+    "name_source": "Tuaran",
+    "type": "Church",
+    "state": "Sabah",
+    "zone": "West Coast",
+    "subzone": "Kota Kinabalu",
+    "address": "P.O. Box 6, 89207 Tuaran, Sabah.",
+    "kodlokasi": "SBTU.124.340X",
+    "kodlokasi_url": "https://map.kodlokasi.my/SBTU.124.340X",
+    "services": [
+     {
+      "when": "Tue 7.30pm - 8.30pm",
+      "service": "Night Service"
+     },
+     {
+      "when": "Fri 7.30pm - 8.30pm",
+      "service": "Night Service - Sabbath"
+     },
+     {
+      "when": "Sat 7.00am - 8.00am",
+      "service": "Sabbath Service 1"
+     },
+     {
+      "when": "Sat 2.00pm - 3.00pm",
+      "service": "Sabbath Service 2"
+     }
+    ],
+    "photo": null,
+    "coord_source": "Client document",
+    "status": "Located",
+    "notes": null,
+    "lat": 6.146004,
+    "lon": 116.220926
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "TJC-047",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     116.334825,
+     6.204784
+    ]
+   },
+   "properties": {
+    "id": "TJC-047",
+    "no": 47,
+    "name": "Wangkod",
+    "name_source": "Wangkod",
+    "type": "Church",
+    "state": "Sabah",
+    "zone": "West Coast",
+    "subzone": "Tuaran",
+    "address": "Gereja Yesus Benar Wangkod, Peti Surat 202, 89257 Tamparuli",
+    "kodlokasi": "SBTU.1146.320",
+    "kodlokasi_url": "https://map.kodlokasi.my/SBTU.1146.320",
+    "services": [
+     {
+      "when": "Sun 4.30pm - 5.30pm",
+      "service": "Home Service"
+     },
+     {
+      "when": "Mon 7.30pm - 8.30pm",
+      "service": "Night Service - Bible Study"
+     },
+     {
+      "when": "Wed 7.30pm - 8.30pm",
+      "service": "Night Service"
+     },
+     {
+      "when": "Fri 7.30pm - 8.30pm",
+      "service": "Night Service - Sabbath"
+     },
+     {
+      "when": "Sat 8.00am - 9.30am",
+      "service": "Morning Prayer"
+     },
+     {
+      "when": "Sat 10.30am - 12.00pm",
+      "service": "Sabbath Service 1"
+     },
+     {
+      "when": "Sat 1.30pm - 3.00pm",
+      "service": "Sabbath Service 2"
+     }
+    ],
+    "photo": null,
+    "coord_source": "Client document",
+    "status": "Located",
+    "notes": null,
+    "lat": 6.204784,
+    "lon": 116.334825
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "TJC-048",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     116.229946,
+     5.375901
+    ]
+   },
+   "properties": {
+    "id": "TJC-048",
+    "no": 48,
+    "name": "Ambual",
+    "name_source": "Ambual",
+    "type": "Prayer House",
+    "state": "Sabah",
+    "zone": "Interior",
+    "subzone": "Bingkor",
+    "address": "Gereja Yesus Benar, No. 103 Kampung Ambual, 89000 Keningau, Sabah.",
+    "kodlokasi": "SBSK.812.2555W",
+    "kodlokasi_url": "https://map.kodlokasi.my/SBSK.812.2555W",
+    "services": [
+     {
+      "when": "Fri 7.30pm - 8.30pm",
+      "service": "Night Service"
+     },
+     {
+      "when": "Sat 3.00pm - 4.00pm",
+      "service": "Sabbath Service"
+     }
+    ],
+    "photo": null,
+    "coord_source": "Client document",
+    "status": "Located",
+    "notes": null,
+    "lat": 5.375901,
+    "lon": 116.229946
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "TJC-049",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     116.45594,
+     4.585354
+    ]
+   },
+   "properties": {
+    "id": "TJC-049",
+    "no": 49,
+    "name": "Balantos",
+    "name_source": "Balantos",
+    "type": "Church",
+    "state": "Sabah",
+    "zone": "Interior",
+    "subzone": "Pensiangan",
+    "address": "Kampung Balantos, Pagalungan Kecil",
+    "kodlokasi": "SBNA.245.5101E",
+    "kodlokasi_url": "https://map.kodlokasi.my/SBNA.245.5101E",
+    "services": [
+     {
+      "when": "Sat 9.00am - 10.00am",
+      "service": "Sabbath Service"
+     }
+    ],
+    "photo": null,
+    "coord_source": "Client document",
+    "status": "Located",
+    "notes": null,
+    "lat": 4.585354,
+    "lon": 116.45594
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "TJC-050",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     115.892643,
+     4.999215
+    ]
+   },
+   "properties": {
+    "id": "TJC-050",
+    "no": 50,
+    "name": "Bamban",
+    "name_source": "Bamban",
+    "type": "Church",
+    "state": "Sabah",
+    "zone": "Interior",
+    "subzone": "Kemabong",
+    "address": "Kg. Bamban",
+    "kodlokasi": "SBTE.524.1350X",
+    "kodlokasi_url": "https://map.kodlokasi.my/SBTE.524.1350X",
+    "services": [],
+    "photo": null,
+    "coord_source": "Client document",
+    "status": "Located",
+    "notes": null,
+    "lat": 4.999215,
+    "lon": 115.892643
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "TJC-051",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     116.438082,
+     5.341313
+    ]
+   },
+   "properties": {
+    "id": "TJC-051",
+    "no": 51,
+    "name": "Batu Lunguyan",
+    "name_source": "Batu Lunguyan",
+    "type": "Church",
+    "state": "Sabah",
+    "zone": "Interior",
+    "subzone": "Bingkor",
+    "address": "Kg Batu Lunguyan Sook, 89000 Keningau, Sabah",
+    "kodlokasi": "SBSK.1507.2168",
+    "kodlokasi_url": "https://map.kodlokasi.my/SBSK.1507.2168",
+    "services": [
+     {
+      "when": "Wed 7.30pm - 8.30pm",
+      "service": "Night Service"
+     },
+     {
+      "when": "Fri 7.30pm - 8.30pm",
+      "service": "Night Service"
+     },
+     {
+      "when": "Sat 8.45am - 10.15am",
+      "service": "Sabbath Service"
+     }
+    ],
+    "photo": null,
+    "coord_source": "Client document",
+    "status": "Located",
+    "notes": "Latitude/longitude were swapped in the source document and have been corrected.",
+    "lat": 5.341313,
+    "lon": 116.438082
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "TJC-052",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     116.197203,
+     5.279594
+    ]
+   },
+   "properties": {
+    "id": "TJC-052",
+    "no": 52,
+    "name": "Biah Skim",
+    "name_source": "Biah Skim",
+    "type": "Prayer House",
+    "state": "Sabah",
+    "zone": "Interior",
+    "subzone": "Bingkor",
+    "address": "Kampung Biah Skim, 89000 Keningau, Sabah",
+    "kodlokasi": "SBSK.1177.1478W",
+    "kodlokasi_url": "https://map.kodlokasi.my/SBSK.1177.1478W",
+    "services": [
+     {
+      "when": "Fri 7.30pm - 8.30pm",
+      "service": "Night Service"
+     },
+     {
+      "when": "Sat 10.00am - 11.00am",
+      "service": "Sabbath Service"
+     }
+    ],
+    "photo": null,
+    "coord_source": "Client document",
+    "status": "Located",
+    "notes": null,
+    "lat": 5.279594,
+    "lon": 116.197203
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "TJC-053",
+   "geometry": null,
+   "properties": {
+    "id": "TJC-053",
+    "no": 53,
+    "name": "Binanun",
+    "name_source": "Binanun",
+    "type": "Church",
+    "state": "Sabah",
+    "zone": "Interior",
+    "subzone": "Nabawan",
+    "address": "",
+    "kodlokasi": null,
+    "kodlokasi_url": null,
+    "services": [],
+    "photo": "photos/TJC-053.jpg",
+    "coord_source": null,
+    "status": "Awaiting coordinates",
+    "notes": null,
+    "lat": null,
+    "lon": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "TJC-054",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     116.398075,
+     4.994886
+    ]
+   },
+   "properties": {
+    "id": "TJC-054",
+    "no": 54,
+    "name": "Kabu Baru",
+    "name_source": "Kabu Baru",
+    "type": "Church",
+    "state": "Sabah",
+    "zone": "Interior",
+    "subzone": "Nabawan",
+    "address": "Gereja Yesus Benar, Kabu Baru Nabawan",
+    "kodlokasi": "SBNA.402.526X",
+    "kodlokasi_url": "https://map.kodlokasi.my/SBNA.402.526X",
+    "services": [
+     {
+      "when": "Sat 10.00am - 11.00am",
+      "service": "Sabbath Service"
+     }
+    ],
+    "photo": null,
+    "coord_source": "Client document",
+    "status": "Located",
+    "notes": "Latitude/longitude were swapped in the source document and have been corrected.",
+    "lat": 4.994886,
+    "lon": 116.398075
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "TJC-055",
+   "geometry": null,
+   "properties": {
+    "id": "TJC-055",
+    "no": 55,
+    "name": "Kampung Dua",
+    "name_source": "Kampung Dua",
+    "type": "Prayer House",
+    "state": "Sabah",
+    "zone": "Interior",
+    "subzone": "Nabawan",
+    "address": "",
+    "kodlokasi": null,
+    "kodlokasi_url": null,
+    "services": [],
+    "photo": null,
+    "coord_source": null,
+    "status": "Awaiting coordinates",
+    "notes": null,
+    "lat": null,
+    "lon": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "TJC-056",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     116.415703,
+     5.028215
+    ]
+   },
+   "properties": {
+    "id": "TJC-056",
+    "no": 56,
+    "name": "Kampung Lima",
+    "name_source": "Kampung Lima",
+    "type": "Church",
+    "state": "Sabah",
+    "zone": "Interior",
+    "subzone": "Nabawan",
+    "address": "Gereja Yesus Benar, Kg. Lima, Peti Surat 20, 89957, Nabawan, Sabah",
+    "kodlokasi": "SBNA.205.154X",
+    "kodlokasi_url": "https://map.kodlokasi.my/SBNA.205.154X",
+    "services": [
+     {
+      "when": "Wed 7.30pm - 8.30pm",
+      "service": "Youth Service"
+     },
+     {
+      "when": "Fri 7.30pm - 8.30pm",
+      "service": "Night Service - Sabbath"
+     },
+     {
+      "when": "Sat 7.30am - 8.30am",
+      "service": "Sabbath Service 1"
+     },
+     {
+      "when": "Sat 2.00pm - 3.00pm",
+      "service": "Sabbath Service 2"
+     }
+    ],
+    "photo": null,
+    "coord_source": "Client document",
+    "status": "Located",
+    "notes": "Latitude/longitude were swapped in the source document and have been corrected.",
+    "lat": 5.028215,
+    "lon": 116.415703
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "TJC-057",
+   "geometry": null,
+   "properties": {
+    "id": "TJC-057",
+    "no": 57,
+    "name": "Kapalarau",
+    "name_source": "Kapalarau",
+    "type": "Church",
+    "state": "Sabah",
+    "zone": "Interior",
+    "subzone": "Nabawan",
+    "address": "",
+    "kodlokasi": null,
+    "kodlokasi_url": null,
+    "services": [],
+    "photo": "photos/TJC-057.jpg",
+    "coord_source": null,
+    "status": "Awaiting coordinates",
+    "notes": null,
+    "lat": null,
+    "lon": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "TJC-058",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     116.271627,
+     5.448104
+    ]
+   },
+   "properties": {
+    "id": "TJC-058",
+    "no": 58,
+    "name": "Kapayan",
+    "name_source": "Kapayan",
+    "type": "Church",
+    "state": "Sabah",
+    "zone": "Interior",
+    "subzone": "Bingkor",
+    "address": "Gereja Yesus Benar, Kg. Sungoi Kapayan, Apin-Apin Keningau.",
+    "kodlokasi": "SBSK.348.3362W",
+    "kodlokasi_url": "https://map.kodlokasi.my/SBSK.348.3362W",
+    "services": [
+     {
+      "when": "Fri 7.30pm - 8.30pm",
+      "service": "Night Service"
+     },
+     {
+      "when": "Sat 2.00pm - 3.00pm",
+      "service": "Sabbath Service"
+     }
+    ],
+    "photo": null,
+    "coord_source": "Client document",
+    "status": "Located",
+    "notes": null,
+    "lat": 5.448104,
+    "lon": 116.271627
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "TJC-059",
+   "geometry": null,
+   "properties": {
+    "id": "TJC-059",
+    "no": 59,
+    "name": "Katalirus",
+    "name_source": "Katalirus",
+    "type": "Church",
+    "state": "Sabah",
+    "zone": "Interior",
+    "subzone": "Nabawan",
+    "address": "",
+    "kodlokasi": null,
+    "kodlokasi_url": null,
+    "services": [],
+    "photo": "photos/TJC-059.jpg",
+    "coord_source": null,
+    "status": "Awaiting coordinates",
+    "notes": null,
+    "lat": null,
+    "lon": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "TJC-060",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     116.267458,
+     5.141842
+    ]
+   },
+   "properties": {
+    "id": "TJC-060",
+    "no": 60,
+    "name": "Kauluan",
+    "name_source": "Kauluan",
+    "type": "Church",
+    "state": "Sabah",
+    "zone": "Interior",
+    "subzone": "Nabawan",
+    "address": "Kg Kauluan Sook, Peti Surat 3000, 89008 Keningau, Sabah",
+    "kodlokasi": "SBSK.395.64X",
+    "kodlokasi_url": "https://map.kodlokasi.my/SBSK.395.64X",
+    "services": [
+     {
+      "when": "Fri 7.30pm - 8.30pm",
+      "service": "Night Service - Sabbath"
+     },
+     {
+      "when": "Sat 10.00am - 11.00am",
+      "service": "Sabbath Service"
+     }
+    ],
+    "photo": null,
+    "coord_source": "Client document",
+    "status": "Located",
+    "notes": "Latitude/longitude were swapped in the source document and have been corrected.",
+    "lat": 5.141842,
+    "lon": 116.267458
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "TJC-061",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     116.13897,
+     5.31934
+    ]
+   },
+   "properties": {
+    "id": "TJC-061",
+    "no": 61,
+    "name": "Keningau",
+    "name_source": "Keningau",
+    "type": "Church",
+    "state": "Sabah",
+    "zone": "Interior",
+    "subzone": "Tenom",
+    "address": "P.O.Box 197, 89008 Keningau, Jalan Tenom Mile 1/4 KM",
+    "kodlokasi": "SBKG.213.251X",
+    "kodlokasi_url": "https://map.kodlokasi.my/SBKG.213.251X",
+    "services": [
+     {
+      "when": "Sun 7.00am - 7.45am",
+      "service": "Morning Prayer"
+     },
+     {
+      "when": "Wed 7.30pm - 8.30pm",
+      "service": "Night Service"
+     },
+     {
+      "when": "Fri 7.30pm - 8.30pm",
+      "service": "Night Service - Sabbath"
+     },
+     {
+      "when": "Sat 2.00pm - 3.00pm",
+      "service": "Sabbath Service"
+     }
+    ],
+    "photo": null,
+    "coord_source": "Client document",
+    "status": "Located",
+    "notes": null,
+    "lat": 5.31934,
+    "lon": 116.13897
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "TJC-062",
+   "geometry": null,
+   "properties": {
+    "id": "TJC-062",
+    "no": 62,
+    "name": "Labut",
+    "name_source": "Labut",
+    "type": "Church",
+    "state": "Sabah",
+    "zone": "Interior",
+    "subzone": "Nabawan",
+    "address": "",
+    "kodlokasi": null,
+    "kodlokasi_url": null,
+    "services": [],
+    "photo": null,
+    "coord_source": null,
+    "status": "Awaiting coordinates",
+    "notes": null,
+    "lat": null,
+    "lon": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "TJC-063",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     115.911274,
+     4.980893
+    ]
+   },
+   "properties": {
+    "id": "TJC-063",
+    "no": 63,
+    "name": "Laman",
+    "name_source": "Laman",
+    "type": "Church",
+    "state": "Sabah",
+    "zone": "Interior",
+    "subzone": "Kemabong",
+    "address": "Kampung Laman, W.D.T. 169, 89908 Tenom",
+    "kodlokasi": "SBTE.317.1555X",
+    "kodlokasi_url": "https://map.kodlokasi.my/SBTE.317.1555X",
+    "services": [],
+    "photo": null,
+    "coord_source": "Client document",
+    "status": "Located",
+    "notes": null,
+    "lat": 4.980893,
+    "lon": 115.911274
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "TJC-064",
+   "geometry": null,
+   "properties": {
+    "id": "TJC-064",
+    "no": 64,
+    "name": "Layon",
+    "name_source": "Layon",
+    "type": "Church",
+    "state": "Sabah",
+    "zone": "Interior",
+    "subzone": "Nabawan",
+    "address": "",
+    "kodlokasi": null,
+    "kodlokasi_url": null,
+    "services": [],
+    "photo": "photos/TJC-064.jpg",
+    "coord_source": null,
+    "status": "Awaiting coordinates",
+    "notes": null,
+    "lat": null,
+    "lon": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "TJC-065",
+   "geometry": null,
+   "properties": {
+    "id": "TJC-065",
+    "no": 65,
+    "name": "Lotong",
+    "name_source": "Lotong",
+    "type": "Church",
+    "state": "Sabah",
+    "zone": "Interior",
+    "subzone": "Nabawan",
+    "address": "",
+    "kodlokasi": null,
+    "kodlokasi_url": null,
+    "services": [],
+    "photo": "photos/TJC-065.jpg",
+    "coord_source": null,
+    "status": "Awaiting coordinates",
+    "notes": null,
+    "lat": null,
+    "lon": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "TJC-066",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     116.245431,
+     5.403571
+    ]
+   },
+   "properties": {
+    "id": "TJC-066",
+    "no": 66,
+    "name": "Luanti",
+    "name_source": "Luanti",
+    "type": "Church",
+    "state": "Sabah",
+    "zone": "Interior",
+    "subzone": "Bingkor",
+    "address": "Kg Luanti Baru, Peti Surat 1614, Poskod 89000 Keningau, Sabah",
+    "kodlokasi": "SBSK.640.2864W",
+    "kodlokasi_url": "https://map.kodlokasi.my/SBSK.640.2864W",
+    "services": [
+     {
+      "when": "Wed 7.30pm - 8.30pm",
+      "service": "Night Service"
+     },
+     {
+      "when": "Thu 7.30pm - 8.20pm",
+      "service": "Prayer Session"
+     },
+     {
+      "when": "Fri 7.30pm - 8.30pm",
+      "service": "Night Service"
+     },
+     {
+      "when": "Sat 6.30am - 7.30am",
+      "service": "Sabbath Service"
+     },
+     {
+      "when": "Sat 1.30pm - 3.00pm",
+      "service": "Sabbath Service"
+     }
+    ],
+    "photo": null,
+    "coord_source": "Client document",
+    "status": "Located",
+    "notes": null,
+    "lat": 5.403571,
+    "lon": 116.245431
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "TJC-067",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     115.910794,
+     5.032273
+    ]
+   },
+   "properties": {
+    "id": "TJC-067",
+    "no": 67,
+    "name": "Mansasoh",
+    "name_source": "Mansasoh",
+    "type": "Church",
+    "state": "Sabah",
+    "zone": "Interior",
+    "subzone": "Kemabong",
+    "address": "W.D.T. 115, 89908 Tenom",
+    "kodlokasi": "SBTE.322.980X",
+    "kodlokasi_url": "https://map.kodlokasi.my/SBTE.322.980X",
+    "services": [],
+    "photo": null,
+    "coord_source": "Client document",
+    "status": "Located",
+    "notes": null,
+    "lat": 5.032273,
+    "lon": 115.910794
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "TJC-068",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     115.877956,
+     4.860858
+    ]
+   },
+   "properties": {
+    "id": "TJC-068",
+    "no": 68,
+    "name": "Marais",
+    "name_source": "Marais",
+    "type": "Church",
+    "state": "Sabah",
+    "zone": "Interior",
+    "subzone": "Kemabong",
+    "address": "",
+    "kodlokasi": "SBTE.687.2896X",
+    "kodlokasi_url": "https://map.kodlokasi.my/SBTE.687.2896X",
+    "services": [],
+    "photo": null,
+    "coord_source": "Client document",
+    "status": "Located",
+    "notes": null,
+    "lat": 4.860858,
+    "lon": 115.877956
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "TJC-069",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     116.24837,
+     5.487177
+    ]
+   },
+   "properties": {
+    "id": "TJC-069",
+    "no": 69,
+    "name": "Matanoi",
+    "name_source": "Matanoi",
+    "type": "Church",
+    "state": "Sabah",
+    "zone": "Interior",
+    "subzone": "Bingkor",
+    "address": "Peti Surat 1614, 89008 Keningau",
+    "kodlokasi": "SBKG.1007.1628",
+    "kodlokasi_url": "https://map.kodlokasi.my/SBKG.1007.1628",
+    "services": [
+     {
+      "when": "Wed 7.30pm - 9.00pm",
+      "service": "Night Service"
+     },
+     {
+      "when": "Fri 7.30pm - 9.00pm",
+      "service": "Night Service"
+     },
+     {
+      "when": "Sat 12.45pm - 2.00pm",
+      "service": "Sabbath Service"
+     }
+    ],
+    "photo": null,
+    "coord_source": "Client document",
+    "status": "Located",
+    "notes": null,
+    "lat": 5.487177,
+    "lon": 116.24837
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "TJC-070",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     116.408358,
+     4.955058
+    ]
+   },
+   "properties": {
+    "id": "TJC-070",
+    "no": 70,
+    "name": "Nakuyung",
+    "name_source": "Nakuyung",
+    "type": "Church",
+    "state": "Sabah",
+    "zone": "Interior",
+    "subzone": "Nabawan",
+    "address": "",
+    "kodlokasi": "SBNA.287.971X",
+    "kodlokasi_url": "https://map.kodlokasi.my/SBNA.287.971X",
+    "services": [
+     {
+      "when": "Sat 2.00pm - 3.00pm",
+      "service": "Sabbath Service"
+     }
+    ],
+    "photo": null,
+    "coord_source": "Client document",
+    "status": "Located",
+    "notes": "Latitude/longitude were swapped in the source document and have been corrected.",
+    "lat": 4.955058,
+    "lon": 116.408358
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "TJC-071",
+   "geometry": null,
+   "properties": {
+    "id": "TJC-071",
+    "no": 71,
+    "name": "Nangkawangan",
+    "name_source": "Nangkawangan",
+    "type": "Prayer House",
+    "state": "Sabah",
+    "zone": "Interior",
+    "subzone": "Nabawan",
+    "address": "",
+    "kodlokasi": null,
+    "kodlokasi_url": null,
+    "services": [],
+    "photo": "photos/TJC-071.jpg",
+    "coord_source": null,
+    "status": "Awaiting coordinates",
+    "notes": null,
+    "lat": null,
+    "lon": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "TJC-072",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     115.941522,
+     5.045161
+    ]
+   },
+   "properties": {
+    "id": "TJC-072",
+    "no": 72,
+    "name": "Pahat",
+    "name_source": "Pahat",
+    "type": "Prayer House",
+    "state": "Sabah",
+    "zone": "Interior",
+    "subzone": "Tenom",
+    "address": "Peti Surat 89, 89907 Tenom, Sabah",
+    "kodlokasi": "SBTE.22.836E",
+    "kodlokasi_url": "https://map.kodlokasi.my/SBTE.22.836E",
+    "services": [
+     {
+      "when": "Thu 7.30pm - 8.30pm",
+      "service": "Fellowship Service"
+     },
+     {
+      "when": "Sat 10.00am - 11.00am",
+      "service": "Sabbath Service"
+     }
+    ],
+    "photo": null,
+    "coord_source": "Client document",
+    "status": "Located",
+    "notes": null,
+    "lat": 5.045161,
+    "lon": 115.941522
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "TJC-073",
+   "geometry": null,
+   "properties": {
+    "id": "TJC-073",
+    "no": 73,
+    "name": "Pangi",
+    "name_source": "Pangi",
+    "type": "Prayer House",
+    "state": "Sabah",
+    "zone": "Interior",
+    "subzone": "Kemabong",
+    "address": "",
+    "kodlokasi": null,
+    "kodlokasi_url": null,
+    "services": [],
+    "photo": null,
+    "coord_source": null,
+    "status": "Awaiting coordinates",
+    "notes": "Source document states GPS \"to be updated\".",
+    "lat": null,
+    "lon": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "TJC-074",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     115.953022,
+     5.022548
+    ]
+   },
+   "properties": {
+    "id": "TJC-074",
+    "no": 74,
+    "name": "Ponontomon",
+    "name_source": "Ponontomon",
+    "type": "Church",
+    "state": "Sabah",
+    "zone": "Interior",
+    "subzone": "Kemabong",
+    "address": "Peti Surat 139, 89907 Tenom",
+    "kodlokasi": "SBTE.150.1089E",
+    "kodlokasi_url": "https://map.kodlokasi.my/SBTE.150.1089E",
+    "services": [],
+    "photo": null,
+    "coord_source": "Client document",
+    "status": "Located",
+    "notes": null,
+    "lat": 5.022548,
+    "lon": 115.953022
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "TJC-075",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     115.967162,
+     5.043445
+    ]
+   },
+   "properties": {
+    "id": "TJC-075",
+    "no": 75,
+    "name": "Saga",
+    "name_source": "Saga",
+    "type": "Church",
+    "state": "Sabah",
+    "zone": "Interior",
+    "subzone": "Kemabong",
+    "address": "",
+    "kodlokasi": "SBTE.308.856E",
+    "kodlokasi_url": "https://map.kodlokasi.my/SBTE.308.856E",
+    "services": [],
+    "photo": null,
+    "coord_source": "Client document",
+    "status": "Located",
+    "notes": null,
+    "lat": 5.043445,
+    "lon": 115.967162
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "TJC-076",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     116.31456,
+     4.54396
+    ]
+   },
+   "properties": {
+    "id": "TJC-076",
+    "no": 76,
+    "name": "Sakali",
+    "name_source": "Sakali",
+    "type": "Church",
+    "state": "Sabah",
+    "zone": "Interior",
+    "subzone": "Pensiangan",
+    "address": "Kampung Sekali, Pensiangan 89950, Nabawan, Pensiangan",
+    "kodlokasi": "SBNA.1331.5563X",
+    "kodlokasi_url": "https://map.kodlokasi.my/SBNA.1331.5563X",
+    "services": [
+     {
+      "when": "Fri 8.00pm - 9.00pm",
+      "service": "Night Service - Sabbath"
+     },
+     {
+      "when": "Sat 8.00am - 9.00am",
+      "service": "Sabbath Service"
+     }
+    ],
+    "photo": null,
+    "coord_source": "Client document",
+    "status": "Located",
+    "notes": null,
+    "lat": 4.54396,
+    "lon": 116.31456
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "TJC-077",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     116.244689,
+     5.176806
+    ]
+   },
+   "properties": {
+    "id": "TJC-077",
+    "no": 77,
+    "name": "Sakikilu",
+    "name_source": "Sakikilu",
+    "type": "Church",
+    "state": "Sabah",
+    "zone": "Interior",
+    "subzone": "Bingkor",
+    "address": "Kampung Sakikilo Sook",
+    "kodlokasi": "SBSK.648.329W",
+    "kodlokasi_url": "https://map.kodlokasi.my/SBSK.648.329W",
+    "services": [
+     {
+      "when": "Sat 10.30am - 11.30am",
+      "service": "Sabbath Service"
+     }
+    ],
+    "photo": null,
+    "coord_source": "Client document",
+    "status": "Located",
+    "notes": null,
+    "lat": 5.176806,
+    "lon": 116.244689
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "TJC-078",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     116.273236,
+     4.573967
+    ]
+   },
+   "properties": {
+    "id": "TJC-078",
+    "no": 78,
+    "name": "Salinatan",
+    "name_source": "Salinatan",
+    "type": "Church",
+    "state": "Sabah",
+    "zone": "Interior",
+    "subzone": "Pensiangan",
+    "address": "Kampung Salinatan",
+    "kodlokasi": "SBNA.1791.5228X",
+    "kodlokasi_url": "https://map.kodlokasi.my/SBNA.1791.5228X",
+    "services": [
+     {
+      "when": "Fri 8.00pm - 9.00pm",
+      "service": "Night Service - Sabbath"
+     },
+     {
+      "when": "Sat 10.00am - 11.00am",
+      "service": "Sabbath Service"
+     }
+    ],
+    "photo": null,
+    "coord_source": "Client document",
+    "status": "Located",
+    "notes": null,
+    "lat": 4.573967,
+    "lon": 116.273236
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "TJC-079",
+   "geometry": null,
+   "properties": {
+    "id": "TJC-079",
+    "no": 79,
+    "name": "Salong",
+    "name_source": "Salong",
+    "type": "Church",
+    "state": "Sabah",
+    "zone": "Interior",
+    "subzone": "Pensiangan",
+    "address": "Kampung Buntulon Salung Daerah Kecil Pagalungan 89950 Nabawan",
+    "kodlokasi": null,
+    "kodlokasi_url": null,
+    "services": [
+     {
+      "when": "Fri 8.00pm - 9.00pm",
+      "service": "Night Service - Sabbath"
+     },
+     {
+      "when": "Sat 10.00am - 11.00am",
+      "service": "Sabbath Service"
+     }
+    ],
+    "photo": null,
+    "coord_source": null,
+    "status": "Awaiting coordinates",
+    "notes": "The GPS in the source document duplicates another church and has been withheld.",
+    "lat": null,
+    "lon": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "TJC-080",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     116.45015,
+     4.55041
+    ]
+   },
+   "properties": {
+    "id": "TJC-080",
+    "no": 80,
+    "name": "Sikait",
+    "name_source": "Sikait",
+    "type": "Church",
+    "state": "Sabah",
+    "zone": "Interior",
+    "subzone": "Pensiangan",
+    "address": "Kampung Sikait, Daerah Kecil Pagalungan",
+    "kodlokasi": "SBNA.180.5491E",
+    "kodlokasi_url": "https://map.kodlokasi.my/SBNA.180.5491E",
+    "services": [
+     {
+      "when": "Sat 2.00pm - 3.00pm",
+      "service": "Sabbath Service"
+     }
+    ],
+    "photo": null,
+    "coord_source": "Client document",
+    "status": "Located",
+    "notes": null,
+    "lat": 4.55041,
+    "lon": 116.45015
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "TJC-081",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     116.580867,
+     5.458803
+    ]
+   },
+   "properties": {
+    "id": "TJC-081",
+    "no": 81,
+    "name": "Sinaron",
+    "name_source": "Sinaron",
+    "type": "Prayer House",
+    "state": "Sabah",
+    "zone": "Interior",
+    "subzone": "Bingkor",
+    "address": "Gereja Yesus Benar Kg Sinaron Sook, Keningau",
+    "kodlokasi": "SBSK.3096.3482",
+    "kodlokasi_url": "https://map.kodlokasi.my/SBSK.3096.3482",
+    "services": [
+     {
+      "when": "Fri 5.00pm - 6.00pm",
+      "service": "Night Service"
+     },
+     {
+      "when": "Sat 10.00am - 11.00am",
+      "service": "Sabbath Service"
+     }
+    ],
+    "photo": null,
+    "coord_source": "Client document",
+    "status": "Located",
+    "notes": "Latitude/longitude were swapped in the source document and have been corrected.",
+    "lat": 5.458803,
+    "lon": 116.580867
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "TJC-082",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     115.886869,
+     4.917303
+    ]
+   },
+   "properties": {
+    "id": "TJC-082",
+    "no": 82,
+    "name": "Sugiang",
+    "name_source": "Sugiang",
+    "type": "Church",
+    "state": "Sabah",
+    "zone": "Interior",
+    "subzone": "Kemabong",
+    "address": "",
+    "kodlokasi": "SBTE.588.2265X",
+    "kodlokasi_url": "https://map.kodlokasi.my/SBTE.588.2265X",
+    "services": [],
+    "photo": null,
+    "coord_source": "Client document",
+    "status": "Located",
+    "notes": null,
+    "lat": 4.917303,
+    "lon": 115.886869
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "TJC-083",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     115.897466,
+     5.016429
+    ]
+   },
+   "properties": {
+    "id": "TJC-083",
+    "no": 83,
+    "name": "Sumandalom",
+    "name_source": "Sumandalom",
+    "type": "Church",
+    "state": "Sabah",
+    "zone": "Interior",
+    "subzone": "Kemabong",
+    "address": "Peti Surat 361, 89908 Tenom",
+    "kodlokasi": "SBTE.470.1157X",
+    "kodlokasi_url": "https://map.kodlokasi.my/SBTE.470.1157X",
+    "services": [],
+    "photo": null,
+    "coord_source": "Client document",
+    "status": "Located",
+    "notes": null,
+    "lat": 5.016429,
+    "lon": 115.897466
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "TJC-084",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     115.911952,
+     5.014951
+    ]
+   },
+   "properties": {
+    "id": "TJC-084",
+    "no": 84,
+    "name": "Sungai Apih",
+    "name_source": "Sungai Apih",
+    "type": "Church",
+    "state": "Sabah",
+    "zone": "Interior",
+    "subzone": "Kemabong",
+    "address": "",
+    "kodlokasi": "SBTE.309.1174X",
+    "kodlokasi_url": "https://map.kodlokasi.my/SBTE.309.1174X",
+    "services": [],
+    "photo": null,
+    "coord_source": "Client document",
+    "status": "Located",
+    "notes": null,
+    "lat": 5.014951,
+    "lon": 115.911952
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "TJC-085",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     115.917987,
+     5.008394
+    ]
+   },
+   "properties": {
+    "id": "TJC-085",
+    "no": 85,
+    "name": "Sungai Paal",
+    "name_source": "Sg.Paal",
+    "type": "Church",
+    "state": "Sabah",
+    "zone": "Interior",
+    "subzone": "Tenom",
+    "address": "Peti Surat 89, 89907 Tenom, Sabah",
+    "kodlokasi": "SBTE.242.1247X",
+    "kodlokasi_url": "https://map.kodlokasi.my/SBTE.242.1247X",
+    "services": [
+     {
+      "when": "Mon 7.30pm - 8.30pm",
+      "service": "Night service / Home Service"
+     },
+     {
+      "when": "Fri 7.30pm - 8.30pm",
+      "service": "Night Service - Sabbath"
+     },
+     {
+      "when": "Sat 7.00am - 8.00am",
+      "service": "Morning Prayer"
+     },
+     {
+      "when": "Sat 1.00pm - 2.00pm",
+      "service": "Sabbath Service"
+     }
+    ],
+    "photo": null,
+    "coord_source": "Client document",
+    "status": "Located",
+    "notes": null,
+    "lat": 5.008394,
+    "lon": 115.917987
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "TJC-086",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     115.940514,
+     5.107071
+    ]
+   },
+   "properties": {
+    "id": "TJC-086",
+    "no": 86,
+    "name": "Tenom",
+    "name_source": "Tenom",
+    "type": "Church",
+    "state": "Sabah",
+    "zone": "Interior",
+    "subzone": "Tenom",
+    "address": "1 KM, Jalan Tenom Tomani, P.O.Box 89, 89907 Tenom",
+    "kodlokasi": "SBTE.11.145E",
+    "kodlokasi_url": "https://map.kodlokasi.my/SBTE.11.145E",
+    "services": [
+     {
+      "when": "Sun 6.30am - 7.15am",
+      "service": "Morning Prayer"
+     },
+     {
+      "when": "Tue 7.30pm - 9.00pm",
+      "service": "Night Service"
+     },
+     {
+      "when": "Fri 7.30pm - 9.00pm",
+      "service": "Night Service - Sabbath"
+     },
+     {
+      "when": "Sat 1.30pm - 2.30pm",
+      "service": "Sabbath Service"
+     }
+    ],
+    "photo": null,
+    "coord_source": "Client document",
+    "status": "Located",
+    "notes": null,
+    "lat": 5.107071,
+    "lon": 115.940514
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "TJC-087",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     116.177705,
+     5.417758
+    ]
+   },
+   "properties": {
+    "id": "TJC-087",
+    "no": 87,
+    "name": "Tuntumulud",
+    "name_source": "Tuntumulud",
+    "type": "Church",
+    "state": "Sabah",
+    "zone": "Interior",
+    "subzone": "Bingkor",
+    "address": "P.O.Box 1614, 89007, Keningau, Sabah",
+    "kodlokasi": "SBKG.220.852",
+    "kodlokasi_url": "https://map.kodlokasi.my/SBKG.220.852",
+    "services": [
+     {
+      "when": "Mon 7.30pm - 8.30pm",
+      "service": "Prayer Session"
+     },
+     {
+      "when": "Wed 7.30pm - 8.30pm",
+      "service": "Night Service"
+     },
+     {
+      "when": "Fri 7.30pm - 8.30pm",
+      "service": "Night Service"
+     },
+     {
+      "when": "Sat 3.00pm - 4.00pm",
+      "service": "Sabbath Service"
+     }
+    ],
+    "photo": null,
+    "coord_source": "Client document",
+    "status": "Located",
+    "notes": null,
+    "lat": 5.417758,
+    "lon": 116.177705
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "TJC-088",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     115.974986,
+     5.050802
+    ]
+   },
+   "properties": {
+    "id": "TJC-088",
+    "no": 88,
+    "name": "Ulikon",
+    "name_source": "Ulikon",
+    "type": "Church",
+    "state": "Sabah",
+    "zone": "Interior",
+    "subzone": "Kemabong",
+    "address": "",
+    "kodlokasi": "SBTE.395.773E",
+    "kodlokasi_url": "https://map.kodlokasi.my/SBTE.395.773E",
+    "services": [],
+    "photo": null,
+    "coord_source": "Client document",
+    "status": "Located",
+    "notes": null,
+    "lat": 5.050802,
+    "lon": 115.974986
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "TJC-089",
+   "geometry": null,
+   "properties": {
+    "id": "TJC-089",
+    "no": 89,
+    "name": "Ulu Tepoh",
+    "name_source": "Ulu Tepoh",
+    "type": "Church",
+    "state": "Sabah",
+    "zone": "Interior",
+    "subzone": "",
+    "address": "",
+    "kodlokasi": null,
+    "kodlokasi_url": null,
+    "services": [],
+    "photo": null,
+    "coord_source": null,
+    "status": "Awaiting coordinates",
+    "notes": null,
+    "lat": null,
+    "lon": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "TJC-090",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     118.028,
+     4.319671
+    ]
+   },
+   "properties": {
+    "id": "TJC-090",
+    "no": 90,
+    "name": "Balung",
+    "name_source": "Balung",
+    "type": "Church",
+    "state": "Sabah",
+    "zone": "East Coast",
+    "subzone": "Tawau",
+    "address": "Bt 14 Jalan Ranggu Andrassy, P.O.BOX 60674, 91016 Tawau, Sabah.",
+    "kodlokasi": "SBTW.1521.836",
+    "kodlokasi_url": "https://map.kodlokasi.my/SBTW.1521.836",
+    "services": [
+     {
+      "when": "Thu 7.30pm - 8.30pm",
+      "service": "Home Fellowship Service (Combined"
+     },
+     {
+      "when": "Fri 7.30pm - 8.30pm",
+      "service": "Night Service - Sabbath"
+     },
+     {
+      "when": "Sat 2.30pm - 3.30pm",
+      "service": "Sabbath Service"
+     },
+     {
+      "when": "Sat 4.15pm - 5.15pm",
+      "service": "Youth Service"
+     }
+    ],
+    "photo": "photos/TJC-090.jpg",
+    "coord_source": "Client document",
+    "status": "Located",
+    "notes": null,
+    "lat": 4.319671,
+    "lon": 118.028
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "TJC-091",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     118.232651,
+     5.11262
+    ]
+   },
+   "properties": {
+    "id": "TJC-091",
+    "no": 91,
+    "name": "Bukit Belacon",
+    "name_source": "Bukit Belacon",
+    "type": "Church",
+    "state": "Sabah",
+    "zone": "East Coast",
+    "subzone": "Lahad Datu",
+    "address": "Kampung Bukit Belacon, P.O. Box 60985, 91118 Lahad Datu.",
+    "kodlokasi": "SBLD.1101.994W",
+    "kodlokasi_url": "https://map.kodlokasi.my/SBLD.1101.994W",
+    "services": [
+     {
+      "when": "Fri 7.00pm - 8.00pm",
+      "service": "Night Service - Sabbath"
+     },
+     {
+      "when": "Sat 2.00pm - 3.00pm",
+      "service": "Sabbath Service"
+     }
+    ],
+    "photo": null,
+    "coord_source": "Client document",
+    "status": "Located",
+    "notes": null,
+    "lat": 5.11262,
+    "lon": 118.232651
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "TJC-092",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     117.828462,
+     5.599078
+    ]
+   },
+   "properties": {
+    "id": "TJC-092",
+    "no": 92,
+    "name": "Bukit Garam",
+    "name_source": "Bukit Garam",
+    "type": "Prayer House",
+    "state": "Sabah",
+    "zone": "East Coast",
+    "subzone": "Sandakan",
+    "address": "Kg. Warisan, Bukit Garam, Kinabatangan.",
+    "kodlokasi": "SBKT.212.130W",
+    "kodlokasi_url": "https://map.kodlokasi.my/SBKT.212.130W",
+    "services": [
+     {
+      "when": "Fri 7.30pm - 8.30pm",
+      "service": "Night Service - Sabbath"
+     },
+     {
+      "when": "Sat 2.30pm - 3.30pm",
+      "service": "Sabbath Service"
+     }
+    ],
+    "photo": null,
+    "coord_source": "Client document",
+    "status": "Located",
+    "notes": null,
+    "lat": 5.599078,
+    "lon": 117.828462
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "TJC-093",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     118.080013,
+     5.856041
+    ]
+   },
+   "properties": {
+    "id": "TJC-093",
+    "no": 93,
+    "name": "Elopura",
+    "name_source": "Elopura",
+    "type": "Church",
+    "state": "Sabah",
+    "zone": "East Coast",
+    "subzone": "Sandakan",
+    "address": "P.O. Box 2324, 90726 Sandakan",
+    "kodlokasi": "SBSD.411.179W",
+    "kodlokasi_url": "https://map.kodlokasi.my/SBSD.411.179W",
+    "services": [
+     {
+      "when": "Mon 7.30pm - 8.30pm",
+      "service": "Prayer Session"
+     },
+     {
+      "when": "Wed 7.45pm - 8.45pm",
+      "service": "Night Service - Sabbath"
+     },
+     {
+      "when": "Fri 7.30pm - 8.30pm",
+      "service": "Night Service - Sabbath"
+     },
+     {
+      "when": "Sat 10.00am - 11.00am",
+      "service": "Sabbath Service"
+     },
+     {
+      "when": "Sat 2.00pm - 3.00pm",
+      "service": "Sabbath Service"
+     }
+    ],
+    "photo": null,
+    "coord_source": "Client document",
+    "status": "Located",
+    "notes": null,
+    "lat": 5.856041,
+    "lon": 118.080013
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "TJC-094",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     118.247493,
+     4.683547
+    ]
+   },
+   "properties": {
+    "id": "TJC-094",
+    "no": 94,
+    "name": "Kunak",
+    "name_source": "Kunak",
+    "type": "Church",
+    "state": "Sabah",
+    "zone": "East Coast",
+    "subzone": "Tawau",
+    "address": "Pekan Kunak SUDL Shop House, Block A Lot 2, 2184",
+    "kodlokasi": "SBKU.30.5E",
+    "kodlokasi_url": "https://map.kodlokasi.my/SBKU.30.5E",
+    "services": [
+     {
+      "when": "Sat 8.30am - 9.30am",
+      "service": "Sabbath Service"
+     }
+    ],
+    "photo": null,
+    "coord_source": "Client document",
+    "status": "Located",
+    "notes": null,
+    "lat": 4.683547,
+    "lon": 118.247493
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "TJC-095",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     118.309773,
+     5.030015
+    ]
+   },
+   "properties": {
+    "id": "TJC-095",
+    "no": 95,
+    "name": "Lahad Datu",
+    "name_source": "Lahad Datu",
+    "type": "Church",
+    "state": "Sabah",
+    "zone": "East Coast",
+    "subzone": "Lahad Datu",
+    "address": "Mold 4252, Mile 1 ½, Silam Road., P.O. Box 60985, 91118 Lahad Datu.",
+    "kodlokasi": "SBLD.243.71W",
+    "kodlokasi_url": "https://map.kodlokasi.my/SBLD.243.71W",
+    "services": [
+     {
+      "when": "Fri 7.15pm - 9.00pm",
+      "service": "Night Service - Sabbath"
+     },
+     {
+      "when": "Sat 1.45pm - 3.00pm",
+      "service": "Sabbath Service"
+     }
+    ],
+    "photo": null,
+    "coord_source": "Client document",
+    "status": "Located",
+    "notes": null,
+    "lat": 5.030015,
+    "lon": 118.309773
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "TJC-096",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     116.832012,
+     5.210284
+    ]
+   },
+   "properties": {
+    "id": "TJC-096",
+    "no": 96,
+    "name": "Malikup",
+    "name_source": "Malikup",
+    "type": "Church",
+    "state": "Sabah",
+    "zone": "East Coast",
+    "subzone": "Sandakan",
+    "address": "",
+    "kodlokasi": "SBTG.1595.687X",
+    "kodlokasi_url": "https://map.kodlokasi.my/SBTG.1595.687X",
+    "services": [
+     {
+      "when": "Sat 9.30am - 10.30am",
+      "service": "Sabbath Service"
+     }
+    ],
+    "photo": null,
+    "coord_source": "Client document",
+    "status": "Located",
+    "notes": null,
+    "lat": 5.210284,
+    "lon": 116.832012
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "TJC-097",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     117.925248,
+     4.256397
+    ]
+   },
+   "properties": {
+    "id": "TJC-097",
+    "no": 97,
+    "name": "Megah Jaya",
+    "name_source": "Megah Jaya",
+    "type": "Church",
+    "state": "Sabah",
+    "zone": "East Coast",
+    "subzone": "Tawau",
+    "address": "No. 10167, Lot 25, Megah 5, Batu 3  ½ Jalan Apas, Tawau.",
+    "kodlokasi": "SBTW.377.130",
+    "kodlokasi_url": "https://map.kodlokasi.my/SBTW.377.130",
+    "services": [
+     {
+      "when": "Wed 7.30pm - 8.30pm",
+      "service": "Night Service"
+     },
+     {
+      "when": "Fri 7.30pm - 8.30pm",
+      "service": "Night Service - Sabbath"
+     },
+     {
+      "when": "Sat 2.00pm - 3.00pm",
+      "service": "Sabbath Service"
+     }
+    ],
+    "photo": "photos/TJC-097.jpg",
+    "coord_source": "Client document",
+    "status": "Located",
+    "notes": null,
+    "lat": 4.256397,
+    "lon": 117.925248
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "TJC-098",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     118.204886,
+     5.106696
+    ]
+   },
+   "properties": {
+    "id": "TJC-098",
+    "no": 98,
+    "name": "Segama",
+    "name_source": "Segama",
+    "type": "Church",
+    "state": "Sabah",
+    "zone": "East Coast",
+    "subzone": "Lahad Datu",
+    "address": "Kg Ulu Segama., P.O. Box 60985, 91100 Lahad Datu",
+    "kodlokasi": "SBLD.1410.928W",
+    "kodlokasi_url": "https://map.kodlokasi.my/SBLD.1410.928W",
+    "services": [
+     {
+      "when": "Fri 7.30pm - 9.00pm",
+      "service": "Night Service - Sabbath"
+     },
+     {
+      "when": "Sat 4.00pm - 5.00pm",
+      "service": "Sabbath Service"
+     }
+    ],
+    "photo": null,
+    "coord_source": "Client document",
+    "status": "Located",
+    "notes": null,
+    "lat": 5.106696,
+    "lon": 118.204886
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "TJC-099",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     118.04444,
+     4.327603
+    ]
+   },
+   "properties": {
+    "id": "TJC-099",
+    "no": 99,
+    "name": "Serudung Baru",
+    "name_source": "Serudung Baru",
+    "type": "Church",
+    "state": "Sabah",
+    "zone": "East Coast",
+    "subzone": "Tawau",
+    "address": "Bt 17, Jalan Apas Rancangan, P.O. Box 60674, 91016 Tawau.",
+    "kodlokasi": "SBTW.1704.925",
+    "kodlokasi_url": "https://map.kodlokasi.my/SBTW.1704.925",
+    "services": [
+     {
+      "when": "Tue 7.30pm - 8.30pm",
+      "service": "Home Service"
+     },
+     {
+      "when": "Thu 7.30pm - 8.30pm",
+      "service": "Home Fellowship Service (Combined"
+     },
+     {
+      "when": "Fri 7.30pm - 8.30pm",
+      "service": "Night Service - Sabbath"
+     },
+     {
+      "when": "Sat 10.00am - 11.00am",
+      "service": "Sabbath Service 1"
+     },
+     {
+      "when": "Sat 2.30pm - 3.30pm",
+      "service": "Sabbath Service 2"
+     }
+    ],
+    "photo": "photos/TJC-099.jpg",
+    "coord_source": "Client document",
+    "status": "Located",
+    "notes": null,
+    "lat": 4.327603,
+    "lon": 118.04444
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "TJC-100",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     118.040798,
+     5.858871
+    ]
+   },
+   "properties": {
+    "id": "TJC-100",
+    "no": 100,
+    "name": "Sibuga",
+    "name_source": "Sibuga",
+    "type": "Church",
+    "state": "Sabah",
+    "zone": "East Coast",
+    "subzone": "Sandakan",
+    "address": "P.O. Box 668, 90707 Sandakan",
+    "kodlokasi": "SBSD.848.211W",
+    "kodlokasi_url": "https://map.kodlokasi.my/SBSD.848.211W",
+    "services": [
+     {
+      "when": "Sun 8.15am - 8.45am",
+      "service": "Morning Prayer"
+     },
+     {
+      "when": "Mon 7.30pm - 8.30pm",
+      "service": "Prayer Session"
+     },
+     {
+      "when": "Wed 8.30am - 11.30am",
+      "service": "Evergreen Service"
+     },
+     {
+      "when": "Fri 7.30pm - 8.30pm",
+      "service": "Night Service - Sabbath"
+     },
+     {
+      "when": "Sat 10.00am - 11.00am",
+      "service": "Sabbath Service"
+     },
+     {
+      "when": "Sat 2.00pm - 3.00pm",
+      "service": "Sabbath Service"
+     }
+    ],
+    "photo": null,
+    "coord_source": "Client document",
+    "status": "Located",
+    "notes": null,
+    "lat": 5.858871,
+    "lon": 118.040798
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "TJC-101",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     118.468808,
+     5.018015
+    ]
+   },
+   "properties": {
+    "id": "TJC-101",
+    "no": 101,
+    "name": "Silabukan",
+    "name_source": "Silabukan",
+    "type": "Church",
+    "state": "Sabah",
+    "zone": "East Coast",
+    "subzone": "Lahad Datu",
+    "address": "Peringkat 2, Rancangan Silabukan., P.O. Box 60985, Lahad Datu",
+    "kodlokasi": "SBLD.1530.65E",
+    "kodlokasi_url": "https://map.kodlokasi.my/SBLD.1530.65E",
+    "services": [
+     {
+      "when": "Fri 7.30pm - 8.30pm",
+      "service": "Night Service - Sabbath"
+     },
+     {
+      "when": "Sat 2.00pm - 3.00pm",
+      "service": "Sabbath Service"
+     }
+    ],
+    "photo": null,
+    "coord_source": "Client document",
+    "status": "Located",
+    "notes": null,
+    "lat": 5.018015,
+    "lon": 118.468808
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "TJC-102",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     117.892864,
+     4.272398
+    ]
+   },
+   "properties": {
+    "id": "TJC-102",
+    "no": 102,
+    "name": "Tawau",
+    "name_source": "Tawau",
+    "type": "Church",
+    "state": "Sabah",
+    "zone": "East Coast",
+    "subzone": "Tawau",
+    "address": "No. 812, Batu 3, Jalan Kuhara, P.O. Box 475, 91007 Tawau.",
+    "kodlokasi": "SBTW.16.309",
+    "kodlokasi_url": "https://map.kodlokasi.my/SBTW.16.309",
+    "services": [
+     {
+      "when": "Sun 7.00am - 7.40am",
+      "service": "Morning Prayer"
+     },
+     {
+      "when": "Thu 7.30pm - 8.30pm (monthly)",
+      "service": "Fellowship Service"
+     },
+     {
+      "when": "Fri 7.30pm - 8.30pm",
+      "service": "Night Service - Sabbath"
+     },
+     {
+      "when": "Sat 2.00pm - 3.00pm",
+      "service": "Sabbath Service"
+     }
+    ],
+    "photo": "photos/TJC-102.jpg",
+    "coord_source": "Client document",
+    "status": "Located",
+    "notes": null,
+    "lat": 4.272398,
+    "lon": 117.892864
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "TJC-103",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     117.141636,
+     5.621978
+    ]
+   },
+   "properties": {
+    "id": "TJC-103",
+    "no": 103,
+    "name": "Telupid",
+    "name_source": "Telupid",
+    "type": "Church",
+    "state": "Sabah",
+    "zone": "East Coast",
+    "subzone": "Sandakan",
+    "address": "P.O. Box 170, 89300 Telupid",
+    "kodlokasi": "SBTL.141.87E",
+    "kodlokasi_url": "https://map.kodlokasi.my/SBTL.141.87E",
+    "services": [
+     {
+      "when": "Fri 7.30pm - 8.30pm",
+      "service": "Sabbath Service"
+     },
+     {
+      "when": "Sat 11.00am - 12.00pm",
+      "service": "Sabbath Service"
+     }
+    ],
+    "photo": null,
+    "coord_source": "Client document",
+    "status": "Located",
+    "notes": null,
+    "lat": 5.621978,
+    "lon": 117.141636
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "TJC-104",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     115.233019,
+     5.339998
+    ]
+   },
+   "properties": {
+    "id": "TJC-104",
+    "no": 104,
+    "name": "Labuan",
+    "name_source": "Labuan",
+    "type": "Church",
+    "state": "Labuan",
+    "zone": "Labuan",
+    "subzone": "Kota Kinabalu",
+    "address": "P.O. Box 81088, 87020 Labuan, Federal Territory.",
+    "kodlokasi": "WPLB.143.700W",
+    "kodlokasi_url": "https://map.kodlokasi.my/WPLB.143.700W",
+    "services": [
+     {
+      "when": "Sun 8.00am",
+      "service": "Morning Prayer"
+     },
+     {
+      "when": "Fri 7.30pm - 8.30pm",
+      "service": "Night Service - Sabbath"
+     },
+     {
+      "when": "Sat 7.00am - 8.00am",
+      "service": "Sabbath Service 1"
+     },
+     {
+      "when": "Sat 2.00pm - 3.00pm",
+      "service": "Sabbath Service 2"
+     }
+    ],
+    "photo": null,
+    "coord_source": "Client document",
+    "status": "Located",
+    "notes": null,
+    "lat": 5.339998,
+    "lon": 115.233019
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "TJC-105",
+   "geometry": null,
+   "properties": {
+    "id": "TJC-105",
+    "no": 105,
+    "name": "Bintulu",
+    "name_source": "Bintulu",
+    "type": "Prayer House",
+    "state": "Sarawak",
+    "zone": "Sarawak",
+    "subzone": "",
+    "address": "",
+    "kodlokasi": null,
+    "kodlokasi_url": null,
+    "services": [],
+    "photo": null,
+    "coord_source": null,
+    "status": "Awaiting coordinates",
+    "notes": null,
+    "lat": null,
+    "lon": null
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "TJC-106",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     110.37991,
+     1.51911
+    ]
+   },
+   "properties": {
+    "id": "TJC-106",
+    "no": 106,
+    "name": "Kuching",
+    "name_source": "Kuching",
+    "type": "Prayer House",
+    "state": "Sarawak",
+    "zone": "Sarawak",
+    "subzone": "",
+    "address": "",
+    "kodlokasi": "SWKC.178.331E",
+    "kodlokasi_url": "https://map.kodlokasi.my/SWKC.178.331E",
+    "services": [],
+    "photo": null,
+    "coord_source": "OpenStreetMap (crowd-sourced)",
+    "status": "Located",
+    "notes": null,
+    "lat": 1.51911,
+    "lon": 110.37991
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "TJC-107",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     114.01934,
+     4.43035
+    ]
+   },
+   "properties": {
+    "id": "TJC-107",
+    "no": 107,
+    "name": "Miri",
+    "name_source": "Miri",
+    "type": "Prayer House",
+    "state": "Sarawak",
+    "zone": "Sarawak",
+    "subzone": "",
+    "address": "",
+    "kodlokasi": "SWMR.509.475",
+    "kodlokasi_url": "https://map.kodlokasi.my/SWMR.509.475",
+    "services": [],
+    "photo": null,
+    "coord_source": "OpenStreetMap (crowd-sourced)",
+    "status": "Located",
+    "notes": null,
+    "lat": 4.43035,
+    "lon": 114.01934
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "TJC-108",
+   "geometry": null,
+   "properties": {
+    "id": "TJC-108",
+    "no": 108,
+    "name": "Sibu",
+    "name_source": "Sibu",
+    "type": "Prayer House",
+    "state": "Sarawak",
+    "zone": "Sarawak",
+    "subzone": "",
+    "address": "",
+    "kodlokasi": null,
+    "kodlokasi_url": null,
+    "services": [],
+    "photo": null,
+    "coord_source": null,
+    "status": "Awaiting coordinates",
+    "notes": null,
+    "lat": null,
+    "lon": null
+   }
+  }
+ ]
+}
