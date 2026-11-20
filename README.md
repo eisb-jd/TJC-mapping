@@ -2,6 +2,8 @@
 
 A web map of True Jesus Church (Gereja Yesus Benar) churches and prayer houses in Sabah, Labuan and Sarawak. You can search and filter the locations, open a details panel for each one, and tap its KodLokasi code for directions. The site is static and is hosted on GitHub Pages.
 
+**Live site:** https://eisb-jd.github.io/TJC-mapping/
+
 **Status:** Draft v1 (20 November 2026), for review by the church. Not field-verified.
 
 ## Contents
@@ -19,9 +21,9 @@ A web map of True Jesus Church (Gereja Yesus Benar) churches and prayer houses i
 
 ## Publish on GitHub Pages
 
-1. Create a repository, e.g. `tjc-church-map`, and upload every file in this folder, including `.nojekyll`.
+1. Create a repository (this one is `eisb-jd/TJC-mapping`) and upload every file in this folder, including `.nojekyll`.
 2. In the repository, open **Settings → Pages**. Under **Build and deployment**, choose **Deploy from a branch**, branch `main`, folder `/ (root)`, then **Save**.
-3. After about a minute the site is live at `https://<account>.github.io/tjc-church-map/`.
+3. After about a minute the site is live at **https://eisb-jd.github.io/TJC-mapping/**.
 4. Optional: to use a custom domain such as `map.example.org`, enter it under **Settings → Pages → Custom domain**, then add a CNAME record at your DNS provider.
 
 Note: GitHub Pages sites are public. Publish only after the church has approved the data. A Pages site from a private repository needs a paid GitHub plan, and is still public.
