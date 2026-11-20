@@ -176,7 +176,7 @@ body.embed #top,body.embed #nav{display:none}body.embed main{top:0;bottom:0}body
   <img src="proposal/assets/logo-white.svg?v=3" alt="Gereja Yesus Benar" style="height:54px;display:block;margin-top:18px;max-width:100%"><div class="k">TRUE JESUS CHURCH</div>
   <h1>CHURCH LOCATION ATLAS</h1>
   <div class="reg">Sabah &nbsp;&middot;&nbsp; Labuan &nbsp;&middot;&nbsp; Sarawak</div>
-  <div class="zh">沙巴真耶稣教会 &middot; Gereja Yesus Benar</div>
+  <div class="zh" id="cov-name"></div>
   <div class="grow"></div>
   <div class="stats"><div><b id="s-all">-</b><span>locations listed</span></div><div><b id="s-map">-</b><span>mapped with KodLokasi</span></div><div><b id="s-pend">-</b><span>awaiting coordinates</span></div></div>
   <div class="bts"><a class="btn sky" href="#directory">Directory &nbsp;&rsaquo;</a><a class="btn white" href="#map">Maps &nbsp;&rsaquo;</a><a class="btn white" href="#how">How to use &nbsp;&rsaquo;</a></div>
@@ -309,7 +309,7 @@ Promise.all([
 const NAVL={home:{en:'Home',ms:'Utama',zh:'首页'},how:{en:'How to use',ms:'Cara guna',zh:'使用说明'},directory:{en:'Directory',ms:'Direktori',zh:'名录'},map:{en:'Maps',ms:'Peta',zh:'地图'},pending:{en:'Awaiting coordinates',ms:'Menunggu koordinat',zh:'待定位'},about:{en:'About',ms:'Perihal',zh:'关于'}};
 const SEC={home:'',how:tr(NAVL.how),directory:tr(NAVL.directory),map:tr(NAVL.map),pending:tr(NAVL.pending),about:tr(NAVL.about)};
 document.querySelectorAll('#nav a').forEach(a=>a.textContent=tr(NAVL[a.dataset.p]));
-document.getElementById('t-sub').textContent=tr(A.tsub);document.getElementById('dlt').textContent=tr({en:'Download directory (PDF)',ms:'Muat turun direktori (PDF)',zh:'下载名录 (PDF)'});document.getElementById('dlpdf').title=tr({en:'Church Location Atlas, PDF, 18 MB',ms:'Atlas Lokasi Gereja, PDF, 18 MB',zh:'教会位置图集，PDF，18 MB'});document.getElementById('m-tap').textContent=tr(A.tapPin);
+document.getElementById('t-sub').textContent=tr(A.tsub);document.getElementById('cov-name').textContent=tr({en:'Sabah General Assembly',ms:'Ibu Gereja Sabah',zh:'沙巴真耶稣教会 · 沙巴总会'});document.getElementById('dlt').textContent=tr({en:'Download directory (PDF)',ms:'Muat turun direktori (PDF)',zh:'下载名录 (PDF)'});document.getElementById('dlpdf').title=tr({en:'Church Location Atlas, PDF, 18 MB',ms:'Atlas Lokasi Gereja, PDF, 18 MB',zh:'教会位置图集，PDF，18 MB'});document.getElementById('m-tap').textContent=tr(A.tapPin);
 if(LG!=='en'){document.querySelector('#p-directory h1').textContent=tr({ms:'Direktori lokasi',zh:'地点名录'});document.querySelector('#p-directory .lead').textContent=tr({ms:'Klik nama untuk membuka halamannya, kod untuk membuka KodLokasi, atau "Peta" untuk petanya.',zh:'点击名称打开页面，点击代码打开 KodLokasi，或点击“地图”查看位置。'});document.getElementById('q').placeholder=tr({ms:'Cari nama, subzon, alamat atau KodLokasi',zh:'搜索名称、小区、地址或 KodLokasi'});document.querySelector('#p-directory .btn.red').innerHTML=tr({ms:'Senarai menunggu koordinat',zh:'待定位名单'})+' &rsaquo;'}
 function go(h){location.hash=h}
 window.addEventListener('hashchange',route);
