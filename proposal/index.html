@@ -39,7 +39,7 @@ img{max-width:100%}
 header{background:rgba(255,255,255,.88);backdrop-filter:saturate(180%) blur(14px);-webkit-backdrop-filter:saturate(180%) blur(14px);border-bottom:1px solid rgba(230,235,242,.8);position:sticky;top:0;z-index:50}
 header .wrap{display:flex;align-items:center;gap:18px;height:74px}
 .brand{display:flex;align-items:center;gap:12px;text-decoration:none;flex:none}
-.brand img{height:42px;width:auto;display:block}
+.brand img{height:38px;width:auto;display:block}
 .brand .brandtxt{border-left:1px solid var(--line);padding-left:12px;line-height:1.15}
 .brand .brandtxt b{display:block;color:var(--navy2);font-size:14px;font-weight:600}
 .brand .brandtxt span{color:var(--grey);font-size:12px}
@@ -49,12 +49,12 @@ nav.main a:hover{background:var(--light);color:var(--navy2)}
 nav.main a.on{background:#E8F2FB;color:var(--navy2);font-weight:600}
 #burger{display:none;margin-left:auto;background:#fff;border:1px solid var(--line);border-radius:12px;width:44px;height:44px;font-size:20px;cursor:pointer;color:var(--navy2)}
 @media(max-width:1480px){.brand .brandtxt{display:none}}
-@media(max-width:1260px){nav.main{display:none;position:absolute;left:12px;right:12px;top:calc(100% + 8px);background:#fff;flex-direction:column;align-items:stretch;padding:10px;border-radius:var(--r);box-shadow:var(--sh2);border:1px solid var(--line)}nav.main.open{display:flex}nav.main a{padding:11px 14px;border-radius:10px}#burger{display:block}}
-@media(max-width:520px){.brand img{height:32px}header .wrap{height:64px}}
+@media(max-width:1360px){nav.main{display:none;position:absolute;left:12px;right:12px;top:calc(100% + 8px);background:#fff;flex-direction:column;align-items:stretch;padding:10px;border-radius:var(--r);box-shadow:var(--sh2);border:1px solid var(--line)}nav.main.open{display:flex}nav.main a{padding:11px 14px;border-radius:10px}#burger{display:block}}
+@media(max-width:520px){.brand img{height:28px}header .wrap{height:64px}}
 /* page header */
 main{min-height:60vh}
 .page-h{position:relative;overflow:hidden;background:radial-gradient(1200px 400px at 85% -20%,rgba(0,175,242,.35),transparent 60%),linear-gradient(135deg,var(--navy2) 0%,var(--navy) 60%,var(--teal) 130%);color:#fff;padding:54px 0 46px}
-.page-h:after{content:'';position:absolute;right:-40px;bottom:-40px;width:340px;height:272px;background:url(assets/mark-white.svg) no-repeat center/contain;opacity:.08}
+.page-h:after{content:'';position:absolute;right:-30px;bottom:-50px;width:380px;height:232px;background:url(assets/mark-white.svg) no-repeat center/contain;opacity:.08}
 .page-h .wrap{position:relative;z-index:1}
 .page-h h1{margin:0;font-size:clamp(30px,4.2vw,44px);font-weight:600;letter-spacing:-.5px;line-height:1.1}
 .page-h p{margin:14px 0 0;max-width:760px;color:#DCE7F5;font-size:17px}
@@ -100,7 +100,7 @@ a.card:hover{transform:translateY(-3px);box-shadow:var(--sh2);border-color:#CFE3
 .verse{position:relative;background:linear-gradient(135deg,var(--navy2),var(--teal));color:#fff;text-align:center;padding:70px 24px;overflow:hidden}
 .verse q{display:block;font-family:'Poppins','Noto Sans SC',sans-serif;font-size:clamp(20px,2.6vw,28px);font-weight:300;max-width:860px;margin:0 auto;line-height:1.45;quotes:none}
 .verse cite{display:block;margin-top:14px;color:#BFE6F8;font-style:normal;letter-spacing:1px;font-size:14px}
-.verse:after{content:'';position:absolute;left:-30px;top:-20px;width:260px;height:208px;background:url(assets/mark-white.svg) no-repeat center/contain;opacity:.08}
+.verse:after{content:'';position:absolute;left:-30px;top:-10px;width:300px;height:183px;background:url(assets/mark-white.svg) no-repeat center/contain;opacity:.08}
 /* beliefs */
 .bel{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
 @media(max-width:780px){.bel{grid-template-columns:1fr}}
@@ -217,7 +217,7 @@ table.ct td:first-child{font-weight:600;color:var(--navy2);width:190px;backgroun
 /* footer */
 footer{background:linear-gradient(160deg,#1A2440,#1F2633);color:#AEB8C6;font-size:14px;margin-top:0}
 footer .wrap{padding:56px 24px 36px;display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:36px}
-footer img.fl{height:44px;margin-bottom:16px}
+footer img.fl{height:40px;margin-bottom:16px}
 footer a{color:#D5DCE6;text-decoration:none;line-height:2}footer a:hover{color:#fff}
 footer h4{color:#fff;margin:0 0 10px;font-weight:600;font-size:15px}
 footer .bt{border-top:1px solid rgba(255,255,255,.08);text-align:center;padding:16px;font-size:12.5px;color:#7F8A9A}
@@ -240,7 +240,7 @@ footer .bt{border-top:1px solid rgba(255,255,255,.08);text-align:center;padding:
 <div id="proto"><div class="wrap"><b id="t-banner"></b><span class="sp"></span><a href="#/review" id="t-review"></a><a id="t-official" href="https://ga.tjcsabah.com/" target="_blank" rel="noopener"></a></div></div>
 <div id="topbar"><div class="wrap"><div class="lang" role="group" aria-label="Language"><button data-l="en">ENGLISH</button><button data-l="ms">BAHASA MELAYU</button><button data-l="zh">中文</button></div><span class="sp"></span><a href="#/disclaimer" data-k="disclaimer"></a><a href="#/contact" data-k="contact"></a></div></div>
 <header><div class="wrap">
-  <a class="brand" href="#/home"><img src="assets/logo.svg" alt="Gereja Yesus Benar" width="252" height="42"><div class="brandtxt"><b id="t-site"></b><span id="t-sub"></span></div></a>
+  <a class="brand" href="#/home"><img src="assets/logo.svg" alt="Gereja Yesus Benar" width="335" height="38"><div class="brandtxt"><b id="t-site"></b><span id="t-sub"></span></div></a>
   <button id="burger" aria-label="Menu">&#9776;</button>
   <nav class="main" id="nav"></nav>
 </div></header>
