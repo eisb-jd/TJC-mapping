@@ -11,7 +11,7 @@ A web map of True Jesus Church (Gereja Yesus Benar) churches and prayer houses i
 | Path | What it is |
 |---|---|
 | `index.html` | The web map (Leaflet, OpenStreetMap base map) |
-| `data/tjc_locations.geojson` | Location data, 108 features (93 with coordinates; 15 with `geometry: null`, awaiting coordinates) |
+| `data/tjc_locations.geojson` | Location data, 108 features (94 with coordinates; 14 with `geometry: null`, awaiting coordinates) |
 | `data/districts.json` | District boundaries (lines) and district names for Sabah, Labuan and Sarawak, from geoBoundaries (simplified) |
 | `data/outline.json` | Simplified land outline, used only when the base map tiles cannot load |
 | `data/validation_issues.csv` | List of data issues found by the validation checks |

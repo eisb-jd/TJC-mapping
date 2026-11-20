@@ -7,8 +7,8 @@ Run: 20 November 2026 · Data: `data/tjc_locations.geojson` · CRS: WGS 84 (EPSG
 | Item | Result |
 |---|---|
 | Records | 108 |
-| With coordinates | 93 |
-| With KodLokasi code | 93 |
+| With coordinates | 94 |
+| With KodLokasi code | 94 |
 | Unique IDs | Pass |
 | Unique KodLokasi codes | Pass |
 | Coordinates inside Borneo bounds | Pass |
@@ -21,13 +21,14 @@ Run: 20 November 2026 · Data: `data/tjc_locations.geojson` · CRS: WGS 84 (EPSG
 
 | Severity | Check | Count |
 |---|---|---|
-| High | Missing coordinates | 15 |
+| High | Missing coordinates | 14 |
+| Medium | Coordinates from Google Maps listing | 1 |
 | Medium | Coordinates from crowd-sourced data | 2 |
 | Medium | Corrected in source | 6 |
 | Medium | Location to confirm | 5 |
-| Low | Missing address | 24 |
-| Low | Missing photo | 97 |
-| Low | Missing service times | 26 |
+| Low | Missing address | 23 |
+| Low | Missing photo | 7 |
+| Low | Missing service times | 25 |
 | Low | Missing subzone | 6 |
 
 ## High and medium issues (action needed from the church)
@@ -35,7 +36,6 @@ Run: 20 November 2026 · Data: `data/tjc_locations.geojson` · CRS: WGS 84 (EPSG
 | Severity | Check | ID | Location | Detail |
 |---|---|---|---|---|
 | High | Missing coordinates | TJC-016 | Kionsom | No GPS coordinates; not shown on map, no KodLokasi code. |
-| High | Missing coordinates | TJC-033 | Putrajaya | No GPS coordinates; not shown on map, no KodLokasi code. |
 | High | Missing coordinates | TJC-053 | Binanun | No GPS coordinates; not shown on map, no KodLokasi code. |
 | High | Missing coordinates | TJC-055 | Kampung Dua | No GPS coordinates; not shown on map, no KodLokasi code. |
 | High | Missing coordinates | TJC-057 | Kapalarau | No GPS coordinates; not shown on map, no KodLokasi code. |
@@ -49,6 +49,7 @@ Run: 20 November 2026 · Data: `data/tjc_locations.geojson` · CRS: WGS 84 (EPSG
 | High | Missing coordinates | TJC-089 | Ulu Tepoh | No GPS coordinates; not shown on map, no KodLokasi code. |
 | High | Missing coordinates | TJC-105 | Bintulu | No GPS coordinates; not shown on map, no KodLokasi code. |
 | High | Missing coordinates | TJC-108 | Sibu | No GPS coordinates; not shown on map, no KodLokasi code. |
+| Medium | Coordinates from Google Maps listing | TJC-033 | Putera Jaya (Telipok) | Position, address and service times from the public Google Maps listing; please confirm. |
 | Medium | Coordinates from crowd-sourced data | TJC-106 | Kuching | Position from OpenStreetMap, not from church records. |
 | Medium | Coordinates from crowd-sourced data | TJC-107 | Miri | Position from OpenStreetMap, not from church records. |
 | Medium | Corrected in source | TJC-051 | Batu Lunguyan | Latitude/longitude swapped in church document; corrected. Church to confirm. |

@@ -1443,26 +1443,45 @@
   {
    "type": "Feature",
    "id": "TJC-033",
-   "geometry": null,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     116.18657,
+     6.077943
+    ]
+   },
    "properties": {
     "id": "TJC-033",
     "no": 33,
-    "name": "Putrajaya",
+    "name": "Putera Jaya (Telipok)",
     "name_source": "Putrajaya",
     "type": "Prayer House",
     "state": "Sabah",
     "zone": "West Coast",
     "subzone": "Tuaran",
-    "address": "",
-    "kodlokasi": null,
-    "kodlokasi_url": null,
-    "services": [],
+    "address": "20, Lorong Putera Jaya 13, Taman Putera Jaya, Telipok, 88400 Kota Kinabalu, Sabah.",
+    "kodlokasi": "SBKK.1237.1077",
+    "kodlokasi_url": "https://map.kodlokasi.my/SBKK.1237.1077",
+    "services": [
+     {
+      "when": "Fri 7.30pm - 8.30pm",
+      "service": "Night Service - Sabbath"
+     },
+     {
+      "when": "Sat 10.00am - 11.00am",
+      "service": "Sabbath Service"
+     },
+     {
+      "when": "Sat 3.30pm - 4.30pm",
+      "service": "Sabbath Service"
+     }
+    ],
     "photo": "photos/TJC-033.jpg",
-    "coord_source": null,
-    "status": "Awaiting coordinates",
-    "notes": null,
-    "lat": null,
-    "lon": null
+    "coord_source": "Google Maps listing (TJC Putera Jaya Telipok)",
+    "status": "Located",
+    "notes": "Location, address and service times from the Google Maps listing \"True Jesus Church (TJC) Putera Jaya Telipok\"; to be confirmed by the church.",
+    "lat": 6.077943,
+    "lon": 116.18657
    }
   },
   {
