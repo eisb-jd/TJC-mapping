@@ -355,7 +355,7 @@ function pending(){document.getElementById('pend').innerHTML=F.filter(p=>!p.mapp
 
 /* ---------- maps ---------- */
 const VIEWS={all:{t:tr({en:'All churches',ms:'Semua gereja',zh:'全部教会'})},
-  'west-coast':{t:'Sabah · '+tr(C.zones['West Coast']),z:'West Coast'},'interior':{t:'Sabah · '+tr(C.zones['Interior']),z:'Interior'},'east-coast':{t:'Sabah · '+tr(C.zones['East Coast']),z:'East Coast'},
+  'west-coast':{t:(LG==='zh'?'沙巴 · ':'Sabah · ')+tr(C.zones['West Coast']),z:'West Coast'},'interior':{t:(LG==='zh'?'沙巴 · ':'Sabah · ')+tr(C.zones['Interior']),z:'Interior'},'east-coast':{t:(LG==='zh'?'沙巴 · ':'Sabah · ')+tr(C.zones['East Coast']),z:'East Coast'},
   'labuan':{t:tr(C.zones.Labuan),z:'Labuan',pad:.06},'sarawak':{t:tr(C.zones.Sarawak),z:'Sarawak'}};
 VIEWS.sabah=VIEWS.all;
 const SYM={church:(c,on)=>`<svg width="${on?30:24}" height="${on?30:24}" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10.5" fill="${c}" stroke="#fff" stroke-width="2"/><path d="M12 6.5v11M8.2 10.2h7.6" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/></svg>`,
