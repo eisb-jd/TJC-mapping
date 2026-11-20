@@ -21,8 +21,9 @@ button{font:inherit}
 #top{position:fixed;top:0;left:0;right:0;height:var(--top);background:var(--char);color:#fff;border-bottom:3px solid var(--sky);display:flex;align-items:center;padding:0 16px;gap:12px;z-index:1000}
 #top .t{cursor:pointer;line-height:1.15}
 #top .t b{display:block;font-size:17px;letter-spacing:.4px}
-#top .t span{font-size:11.5px;color:#BDBDBD}#top .dl{display:inline-flex;align-items:center;gap:6px;background:var(--sky);color:#fff;text-decoration:none;font-weight:700;font-size:12.5px;border-radius:999px;padding:6px 12px;white-space:nowrap}#top .dl:hover{background:#0098D4}
-@media(max-width:760px){#top .dl span{display:none}#top .dl{padding:7px}}
+#top .t span{font-size:11.5px;color:#BDBDBD}.lsw{display:flex;background:rgba(255,255,255,.1);border-radius:999px;padding:3px}.lsw a{color:#ddd;text-decoration:none;font-size:12px;font-weight:700;padding:4px 10px;border-radius:999px;cursor:pointer}.lsw a.on{background:#fff;color:var(--char)}.lsw a:hover:not(.on){color:#fff}
+#top .dl{display:inline-flex;align-items:center;gap:8px;background:#fff;color:var(--char);text-decoration:none;font-weight:700;font-size:12.5px;border-radius:999px;padding:3px 14px 3px 8px;white-space:nowrap}#top .dl:hover{background:#EAF7FE}
+@media(max-width:760px){#top .dl span{display:none}#top .dl{padding:3px 6px}#top .tsub{display:none}#top .sec{display:none}}
 #top .tsub{border-left:1px solid #555;padding-left:12px}
 #top .sp{flex:1}
 #top .sec{color:var(--sky);font-weight:700;font-size:13.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:45vw}
@@ -90,6 +91,7 @@ table.dir{width:100%;border-collapse:collapse;font-size:14px}
 table.dir th{font-size:11.5px;color:var(--grey);text-align:left;font-weight:400;padding:6px 6px 3px;border-bottom:1px solid var(--line)}
 table.dir td{padding:6px;border-bottom:1px solid #F0F0F0;vertical-align:middle}
 table.dir tr{cursor:pointer}table.dir tbody tr:hover{background:#EAF7FE}
+table.dir td.no{color:#767676;font-variant-numeric:tabular-nums;width:40px}
 table.dir td.nm{font-weight:700;color:var(--navy)}
 table.dir td.kc a{color:var(--sky);font-weight:700;text-decoration:none}
 table.dir td.kc .aw{color:var(--red);font-size:12.5px}
@@ -114,10 +116,12 @@ table.dir td.mb{text-align:right;width:56px}
 .tri{clip-path:polygon(50% 0,100% 100%,0 100%);width:26px;padding-top:8px;font-size:10px}
 .pin.sel{transform:scale(1.4);box-shadow:0 0 0 4px rgba(0,175,242,.55)}
 .tri.sel{transform:scale(1.4)}
+.pinw{cursor:pointer;filter:drop-shadow(0 1px 2px rgba(0,0,0,.45))}.pinw svg{display:block}.pinw.sel{z-index:1000!important}
+.legend b{display:block;font-size:11px;letter-spacing:.5px;text-transform:uppercase;color:#767676;margin:4px 0 2px}.legend b:first-child{margin-top:0}.lgi{display:flex;align-items:center;gap:6px}.lgi svg{width:16px;height:16px}
 .leaflet-tooltip.lbl{background:transparent;border:0;box-shadow:none;padding:0 0 0 2px}.leaflet-tooltip.lbl:before{display:none}
-.lbl{font:bold 11.5px 'Roboto Condensed',Arial,sans-serif;color:var(--char);white-space:nowrap;text-shadow:0 0 3px #fff,0 0 3px #fff,0 0 3px #fff;pointer-events:none}
+.lbl{font:bold 12px 'Roboto Condensed',Arial,sans-serif;color:var(--char)!important;white-space:nowrap;text-shadow:none!important;pointer-events:none;background:#fff!important;border-radius:999px!important;padding:2px 9px!important;box-shadow:0 1px 4px rgba(0,0,0,.35)!important}
 #map.onsat .lbl{color:#fff;text-shadow:0 0 3px #000,0 0 3px #000}
-#map.lowzoom .lbl{display:none}
+
 .dlab{color:#555;font:bold 11px 'Roboto Condensed',Arial,sans-serif;letter-spacing:.6px;white-space:nowrap;text-shadow:0 0 3px #fff,0 0 3px #fff;transform:translate(-50%,-50%)}
 #map.onsat .dlab{color:#fff;text-shadow:0 0 3px #000,0 0 3px #000}
 #map.lowzoom .dlab{display:none}
@@ -166,59 +170,57 @@ body.embed #top,body.embed #nav{display:none}body.embed main{top:0;bottom:0}body
 <body>
 <header id="top">
   <div class="t" onclick="go('home')" style="display:flex;align-items:center;gap:12px"><img src="proposal/assets/logo-white.svg?v=3" alt="Gereja Yesus Benar" style="height:30px;display:block"><span id="t-sub" class="tsub">Church Location Atlas &nbsp;|&nbsp; Sabah &middot; Labuan &middot; Sarawak</span></div>
-  <span class="sp"></span><span class="sec" id="sec"></span><a class="dl" id="dlpdf" href="downloads/TJC_Church_Location_Atlas.pdf" download="TJC_Church_Location_Atlas.pdf" title="PDF, 18 MB"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0-5-5m5 5 5-5M5 21h14"/></svg><span id="dlt">Download directory (PDF)</span></a><span class="badge" id="ver">DRAFT</span>
+  <span class="sp"></span><span class="sec" id="sec"></span><div class="lsw" role="group" aria-label="Language"><a data-l="en">EN</a><a data-l="ms">BM</a><a data-l="zh">中文</a></div><a class="dl" id="dlpdf" href="downloads/TJC_Church_Location_Atlas_EN.pdf" download><svg class="pdfi" width="22" height="26" viewBox="0 0 22 26" aria-hidden="true"><path d="M3 1h11l6 6v16a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2z" fill="#fff" stroke="#C9CED6"/><path d="M14 1v4a2 2 0 0 0 2 2h4" fill="#E9ECF1"/><rect x="0" y="13" width="17" height="8" rx="1.5" fill="#E2231A"/><text x="8.5" y="19.2" text-anchor="middle" font-family="Arial,sans-serif" font-weight="700" font-size="6.2" fill="#fff">PDF</text></svg><span id="dlt">Download directory</span></a><span class="badge" id="ver">DRAFT</span>
 </header>
 <main id="main">
 
 <!-- COVER -->
 <section class="page" id="p-home"><svg id="cov" viewBox="0 0 100 100"></svg><div class="in">
   <div><span class="badge" id="ver2">DRAFT</span></div>
-  <img src="proposal/assets/logo-white.svg?v=3" alt="Gereja Yesus Benar" style="height:54px;display:block;margin-top:18px;max-width:100%"><div class="k">TRUE JESUS CHURCH</div>
-  <h1>CHURCH LOCATION ATLAS</h1>
-  <div class="reg">Sabah &nbsp;&middot;&nbsp; Labuan &nbsp;&middot;&nbsp; Sarawak</div>
+  <img src="proposal/assets/logo-white.svg?v=3" alt="Gereja Yesus Benar" style="height:54px;display:block;margin-top:18px;max-width:100%"><div class="k" data-i="cov_k">TRUE JESUS CHURCH</div>
+  <h1 data-i="cov_h">CHURCH LOCATION ATLAS</h1>
+  <div class="reg" data-i="cov_reg">Sabah &nbsp;&middot;&nbsp; Labuan &nbsp;&middot;&nbsp; Sarawak</div>
   <div class="zh" id="cov-name"></div>
   <div class="grow"></div>
-  <div class="stats"><div><b id="s-all">-</b><span>locations listed</span></div><div><b id="s-map">-</b><span>mapped with KodLokasi</span></div><div><b id="s-pend">-</b><span>awaiting coordinates</span></div></div>
-  <div class="bts"><a class="btn sky" href="#directory">Directory &nbsp;&rsaquo;</a><a class="btn white" href="#map">Maps &nbsp;&rsaquo;</a><a class="btn white" href="#how">How to use &nbsp;&rsaquo;</a></div>
-  <div class="prep"><div><span id="cov-date"></span><br>Locations compiled from the church's subzone documents; open / crowd-sourced data used for cross-checking.<br>Not field-verified. Please report corrections so they can be included in the final version.</div>
-  <div style="text-align:right">Prepared by <b>EARTH Info Sdn. Bhd.</b><br>Kota Kinabalu, Sabah</div></div>
+  <div class="stats"><div><b id="s-all">-</b><span data-i="st_all">locations listed</span></div><div><b id="s-map">-</b><span data-i="st_map">mapped with KodLokasi</span></div><div><b id="s-pend">-</b><span data-i="st_pend">awaiting coordinates</span></div></div>
+  <div class="bts"><a class="btn sky" href="#directory" data-i="b_dir">Directory &nbsp;&rsaquo;</a><a class="btn white" href="#map" data-i="b_map">Maps &nbsp;&rsaquo;</a><a class="btn white" href="#how" data-i="b_how">How to use &nbsp;&rsaquo;</a></div>
+  <div class="prep"><div><span id="cov-date"></span><br><span data-i="cov_src"></span></div>
+  <div style="text-align:right" data-i="cov_prep"></div></div>
 </div></section>
 
 <!-- HOW TO USE -->
 <section class="page" id="p-how">
-  <h1 class="pt">Find a church near you</h1>
-  <p class="lead">This atlas lists <b id="h-all">108</b> True Jesus Church churches and prayer houses in <b>Sabah, Labuan and Sarawak</b>. Every mapped location has a <b>KodLokasi</b> code that opens directions.</p>
+  <h1 class="pt" data-i="how_h">Find a church near you</h1>
+  <p class="lead" data-i="how_lead"></p>
   <div class="steps">
-    <div class="step"><div class="nu">1</div><div class="tx"><b>Directory</b><div>All locations grouped by state and zone. Tap a name to open its page.</div></div><a class="btn navy" href="#directory">Open &rsaquo;</a></div>
-    <div class="step"><div class="nu">2</div><div class="tx"><b>Maps</b><div>An overview of Sabah, zone maps, two detail maps, Labuan and Sarawak. Tap a numbered pin to open that location.</div></div><a class="btn navy" href="#map">Open &rsaquo;</a></div>
-    <div class="step"><div class="nu">3</div><div class="tx"><b>Location page</b><div>Photo, address, service times, GPS coordinates and a small location map.</div></div><a class="btn navy" href="#TJC-001">Open &rsaquo;</a></div>
-    <div class="step"><div class="nu">4</div><div class="tx"><b>Get directions</b><div>Tap the KodLokasi code or scan its QR code. It opens the KodLokasi app (if installed) or the web app, which hands over to Google Maps or Waze.</div></div><a class="btn navy" href="#TJC-001">Open &rsaquo;</a></div>
+    <div class="step"><div class="nu">1</div><div class="tx"><b data-i="s1t">Directory</b><div data-i="s1d">All locations grouped by state and zone. Tap a name to open its page.</div></div><a class="btn navy" href="#directory" data-i="open">Open &rsaquo;</a></div>
+    <div class="step"><div class="nu">2</div><div class="tx"><b data-i="s2t">Maps</b><div data-i="s2d">An overview of Sabah, zone maps, two detail maps, Labuan and Sarawak. Tap a numbered pin to open that location.</div></div><a class="btn navy" href="#map" data-i="open">Open &rsaquo;</a></div>
+    <div class="step"><div class="nu">3</div><div class="tx"><b data-i="s3t">Location page</b><div data-i="s3d">Photo, address, service times, GPS coordinates and a small location map.</div></div><a class="btn navy" href="#TJC-001" data-i="open">Open &rsaquo;</a></div>
+    <div class="step"><div class="nu">4</div><div class="tx"><b data-i="s4t">Get directions</b><div data-i="s4d">Tap the KodLokasi code or scan its QR code. It opens the KodLokasi app (if installed) or the web app, which hands over to Google Maps or Waze.</div></div><a class="btn navy" href="#TJC-001" data-i="open">Open &rsaquo;</a></div>
   </div>
-  <h2 class="sh">Symbols</h2>
-  <div class="sym" id="symbols"></div>
-  <div class="appbox"><h2 class="sh">Get the KodLokasi app</h2>
-  <div style="font-size:14px;line-height:1.5">KodLokasi gives every 10 m x 10 m location in Malaysia a short code. The app shows your own code, searches or scans codes, navigates with Google Maps or Waze, and has a compass. Codes also work in the web app, with no install needed.</div>
+  <div class="appbox"><h2 class="sh" data-i="app_h">Get the KodLokasi app</h2>
+  <div style="font-size:14px;line-height:1.5" data-i="app_d">KodLokasi gives every 10 m x 10 m location in Malaysia a short code. The app shows your own code, searches or scans codes, navigates with Google Maps or Waze, and has a compass. Codes also work in the web app, with no install needed.</div>
   <div class="apps">
     <a class="app" href="https://apps.apple.com/my/app/kodlokasi/id6753739461" target="_blank" rel="noopener"><span class="q" id="qa"></span>
-      <span class="bdg"><img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" class="ios"></span><span class="cp">iPhone &amp; iPad</span></a>
+      <span class="bdg"><img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" class="ios"></span><span class="cp" data-i="app_ios">iPhone &amp; iPad</span></a>
     <a class="app" href="https://play.google.com/store/apps/details?id=my.kodlokasi" target="_blank" rel="noopener"><span class="q" id="qg"></span>
-      <span class="bdg"><img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" class="gp"></span><span class="cp">Android phones</span></a>
+      <span class="bdg"><img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" class="gp"></span><span class="cp" data-i="app_and">Android phones</span></a>
     <a class="app" href="https://map.kodlokasi.my/" target="_blank" rel="noopener"><span class="q" id="qw"></span>
-      <span class="bdg"><span class="web"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#fff" stroke-width="1.6"><circle cx="12" cy="12" r="9.5"/><path d="M2.5 12h19M12 2.5c2.6 2.8 3.9 6 3.9 9.5s-1.3 6.7-3.9 9.5c-2.6-2.8-3.9-6-3.9-9.5S9.4 5.3 12 2.5z"/></svg><span><small>Open in your</small>Web browser</span></span></span><span class="cp">map.kodlokasi.my &middot; no install</span></a>
+      <span class="bdg"><span class="web"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#fff" stroke-width="1.6"><circle cx="12" cy="12" r="9.5"/><path d="M2.5 12h19M12 2.5c2.6 2.8 3.9 6 3.9 9.5s-1.3 6.7-3.9 9.5c-2.6-2.8-3.9-6-3.9-9.5S9.4 5.3 12 2.5z"/></svg><span><small data-i="web_s">Open in your</small><span data-i="web_b">Web browser</span></span></span></span><span class="cp" data-i="app_web"></span></a>
   </div></div>
 </section>
 
 <!-- DIRECTORY -->
 <section class="page" id="p-directory">
-  <h1 class="pt">Directory of locations</h1>
-  <p class="lead" style="margin-bottom:10px">Tap a name to open its page, the code to open KodLokasi, or "Map" for its map.</p>
-  <div class="dtop"><input id="q" type="search" placeholder="Search name, subzone, address or KodLokasi" autocomplete="off"><a class="btn red" href="#pending">Awaiting coordinates list &rsaquo;</a></div>
+  <h1 class="pt" data-i="dir_h">Directory of locations</h1>
+  <p class="lead" style="margin-bottom:10px" data-i="dir_p"></p>
+  <div class="dtop"><input id="q" type="search" placeholder="Search name, subzone, address or KodLokasi" autocomplete="off"><a class="btn red" href="#pending" data-i="dir_pend">Awaiting coordinates list &rsaquo;</a></div>
   <div id="dir"></div>
 </section>
 
 <!-- MAPS -->
 <section class="page" id="p-map">
-  <div class="mhead"><h1 id="m-title">Sabah - overview</h1><p id="m-tap">Tap a numbered pin, then its name, to open the location page.</p><div class="views" id="views"></div></div>
+  <div class="mhead"><h1 id="m-title">Sabah - overview</h1><p id="m-tap" data-i="m_tap"></p><div class="views" id="views"></div></div>
   <div id="map"></div>
 </section>
 
@@ -227,23 +229,23 @@ body.embed #top,body.embed #nav{display:none}body.embed main{top:0;bottom:0}body
 
 <!-- PENDING -->
 <section class="page" id="p-pending">
-  <h1 class="pt">Locations awaiting coordinates</h1>
-  <p class="lead">These locations are listed in the church's records but have no confirmed GPS coordinates yet. They have a page in this atlas, but no map pin or KodLokasi code. Please send a GPS pin or KodLokasi code, and the address, for each.</p>
+  <h1 class="pt" data-i="pend_h">Locations awaiting coordinates</h1>
+  <p class="lead" data-i="pend_p">These locations are listed in the church's records but have no confirmed GPS coordinates yet. They have a page in this atlas, but no map pin or KodLokasi code. Please send a GPS pin or KodLokasi code, and the address, for each.</p>
   <table class="pend"><tbody id="pend"></tbody></table>
 </section>
 
 <!-- ABOUT -->
 <section class="page ab" id="p-about">
-  <h1 class="pt">About this atlas</h1>
-  <h2>Status</h2><p id="ab-status"></p>
-  <h2>Contents</h2><p id="ab-contents"></p>
-  <h2>Location data</h2><p>Names, addresses, service times and GPS coordinates come from the subzone documents supplied by the church (November 2026). Where latitude and longitude were swapped in a document, they have been corrected. Kuching and Miri are positioned from OpenStreetMap (crowd-sourced) because no Sarawak documents were received. Putera Jaya (Telipok) is positioned from its Google Maps listing.</p>
-  <h2>KodLokasi</h2><p>Each code was obtained from the KodLokasi web app (map.kodlokasi.my) for the coordinates shown on the location page. A KodLokasi code identifies a 10 m x 10 m cell. If a GPS pin is corrected, its code will change.</p>
-  <h2>Photos</h2><p>Photos were supplied by the church. Locations without a photo show a placeholder.</p>
-  <h2>Base maps</h2><p>Satellite imagery &copy; Esri, Maxar, Earthstar Geographics and the GIS User Community. Street map &copy; OpenStreetMap contributors (ODbL). District boundaries: geoBoundaries (CC BY 3.0), simplified and indicative only.</p>
-  <h2>Data</h2><p>Download: <a href="data/tjc_locations.geojson">tjc_locations.geojson</a> &middot; <a href="VALIDATION.md">Validation report</a></p>
-  <h2>Disclaimer</h2><p>This atlas is compiled from church records and open / crowd-sourced data and has not been verified in the field. Positions, addresses and service times may be inaccurate or out of date. It is not for navigation-critical, legal or boundary purposes. Always confirm service times with the local church.</p>
-  <h2>Prepared by</h2><p>EARTH Info Sdn. Bhd., Lot 3.12, 3rd Floor, Kompleks Asia City, 88000 Kota Kinabalu, Sabah. Tel: 019-2696671 / 088-211 367.</p>
+  <h1 class="pt" data-i="ab_h"></h1>
+  <h2 data-i="ab_st"></h2><p id="ab-status"></p>
+  <h2 data-i="ab_ct"></h2><p id="ab-contents"></p>
+  <h2 data-i="ab_ld"></h2><p data-i="ab_ldp"></p>
+  <h2 data-i="ab_kl"></h2><p data-i="ab_klp"></p>
+  <h2 data-i="ab_ph"></h2><p data-i="ab_php"></p>
+  <h2 data-i="ab_bm"></h2><p data-i="ab_bmp"></p>
+  <h2 data-i="ab_dt"></h2><p data-i="ab_dtp"></p>
+  <h2 data-i="ab_dc"></h2><p data-i="ab_dcp"></p>
+  <h2 data-i="ab_pb"></h2><p data-i="ab_pbp"></p>
 </section>
 </main>
 <nav id="nav"><a href="#home" data-p="home">Home</a><a href="#how" data-p="how">How to use</a><a href="#directory" data-p="directory">Directory</a><a href="#map" data-p="map">Maps</a><a href="#about" data-p="about">About</a></nav>
@@ -251,6 +253,7 @@ body.embed #top,body.embed #nav{display:none}body.embed main{top:0;bottom:0}body
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 <script src="https://unpkg.com/qrcode-generator@1.4.4/qrcode.js"></script>
 <script src="proposal/content.js"></script>
+<script src="atlas_i18n.js"></script>
 <script>
 const LANG=(new URLSearchParams(location.search).get('lang')||'en').replace(/[^a-z]/g,'');const LG=['en','ms','zh'].includes(LANG)?LANG:'en';
 const tr=o=>o?(o[LG]||o.en||''):'';
@@ -279,7 +282,7 @@ const BAND={'West Coast':'SABAH  ·  '+tr(C.zones['West Coast']).toUpperCase(),'
 const ZLABEL={'West Coast':'West Coast','Interior':'Interior','East Coast':'East Coast','Labuan':'Labuan','Sarawak':'Sarawak'};
 const esc=s=>(s||'').toString().replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 let F=[],P={},META={},OUT=null,DIST=null,cur=null,map=null,mini=null,markers={},sel=null;
-function qrsvg(text,cell){const q=qrcode(0,'M');q.addData(text);q.make();return q.createSvgTag({cellSize:cell||3,margin:0,scalable:true})}
+function qrsvg(text,cell){if(!window.qrcode)return '';const q=qrcode(0,'M');q.addData(text);q.make();return q.createSvgTag({cellSize:cell||3,margin:0,scalable:true})}
 function mk(p,big){const ph=p.type==='Prayer House';return `<span class="mk${ph?' ph':''}" style="background:${ZC[p.zone]}${big?';width:30px;height:30px;font-size:12px':''}">${p.no}</span>`}
 function km(a,b){return Math.hypot((a.lat-b.lat)*110.6,(a.lon-b.lon)*110.6*Math.cos(a.lat*Math.PI/180))}
 
@@ -292,13 +295,13 @@ Promise.all([
   META=g.metadata||{};F=g.features.map(f=>f.properties);F.forEach(p=>{p.mapped=!!(p.lat&&p.lon);P[p.id]=p});OUT=o;DIST=d;
   const v=(META.version||'Draft').toUpperCase();document.getElementById('ver').textContent=v;document.getElementById('ver2').textContent=v;
   const n=F.length,m=F.filter(p=>p.mapped).length;
-  document.getElementById('s-all').textContent=n;document.getElementById('s-map').textContent=m;document.getElementById('s-pend').textContent=n-m;document.getElementById('h-all').textContent=n;
-  const dt=META.date?new Date(META.date).toLocaleDateString('en-GB',{day:'numeric',month:'long',year:'numeric'}):'';
-  document.getElementById('cov-date').textContent=`${META.version||'Draft'} for review by the church · ${dt}`;
-  document.getElementById('ab-status').innerHTML=`<b>${esc(META.version||'Draft')}</b>, ${dt}, for review by the church. Please check each location page and send corrections (names, addresses, service times, photos and GPS pins). Corrections will be included in the final version.`;
+  document.getElementById('s-all').textContent=n;document.getElementById('s-map').textContent=m;document.getElementById('s-pend').textContent=n-m;document.querySelectorAll('.n-all').forEach(e=>e.textContent=n);
+  const dt=META.date?new Date(META.date).toLocaleDateString({en:'en-GB',ms:'ms-MY',zh:'zh-CN'}[LG],{day:'numeric',month:'long',year:'numeric'}):'';
+  document.getElementById('cov-date').textContent=`${META.version||'Draft'} · ${STATUS_TXT.forReview[LG]} · ${dt}`;
+  document.getElementById('ab-status').innerHTML=STATUS_TXT.status[LG](esc(META.version||'Draft'),dt);
   const by=s=>F.filter(p=>p.state===s).length;
-  document.getElementById('ab-contents').textContent=`${n} locations: ${by('Sabah')} in Sabah, ${by('Labuan')} in Labuan and ${by('Sarawak')} in Sarawak. ${m} have coordinates and a KodLokasi code; ${n-m} are awaiting coordinates.`;
-  cover();symbols();directory();pending();
+  document.getElementById('ab-contents').textContent=STATUS_TXT.contents[LG](n,by('Sabah'),by('Labuan'),by('Sarawak'),m);
+  cover();directory();pending();
   document.getElementById('qa').innerHTML=qrsvg('https://apps.apple.com/my/app/kodlokasi/id6753739461');
   document.getElementById('qg').innerHTML=qrsvg('https://play.google.com/store/apps/details?id=my.kodlokasi');
   document.getElementById('qw').innerHTML=qrsvg('https://map.kodlokasi.my/');
@@ -309,8 +312,10 @@ Promise.all([
 const NAVL={home:{en:'Home',ms:'Utama',zh:'首页'},how:{en:'How to use',ms:'Cara guna',zh:'使用说明'},directory:{en:'Directory',ms:'Direktori',zh:'名录'},map:{en:'Maps',ms:'Peta',zh:'地图'},pending:{en:'Awaiting coordinates',ms:'Menunggu koordinat',zh:'待定位'},about:{en:'About',ms:'Perihal',zh:'关于'}};
 const SEC={home:'',how:tr(NAVL.how),directory:tr(NAVL.directory),map:tr(NAVL.map),pending:tr(NAVL.pending),about:tr(NAVL.about)};
 document.querySelectorAll('#nav a').forEach(a=>a.textContent=tr(NAVL[a.dataset.p]));
-document.getElementById('t-sub').textContent=tr(A.tsub);document.getElementById('cov-name').textContent=tr({en:'Sabah General Assembly',ms:'Ibu Gereja Sabah',zh:'沙巴真耶稣教会 · 沙巴总会'});document.getElementById('dlt').textContent=tr({en:'Download directory (PDF)',ms:'Muat turun direktori (PDF)',zh:'下载名录 (PDF)'});document.getElementById('dlpdf').title=tr({en:'Church Location Atlas, PDF, 18 MB',ms:'Atlas Lokasi Gereja, PDF, 18 MB',zh:'教会位置图集，PDF，18 MB'});document.getElementById('m-tap').textContent=tr(A.tapPin);
-if(LG!=='en'){document.querySelector('#p-directory h1').textContent=tr({ms:'Direktori lokasi',zh:'地点名录'});document.querySelector('#p-directory .lead').textContent=tr({ms:'Klik nama untuk membuka halamannya, kod untuk membuka KodLokasi, atau "Peta" untuk petanya.',zh:'点击名称打开页面，点击代码打开 KodLokasi，或点击“地图”查看位置。'});document.getElementById('q').placeholder=tr({ms:'Cari nama, subzon, alamat atau KodLokasi',zh:'搜索名称、小区、地址或 KodLokasi'});document.querySelector('#p-directory .btn.red').innerHTML=tr({ms:'Senarai menunggu koordinat',zh:'待定位名单'})+' &rsaquo;'}
+document.querySelectorAll('[data-i]').forEach(e=>{const v=I18[e.dataset.i];if(v)e.innerHTML=v[LG]||v.en});
+document.getElementById('t-sub').textContent=tr(A.tsub);document.getElementById('cov-name').textContent=tr({en:'Sabah General Assembly',ms:'Ibu Gereja Sabah',zh:'沙巴真耶稣教会 · 沙巴总会'});document.getElementById('dlt').textContent=tr(I18.dl);document.getElementById('dlpdf').href='downloads/TJC_Church_Location_Atlas_'+LG.toUpperCase()+'.pdf';document.getElementById('dlpdf').setAttribute('download',{en:'TJC_Church_Location_Atlas_EN.pdf',ms:'Atlas_Lokasi_Gereja_GYB_BM.pdf',zh:'TJC_Church_Location_Atlas_ZH.pdf'}[LG]);document.getElementById('dlpdf').title=tr({en:'Church Location Atlas (PDF)',ms:'Atlas Lokasi Gereja (PDF)',zh:'教会位置图集 (PDF)'});
+document.querySelectorAll('.lsw a').forEach(a=>{a.classList.toggle('on',a.dataset.l===LG);a.onclick=ev=>{ev.preventDefault();const v=new URL(location.href);v.searchParams.set('lang',a.dataset.l);location.href=v.pathname+v.search+location.hash}});
+document.getElementById('q').placeholder=tr({en:'Search name, subzone, address or KodLokasi',ms:'Cari nama, subzon, alamat atau KodLokasi',zh:'搜索名称、小区、地址或 KodLokasi'});
 function go(h){location.hash=h}
 window.addEventListener('hashchange',route);
 function route(){let h=decodeURIComponent(location.hash.slice(1))||'home';let arg=null;
@@ -321,7 +326,7 @@ function route(){let h=decodeURIComponent(location.hash.slice(1))||'home';let ar
   document.getElementById('main').scrollTop=0;
   if(pg==='loc'){const p=P[h];if(!p){go('directory');return}locPage(p);document.getElementById('sec').textContent=[p.state,p.zone!==p.state?tr(C.zones[p.zone]):'',p.subzone?tr(C.ui.subzone)+' '+p.subzone:''].filter(Boolean).join(' · ')}
   else document.getElementById('sec').textContent=SEC[pg]||'';
-  if(pg==='map'){initMap();setTimeout(()=>{map.invalidateSize();if(arg&&P[arg])focusPin(arg);else view(arg&&VIEWS[arg]?arg:(cur||'sabah'))},30)}
+  if(pg==='map'){initMap();setTimeout(()=>{map.invalidateSize();if(arg&&P[arg])focusPin(arg);else view(arg&&VIEWS[arg]?arg:(cur||'all'))},30)}
 }
 
 /* ---------- cover silhouette ---------- */
@@ -342,24 +347,25 @@ function directory(){const q=document.getElementById('q').value.trim().toLowerCa
   document.getElementById('dir').innerHTML=ZORDER.map(z=>{const L=F.filter(p=>p.zone===z&&ok(p));if(!L.length)return'';
     return `<div class="band" style="background:${ZC[z]}">${BAND[z]}<span>${L.length} ${tr(C.ui.locations)}</span></div>
     <table class="dir"><thead><tr><th>${tr({en:"No.",ms:"Bil.",zh:"编号"})}</th><th>${tr({en:"Name",ms:"Nama",zh:"名称"})}</th><th class="hs">${tr({en:"Type",ms:"Jenis",zh:"类型"})}</th><th class="hs">${tr({en:"Subzone",ms:"Subzon",zh:"小区"})}</th><th>KodLokasi</th><th></th></tr></thead><tbody>${
-    L.map(p=>`<tr onclick="go('${p.id}')"><td>${mk(p)}</td><td class="nm">${esc(p.name)}</td><td class="hs">${TY(p)}</td><td class="hs">${esc(p.subzone||'-')}</td>
+    L.map(p=>`<tr onclick="go('${p.id}')"><td class="no">${p.no}</td><td class="nm">${esc(p.name)}</td><td class="hs">${TY(p)}</td><td class="hs">${esc(p.subzone||'-')}</td>
     <td class="kc">${p.kodlokasi?`<a href="${p.kodlokasi_url}" target="_blank" rel="noopener" onclick="event.stopPropagation()">${esc(p.kodlokasi)}</a>`:`<span class="aw">${tr(C.ui.awaiting)}</span>`}</td>
     <td class="mb">${p.mapped?`<button class="mbtn" onclick="event.stopPropagation();go('map/${p.id}')">${tr(A.mapB)}</button>`:''}</td></tr>`).join('')}</tbody></table>`}).join('')||'<p class="nst">No location matches your search.</p>'}
 document.getElementById('q').addEventListener('input',directory);
 function pending(){document.getElementById('pend').innerHTML=F.filter(p=>!p.mapped).map(p=>`<tr onclick="go('${p.id}')"><td>${mk(p)}</td><td style="font-weight:700;color:var(--navy)">${esc(p.name)}</td><td>${p.type}</td><td>${p.state}${p.zone!==p.state?' · '+p.zone:''}</td><td>${esc(p.subzone?'SZ '+p.subzone:'-')}</td></tr>`).join('')}
 
 /* ---------- maps ---------- */
-const VIEWS={sabah:{t:tr(A.overview),b:[[4.05,115.3],[7.4,119.3]]},
-  'west-coast':{t:'Sabah - '+tr(C.zones['West Coast']),z:'West Coast'},'interior':{t:'Sabah - '+tr(C.zones['Interior']),z:'Interior'},'east-coast':{t:'Sabah - '+tr(C.zones['East Coast']),z:'East Coast'},
-  'kk':{t:tr(A.kk),b:[[5.88,116.03],[6.2,116.3]]},
-  'keningau':{t:tr(A.ken),b:[[5.15,115.85],[5.5,116.25]]},
+const VIEWS={all:{t:tr({en:'All churches',ms:'Semua gereja',zh:'全部教会'})},
+  'west-coast':{t:'Sabah · '+tr(C.zones['West Coast']),z:'West Coast'},'interior':{t:'Sabah · '+tr(C.zones['Interior']),z:'Interior'},'east-coast':{t:'Sabah · '+tr(C.zones['East Coast']),z:'East Coast'},
   'labuan':{t:tr(C.zones.Labuan),z:'Labuan',pad:.06},'sarawak':{t:tr(C.zones.Sarawak),z:'Sarawak'}};
-function pinIcon(p,on){const ph=p.type==='Prayer House';return L.divIcon({className:'',iconSize:ph?[26,24]:[24,24],iconAnchor:ph?[13,16]:[12,12],
-  html:`<div class="${ph?'tri':'pin'}${on?' sel':''}" style="background:${ZC[p.zone]}">${p.no}</div>`})}
+VIEWS.sabah=VIEWS.all;
+const SYM={church:(c,on)=>`<svg width="${on?30:24}" height="${on?30:24}" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10.5" fill="${c}" stroke="#fff" stroke-width="2"/><path d="M12 6.5v11M8.2 10.2h7.6" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/></svg>`,
+ ph:(c,on)=>`<svg width="${on?30:24}" height="${on?28:22}" viewBox="0 0 24 22"><path d="M12 1.5 22.6 20.5H1.4Z" fill="${c}" stroke="#fff" stroke-width="2" stroke-linejoin="round"/><circle cx="12" cy="14.2" r="2.6" fill="#fff"/></svg>`};
+function pinIcon(p,on){const ph=p.type==='Prayer House';const w=on?30:24,h=ph?(on?28:22):(on?30:24);return L.divIcon({className:'pinw'+(on?' sel':''),iconSize:[w,h],iconAnchor:[w/2,h/2],html:(ph?SYM.ph:SYM.church)(ZC[p.zone],on)})}
+let REGZ=null;
 function initMap(){if(map)return;
-  map=L.map('map',{zoomControl:true}).setView([5.4,116.6],7);
-  const E='https://server.arcgisonline.com/ArcGIS/rest/services/',A='Imagery &copy; Esri, Maxar, Earthstar Geographics, and the GIS User Community';
-  const sat=L.tileLayer(E+'World_Imagery/MapServer/tile/{z}/{y}/{x}',{maxZoom:19,maxNativeZoom:18,attribution:A});
+  map=L.map('map',{zoomControl:true}).setView([4.2,114.4],6);
+  const E='https://server.arcgisonline.com/ArcGIS/rest/services/',ATTR='Imagery &copy; Esri, Maxar, Earthstar Geographics, and the GIS User Community';
+  const sat=L.tileLayer(E+'World_Imagery/MapServer/tile/{z}/{y}/{x}',{maxZoom:19,maxNativeZoom:18,attribution:ATTR});
   const hyb=L.layerGroup([sat,L.tileLayer(E+'Reference/World_Transportation/MapServer/tile/{z}/{y}/{x}',{maxZoom:19,maxNativeZoom:18,opacity:.8}),L.tileLayer(E+'Reference/World_Boundaries_and_Places/MapServer/tile/{z}/{y}/{x}',{maxZoom:19,maxNativeZoom:18})]);
   const osm=L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:'&copy; OpenStreetMap contributors'});
   const plain=L.layerGroup();
@@ -370,24 +376,27 @@ function initMap(){if(map)return;
   hyb.addTo(map);dl.addTo(map);dn.addTo(map);
   L.control.layers({[tr(A.layers.sat)]:hyb,[tr(A.layers.satO)]:sat,[tr(A.layers.st)]:osm,[tr(A.layers.pl)]:plain},{[tr(A.layers.db)]:dl,[tr(A.layers.dn)]:dn},{position:'topright'}).addTo(map);
   L.control.scale({imperial:false}).addTo(map);
-  const lg=L.control({position:'bottomright'});lg.onAdd=()=>{const d=L.DomUtil.create('div','legend');d.innerHTML=ZORDER.map(z=>`<span class="dot" style="background:${ZC[z]}"></span>${tr(C.zones[z])}`).join('<br>')+'<br>&#9650; '+tr(A.ph);return d};lg.addTo(map);
+  const lg=L.control({position:'bottomright'});lg.onAdd=()=>{const d=L.DomUtil.create('div','legend');
+    d.innerHTML=`<b>${tr({en:'Type',ms:'Jenis',zh:'类型'})}</b><div class="lgi">${SYM.church('#5B6575')}<span>${tr(C.ui.church)}</span></div><div class="lgi">${SYM.ph('#5B6575')}<span>${tr(C.ui.prayerHouse)}</span></div><b>${tr({en:'Region',ms:'Kawasan',zh:'区域'})}</b>`+ZORDER.map(z=>`<div class="lgi"><span class="dot" style="background:${ZC[z]}"></span><span>${tr(C.zones[z])}</span></div>`).join('');return d};lg.addTo(map);
   const upd=()=>{const el=document.getElementById('map');el.classList.toggle('onsat',map.hasLayer(hyb)||map.hasLayer(sat));el.classList.toggle('lowzoom',map.getZoom()<9);dl.setStyle({color:map.hasLayer(hyb)||map.hasLayer(sat)?'#fff':'#6B7280'})};
   map.on('baselayerchange zoomend',upd);upd();
-  F.filter(p=>p.mapped).forEach(p=>{const m=L.marker([p.lat,p.lon],{icon:pinIcon(p),title:p.name}).addTo(map);
-    m.bindTooltip(esc(p.name),{permanent:true,direction:'right',offset:[10,0],className:'lbl',opacity:1});
-    m.bindPopup(`<div class="pop"><b>${p.no}. ${esc(p.name)}</b><br>${TY(p)} · ${esc(p.subzone||tr(C.zones[p.zone]))}<br><span class="c">${esc(p.kodlokasi)}</span><br><a class="btn sky" href="#${p.id}">${tr(A.openPage)} &rsaquo;</a></div>`);
-    m.on('click',()=>setSel(p.id));markers[p.id]=m});
-  map.on('popupclose',()=>setSel(null));
-  document.getElementById('views').innerHTML=Object.entries(VIEWS).map(([k,v])=>`<button data-v="${k}">${v.z?`<span class="dot" style="background:${ZC[v.z]}"></span>`:''}${{sabah:tr(A.ovBtn),kk:tr(A.kkBtn),keningau:tr(A.kenBtn)}[k]||tr(C.zones[v.z])}</button>`).join('');
+  F.filter(p=>p.mapped).forEach(p=>{const m=L.marker([p.lat,p.lon],{icon:pinIcon(p),title:p.name,riseOnHover:true,keyboard:true}).addTo(map);
+    m.on('click',()=>{location.hash='#'+p.id});markers[p.id]=m});
+  labels(null);
+  document.getElementById('views').innerHTML=Object.entries(VIEWS).filter(([k])=>k!=='sabah').map(([k,v])=>`<button data-v="${k}">${v.z?`<span class="dot" style="background:${ZC[v.z]}"></span>`:''}${v.z?tr(C.zones[v.z]):v.t}</button>`).join('');
   document.querySelectorAll('#views button').forEach(b=>b.onclick=()=>{history.replaceState(null,'','#map/'+b.dataset.v);view(b.dataset.v)});
 }
-function view(k){cur=k;const v=VIEWS[k];document.getElementById('m-title').textContent=v.t;
+function labels(z,only){REGZ=z;Object.entries(markers).forEach(([id,m])=>{const p=P[id];const inR=only?id===only:(z?p.zone===z:false);
+  m.unbindTooltip();m.bindTooltip(esc(p.name),{permanent:inR,direction:'right',offset:[12,0],className:'lbl'+(inR?' on':''),opacity:1});
+  m.setOpacity(z&&!inR&&!only?.35:1)})}
+function view(k){if(!VIEWS[k])k='all';cur=k;const v=VIEWS[k];document.getElementById('m-title').textContent=v.t;
   document.querySelectorAll('#views button').forEach(b=>b.classList.toggle('on',b.dataset.v===k));
-  let b=v.b;if(v.z){const pts=F.filter(p=>p.mapped&&p.zone===v.z).map(p=>[p.lat,p.lon]);b=L.latLngBounds(pts).pad(v.pad||.08)}
-  map.fitBounds(b,{padding:[20,20],maxZoom:13})}
+  const pts=F.filter(p=>p.mapped&&(!v.z||p.zone===v.z)).map(p=>[p.lat,p.lon]);
+  labels(v.z||null);setSel(null);
+  map.fitBounds(L.latLngBounds(pts).pad(v.pad||.08),{padding:[20,20],maxZoom:13})}
 function setSel(id){if(sel&&markers[sel])markers[sel].setIcon(pinIcon(P[sel]));sel=id;if(id&&markers[id])markers[id].setIcon(pinIcon(P[id],true))}
 function focusPin(id){const p=P[id];document.getElementById('m-title').textContent=p.name;document.querySelectorAll('#views button').forEach(b=>b.classList.remove('on'));
-  map.setView([p.lat,p.lon],15);setSel(id);markers[id].openPopup()}
+  labels(null,id);map.setView([p.lat,p.lon],15);setSel(id)}
 
 /* ---------- location page ---------- */
 const TY=p=>p.type==='Prayer House'?tr(C.ui.prayerHouse):tr(C.ui.church);
